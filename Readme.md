@@ -10,7 +10,7 @@ ________________________________________
 •	Disposable VM: Use a dedicated, disposable VM (e.g., Windows 10/11 or Linux) that can be easily reverted. 
 2. Sample Handling & Storage
 •	Password Protection: All Samples of Malware and other payloads samples are in  a ZIP file, encrypted with the password “infected”.
-•	File Naming: Do not use original file names. Rename to [sample_ID].zip to prevent accidental execution. The contents of the files 	are in two folders namely “Executable Malware Folder” and “Other Payloads Folder”
+•	File Naming: Do not use original file names. Rename to [sample_ID].zip to prevent accidental execution. The contents of the files 	are in two folders namely “Executable Malware” and “Other Payloads” folders.
 •	Safe Transfer: Use encrypted, secure methods to move files into the VM, such as a secure, dedicated malware repository.
 •	Extensions: Add exceptions to your AV for specific directories if the AV continuously deletes your samples, but never disable AV 	on your host. 
 3. Execution & Analysis Protocols
@@ -22,17 +22,18 @@ ________________________________________
 •	Secure Deletion: Delete all samples, reports, and evidence files securely.
 •	Snapshot Rollback: Revert to the baseline snapshot to eliminate any persistent changes. 
 5. Miscellaneous
-•	Besides the two folders “Executable Malware Folder” and “Other Payloads Folder” there is a  word document named “Submission 2 APT 	Details”, this document has details on the following.
-		Mitre ID
-		Name of ATP Group
-		Country
-		Source Reference
-		MD Hash list
-		Campaign Label
-		Sourcing and Reproducibility information
-		Malware  Data Gathering Methodology Note
+•	Besides the two folders “Executable Malware Folder” and “Other Payloads Folder” there are two word documents which has details on the following.
+   1.Mitre ID
+   2.Name of ATP Group
+   3.Country
+   4.Source Reference
+   5.MD Hash list
+   6.Campaign Label
+   7.Sourcing and Reproducibility information
+   8.Malware  Data Gathering Methodology Note
 	
 Finally, the submission includes this README.md
 
 Thank you very much for your time and efforts! It is much appreciated! 
+
 
