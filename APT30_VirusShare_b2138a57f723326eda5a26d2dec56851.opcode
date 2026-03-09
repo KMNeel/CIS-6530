@@ -1,0 +1,141 @@
+pushad
+mov esi,0x408000
+lea edi,[esi + 0xffff9000]
+push edi
+or ebp,0xffffffff
+jmp 0x0040b582
+mov al,byte ptr [esi]
+inc esi
+mov byte ptr [edi],al
+inc edi
+add ebx,ebx
+jnz 0x0040b589
+mov ebx,dword ptr [esi]
+sub esi,-0x4
+adc ebx,ebx
+jc 0x0040b578
+mov eax,0x1
+add ebx,ebx
+jnz 0x0040b59b
+mov ebx,dword ptr [esi]
+sub esi,-0x4
+adc ebx,ebx
+adc eax,eax
+add ebx,ebx
+jnc 0x0040b590
+jnz 0x0040b5ac
+mov ebx,dword ptr [esi]
+sub esi,-0x4
+adc ebx,ebx
+jnc 0x0040b590
+xor ecx,ecx
+sub eax,0x3
+jc 0x0040b5c0
+shl eax,0x8
+mov al,byte ptr [esi]
+inc esi
+xor eax,0xffffffff
+jz 0x0040b632
+mov ebp,eax
+add ebx,ebx
+jnz 0x0040b5cb
+mov ebx,dword ptr [esi]
+sub esi,-0x4
+adc ebx,ebx
+adc ecx,ecx
+add ebx,ebx
+jnz 0x0040b5d8
+mov ebx,dword ptr [esi]
+sub esi,-0x4
+adc ebx,ebx
+adc ecx,ecx
+jnz 0x0040b5fc
+inc ecx
+add ebx,ebx
+jnz 0x0040b5e8
+mov ebx,dword ptr [esi]
+sub esi,-0x4
+adc ebx,ebx
+adc ecx,ecx
+add ebx,ebx
+jnc 0x0040b5dd
+jnz 0x0040b5f9
+mov ebx,dword ptr [esi]
+sub esi,-0x4
+adc ebx,ebx
+jnc 0x0040b5dd
+add ecx,0x2
+cmp ebp,0xfffff300
+adc ecx,0x1
+lea edx,[edi + ebp*0x1]
+cmp ebp,-0x4
+jbe 0x0040b61c
+mov al,byte ptr [edx]
+inc edx
+mov byte ptr [edi],al
+inc edi
+dec ecx
+jnz 0x0040b60d
+jmp 0x0040b57e
+mov eax,dword ptr [edx]
+add edx,0x4
+mov dword ptr [edi],eax
+add edi,0x4
+sub ecx,0x4
+ja 0x0040b61c
+add edi,ecx
+jmp 0x0040b57e
+pop esi
+mov edi,esi
+mov ecx,0xc9
+mov al,byte ptr [edi]
+inc edi
+sub al,0xe8
+cmp al,0x1
+ja 0x0040b63a
+cmp byte ptr [edi],0x1
+jnz 0x0040b63a
+mov eax,dword ptr [edi]
+mov bl,byte ptr [edi + 0x4]
+shr ax,0x8
+rol eax,0x10
+xchg ah,al
+sub eax,edi
+sub bl,0xe8
+add eax,esi
+mov dword ptr [edi],eax
+add edi,0x5
+mov eax,ebx
+loop 0x0040b63f
+lea edi,[esi + 0x9000]
+mov eax,dword ptr [edi]
+or eax,eax
+jz 0x0040b6b7
+mov ebx,dword ptr [edi + 0x4]
+lea eax,[eax + esi*0x1 + 0xb000]
+add ebx,esi
+push eax
+add edi,0x8
+call dword ptr [esi + 0xb08c]
+xchg eax,ebp
+mov al,byte ptr [edi]
+inc edi
+or al,al
+jz 0x0040b66c
+mov ecx,edi
+jns 0x0040b69b
+movzx eax,word ptr [edi]
+inc edi
+push eax
+inc edi
+mov ecx,0xaef24857
+push ebp
+call dword ptr [esi + 0xb090]
+or eax,eax
+jz 0x0040b6b1
+mov dword ptr [ebx],eax
+add ebx,0x4
+jmp 0x0040b689
+call dword ptr [esi + 0xb094]
+popad
+jmp 0x00405c3f
