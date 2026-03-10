@@ -37,9 +37,10 @@ Finally, the submission includes this README.md
 
 Thank you very much for your time and efforts! It is much appreciated! 
 
-A3 Submission
+A3 Submission:
 Contains two zipped files named "OpcodeExt" and "Opcodes". 
 OpcodeExt.zip contains scripts used to extract opcodes. 
 Refer to the Technical Report submitted on Courselink to know more about how scripts were used to extract opcodes.
+
 
 
