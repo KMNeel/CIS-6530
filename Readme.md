@@ -2,6 +2,7 @@ Malware Assessment Safety Guidelines (README.md)
 ⚠️ WARNING: READ BEFORE PROCEEDING ⚠️ 
 Handling malicious code is hazardous. Mismanagement can result in infection of your host machine, network, and data loss. You are responsible for maintaining a secure environment. 
 ________________________________________
+A2 Submission
 1. Environment Requirements
 •	Isolation: All malware analysis MUST be conducted within an isolated Virtual Machine (VM).
 •	Networking: The VM network adapter must be set to Host-Only or Disconnected. Ensure no bridged networking is used.
@@ -35,5 +36,10 @@ ________________________________________
 Finally, the submission includes this README.md
 
 Thank you very much for your time and efforts! It is much appreciated! 
+
+A3 Submission
+Contains two zipped files named "OpcodeExt" and "Opcodes". 
+OpcodeExt.zip contains scripts used to extract opcodes. 
+Refer to the Technical Report submitted on Courselink to know more about how scripts were used to extract opcodes.
 
 
