@@ -1,0 +1,7 @@
+jmp dword ptr [0x10008000]
+jmp dword ptr [0x10008004]
+jmp dword ptr [0x10008008]
+jmp dword ptr [0x1000800c]
+jmp dword ptr [0x10008010]
+jmp dword ptr [0x10008014]
+jmp dword ptr [0x10002000]

@@ -1,0 +1,10877 @@
+sub esp,0x34
+xor eax,eax
+push ebx
+mov dword ptr [esp + 0x14],eax
+lea ecx,[esp + 0x10]
+push esi
+xor ebx,ebx
+mov dword ptr [esp + 0x1c],eax
+push ecx
+mov esi,0x1
+mov dword ptr [esp + 0x18],ebx
+mov dword ptr [esp + 0x24],eax
+mov dword ptr [0x0040ce98],ebx
+call dword ptr [0x00409118]
+test eax,eax
+jnz 0x00401039
+pop esi
+pop ebx
+add esp,0x34
+ret
+cmp dword ptr [esp + 0x14],ebx
+jz 0x00401044
+mov esi,0x1
+mov eax,dword ptr [esp + 0x18]
+push edi
+cmp eax,ebx
+jz 0x00401155
+push ebx
+push ebx
+push ebx
+push 0x1
+push 0x40a0bc
+call dword ptr [0x0040911c]
+push ebx
+mov edi,eax
+push 0x50
+push 0x40a098
+push edi
+call dword ptr [0x00409120]
+cmp eax,ebx
+jnz 0x00401078
+xor esi,esi
+push ebx
+push ebx
+push ebx
+push ebx
+push ebx
+push ebx
+push eax
+call dword ptr [0x00409124]
+test eax,eax
+jnz 0x0040108b
+xor esi,esi
+xor eax,eax
+xor edx,edx
+mov dword ptr [esp + 0x2c],eax
+mov ecx,dword ptr [esp + 0x1c]
+mov dword ptr [esp + 0x30],eax
+mov dword ptr [esp + 0x10],edx
+mov dword ptr [esp + 0x34],eax
+mov dword ptr [esp + 0x14],edx
+mov dword ptr [esp + 0x38],eax
+lea edx,[esp + 0xc]
+mov dword ptr [esp + 0x3c],eax
+lea eax,[esp + 0x28]
+push edx
+push eax
+push 0x40a068
+push edi
+mov dword ptr [esp + 0x1c],ebx
+mov dword ptr [esp + 0x38],0x2
+mov dword ptr [esp + 0x3c],ebx
+mov dword ptr [esp + 0x40],ecx
+call dword ptr [0x00409128]
+test eax,eax
+jnz 0x004010ee
+call dword ptr [0x00409000]
+xor esi,esi
+pop edi
+mov eax,esi
+pop esi
+pop ebx
+add esp,0x34
+ret
+mov eax,dword ptr [esp + 0x10]
+cmp eax,ebx
+jz 0x00401155
+push eax
+mov dword ptr [0x0040ce98],0x1
+call 0x00402240
+mov esi,dword ptr [esp + 0x14]
+mov ecx,eax
+shl ecx,0x1
+mov edx,ecx
+mov edi,0x40ca98
+shr ecx,0x2
+movsd.rep es:edi,esi
+mov eax,dword ptr [esp + 0x18]
+mov ecx,edx
+add esp,0x4
+and ecx,0x3
+cmp eax,ebx
+movsb.rep es:edi,esi
+jz 0x00401150
+push eax
+call 0x00402240
+mov esi,dword ptr [esp + 0x18]
+mov ecx,eax
+shl ecx,0x1
+mov eax,ecx
+mov edi,0x40d0a0
+shr ecx,0x2
+movsd.rep es:edi,esi
+mov ecx,eax
+add esp,0x4
+and ecx,0x3
+movsb.rep es:edi,esi
+mov esi,0x1
+mov eax,dword ptr [esp + 0x20]
+cmp eax,ebx
+jz 0x004011bc
+push eax
+mov dword ptr [0x0040ce98],0x1
+call 0x00402240
+mov esi,dword ptr [esp + 0x24]
+mov ecx,eax
+shl ecx,0x1
+mov edx,ecx
+mov edi,0x40ca98
+shr ecx,0x2
+movsd.rep es:edi,esi
+mov eax,dword ptr [esp + 0x28]
+mov ecx,edx
+add esp,0x4
+and ecx,0x3
+cmp eax,ebx
+movsb.rep es:edi,esi
+jz 0x004011b7
+push eax
+call 0x00402240
+mov esi,dword ptr [esp + 0x28]
+mov ecx,eax
+shl ecx,0x1
+mov eax,ecx
+mov edi,0x40d0a0
+shr ecx,0x2
+movsd.rep es:edi,esi
+mov ecx,eax
+add esp,0x4
+and ecx,0x3
+movsb.rep es:edi,esi
+mov esi,0x1
+mov eax,esi
+pop edi
+pop esi
+pop ebx
+add esp,0x34
+ret
+sub esp,0x104
+mov ecx,0x41
+xor eax,eax
+push edi
+lea edi,[esp + 0x4]
+stosd.rep es:edi
+mov ecx,0x41
+mov edi,0x40ce9c
+stosd.rep es:edi
+push eax
+call dword ptr [0x00409008]
+lea ecx,[esp + 0x4]
+push 0x104
+push ecx
+push eax
+call dword ptr [0x00409004]
+lea edx,[esp + 0x4]
+push 0x5c
+push edx
+call 0x00402360
+mov edi,eax
+or ecx,0xffffffff
+xor eax,eax
+scasb.repne es:edi
+not ecx
+dec ecx
+lea edi,[esp + 0xc]
+mov edx,ecx
+or ecx,0xffffffff
+scasb.repne es:edi
+not ecx
+dec ecx
+lea eax,[esp + 0xc]
+sub ecx,edx
+push ecx
+push eax
+push 0x40ce9c
+call 0x00402260
+add esp,0x14
+pop edi
+add esp,0x104
+ret
+sub esp,0x8
+mov eax,dword ptr [esp + 0xc]
+push esi
+push 0x0
+push 0x80
+push 0x3
+push 0x0
+push 0x1
+push 0x80000000
+push eax
+mov dword ptr [esp + 0x20],0x0
+mov dword ptr [esp + 0x24],0x0
+call dword ptr [0x00409018]
+mov esi,eax
+cmp esi,-0x1
+jz 0x004012d3
+lea ecx,[esp + 0x4]
+push ecx
+push esi
+call dword ptr [0x00409014]
+test eax,eax
+jz 0x004012cc
+mov eax,dword ptr [esp + 0x8]
+test eax,eax
+jnz 0x004012aa
+cmp dword ptr [esp + 0x4],0x7fffffff
+jbe 0x004012b2
+push 0x6e
+call dword ptr [0x00409010]
+mov edx,dword ptr [esp + 0x14]
+mov eax,dword ptr [esp + 0x18]
+mov ecx,dword ptr [esp + 0x4]
+mov dword ptr [edx],esi
+mov dword ptr [eax],ecx
+mov eax,0x1
+pop esi
+add esp,0x8
+ret
+push esi
+call dword ptr [0x0040900c]
+xor eax,eax
+pop esi
+add esp,0x8
+ret
+push -0x1
+mov eax,fs:[0x0]
+push 0x408be6
+push eax
+mov eax,0x106c
+mov dword ptr fs:[0x0],esp
+call 0x00402690
+push ebx
+push ebp
+xor ebp,ebp
+push esi
+push edi
+mov dword ptr [esp + 0x24],ebp
+mov dword ptr [esp + 0x38],ebp
+mov dword ptr [esp + 0x1084],ebp
+mov dword ptr [esp + 0x30],ebp
+mov edx,dword ptr [esp + 0x1090]
+lea eax,[esp + 0x34]
+lea ecx,[esp + 0x18]
+push eax
+push ecx
+push edx
+mov byte ptr [esp + 0x1090],0x1
+mov dword ptr [esp + 0x24],0xffffffff
+mov dword ptr [esp + 0x20],ebp
+mov dword ptr [esp + 0x34],ebp
+mov dword ptr [esp + 0x28],ebp
+mov dword ptr [esp + 0x48],ebp
+call 0x00401250
+add esp,0xc
+test eax,eax
+jz 0x00401692
+mov ecx,0xf
+xor eax,eax
+lea edi,[esp + 0x40]
+stosd.rep es:edi
+mov ecx,dword ptr [esp + 0x108c]
+mov eax,0x1
+mov dword ptr [esp + 0x54],eax
+mov dword ptr [esp + 0x70],eax
+mov dword ptr [esp + 0x60],eax
+mov dword ptr [esp + 0x68],eax
+lea eax,[esp + 0x40]
+mov dword ptr [esp + 0x40],0x3c
+push eax
+push ebp
+push ebp
+push ecx
+call dword ptr [0x004090f8]
+test eax,eax
+jz 0x00401692
+cmp dword ptr [esp + 0x5c],ebp
+jnz 0x004013ab
+mov dword ptr [esp + 0x60],ebp
+cmp dword ptr [esp + 0x64],ebp
+jnz 0x004013b5
+mov dword ptr [esp + 0x68],ebp
+mov edi,dword ptr [esp + 0x54]
+mov esi,dword ptr [esp + 0x50]
+lea edx,[edi + edi*0x1 + 0x2]
+push edx
+call 0x00402392
+mov ebx,eax
+add esp,0x4
+cmp ebx,ebp
+jnz 0x004013dd
+push 0xe
+call dword ptr [0x00409010]
+jmp 0x00401692
+lea eax,[edi + edi*0x1]
+mov edi,ebx
+mov ecx,eax
+mov dword ptr [esp + 0x38],ebx
+mov edx,ecx
+shr ecx,0x2
+movsd.rep es:edi,esi
+mov ecx,edx
+and ecx,0x3
+movsb.rep es:edi,esi
+mov word ptr [eax + ebx*0x1],bp
+mov eax,dword ptr [esp + 0x70]
+mov esi,dword ptr [esp + 0x6c]
+mov edi,eax
+lea eax,[eax + eax*0x1 + 0x2]
+push eax
+call 0x00402392
+mov ebp,eax
+add esp,0x4
+test ebp,ebp
+jnz 0x00401424
+push 0xe
+call dword ptr [0x00409010]
+jmp 0x00401690
+lea eax,[edi + edi*0x1]
+mov edi,ebp
+mov ecx,eax
+mov dword ptr [esp + 0x30],ebp
+mov edx,ecx
+push 0x0
+shr ecx,0x2
+movsd.rep es:edi,esi
+mov ecx,edx
+and ecx,0x3
+movsb.rep es:edi,esi
+mov word ptr [eax + ebp*0x1],0x0
+mov eax,[0x0040ce98]
+test eax,eax
+jz 0x0040145c
+push 0x40d0a0
+push 0x40ca98
+push 0x3
+jmp 0x00401462
+push 0x0
+push 0x0
+push 0x0
+push 0x40a13c
+call dword ptr [0x0040911c]
+test eax,eax
+mov dword ptr [esp + 0x14],eax
+jz 0x00401690
+mov eax,dword ptr [esp + 0x58]
+mov ecx,dword ptr [esp + 0x14]
+push 0x0
+push eax
+push ebx
+push ecx
+call dword ptr [0x00409120]
+test eax,eax
+mov dword ptr [esp + 0x28],eax
+jz 0x00401690
+mov eax,dword ptr [esp + 0x4c]
+xor edx,edx
+cmp eax,0x2
+mov eax,dword ptr [esp + 0x28]
+setnz dl
+dec edx
+and edx,0x800000
+push edx
+push 0x0
+push 0x0
+push 0x0
+push ebp
+push 0x40a130
+push eax
+call dword ptr [0x00409124]
+test eax,eax
+mov dword ptr [esp + 0x1c],eax
+jz 0x00401690
+mov ebp,dword ptr [0x00409020]
+mov ecx,dword ptr [esp + 0x34]
+mov edx,dword ptr [esp + 0x1c]
+push 0x0
+push ecx
+push 0x0
+push 0x0
+push 0x0
+push 0x40a0cc
+push edx
+call dword ptr [0x004090fc]
+test eax,eax
+jz 0x00401690
+mov eax,dword ptr [esp + 0x18]
+push 0x0
+push 0x0
+push 0x0
+push eax
+call dword ptr [0x0040901c]
+cmp eax,-0x1
+jz 0x00401690
+mov esi,dword ptr [esp + 0x34]
+test esi,esi
+jbe 0x00401582
+mov ecx,0x400
+xor eax,eax
+lea edi,[esp + 0x7c]
+push eax
+stosd.rep es:edi
+mov eax,dword ptr [esp + 0x1c]
+lea ecx,[esp + 0x24]
+push ecx
+lea edx,[esp + 0x84]
+push 0x1000
+push edx
+push eax
+call ebp
+test eax,eax
+jz 0x00401690
+mov eax,dword ptr [esp + 0x20]
+test eax,eax
+jz 0x00401582
+cmp eax,esi
+ja 0x00401690
+lea ecx,[esp + 0x20]
+sub esi,eax
+push ecx
+push eax
+mov eax,dword ptr [esp + 0x24]
+lea edx,[esp + 0x84]
+push edx
+push eax
+call dword ptr [0x00409100]
+test eax,eax
+jz 0x00401690
+test esi,esi
+ja 0x0040151c
+mov ebx,dword ptr [esp + 0x1c]
+push 0x0
+push ebx
+call dword ptr [0x00409104]
+test eax,eax
+jnz 0x004015a9
+call dword ptr [0x00409000]
+cmp eax,0x2f00
+jnz 0x00401690
+jmp 0x004014d5
+lea ecx,[esp + 0x10]
+xor esi,esi
+push ecx
+push ebx
+mov dword ptr [esp + 0x28],esi
+mov dword ptr [esp + 0x18],esi
+call dword ptr [0x00409108]
+test eax,eax
+jz 0x0040168c
+mov edx,dword ptr [esp + 0x10]
+inc edx
+push edx
+call 0x00402392
+mov ebp,eax
+add esp,0x4
+cmp ebp,esi
+jz 0x00401664
+mov eax,dword ptr [esp + 0x10]
+mov edi,ebp
+lea ecx,[eax + 0x1]
+xor eax,eax
+mov edx,ecx
+shr ecx,0x2
+stosd.rep es:edi
+mov ecx,edx
+and ecx,0x3
+stosb.rep es:edi
+mov ecx,dword ptr [esp + 0x10]
+lea eax,[esp + 0x20]
+push eax
+push ecx
+push ebp
+push ebx
+call dword ptr [0x0040910c]
+test eax,eax
+jnz 0x00401612
+mov dword ptr [esp + 0x10],esi
+mov esi,0x40a0c8
+mov eax,ebp
+mov dl,byte ptr [eax]
+mov cl,dl
+cmp dl,byte ptr [esi]
+jnz 0x0040163d
+test cl,cl
+jz 0x00401639
+mov dl,byte ptr [eax + 0x1]
+mov cl,dl
+cmp dl,byte ptr [esi + 0x1]
+jnz 0x0040163d
+add eax,0x2
+add esi,0x2
+test cl,cl
+jnz 0x00401619
+xor eax,eax
+jmp 0x00401642
+sbb eax,eax
+sbb eax,-0x1
+test eax,eax
+jnz 0x0040164e
+mov dword ptr [esp + 0x24],0x1
+push ebp
+call 0x00402387
+mov eax,dword ptr [esp + 0x14]
+add esp,0x4
+test eax,eax
+jbe 0x00401668
+jmp 0x004015a9
+mov dword ptr [esp + 0x10],esi
+lea eax,[esp + 0x2c]
+push 0x0
+lea ecx,[esp + 0x40]
+push eax
+push ecx
+push 0x0
+push 0x20000013
+push ebx
+mov dword ptr [esp + 0x44],0x4
+call dword ptr [0x00409110]
+jmp 0x00401690
+mov dword ptr [esp + 0x10],esi
+xor ebp,ebp
+call dword ptr [0x00409000]
+mov edx,dword ptr [esp + 0x18]
+mov edi,dword ptr [0x0040900c]
+push edx
+mov dword ptr [esp + 0x30],eax
+call edi
+mov eax,dword ptr [esp + 0x1c]
+mov esi,dword ptr [0x00409114]
+cmp eax,ebp
+jz 0x004016ba
+push eax
+call esi
+mov eax,dword ptr [esp + 0x28]
+cmp eax,ebp
+jz 0x004016c5
+push eax
+call esi
+mov eax,dword ptr [esp + 0x14]
+cmp eax,ebp
+jz 0x004016d0
+push eax
+call esi
+mov eax,dword ptr [esp + 0x18]
+or esi,0xffffffff
+cmp eax,esi
+jz 0x004016de
+push esi
+call edi
+mov eax,dword ptr [esp + 0x2c]
+push eax
+call dword ptr [0x00409010]
+mov eax,dword ptr [esp + 0x30]
+mov byte ptr [esp + 0x1084],0x0
+cmp eax,ebp
+jz 0x00401702
+push eax
+call 0x00402387
+add esp,0x4
+mov eax,dword ptr [esp + 0x38]
+mov dword ptr [esp + 0x1084],esi
+pop edi
+pop esi
+cmp eax,ebp
+pop ebp
+pop ebx
+jz 0x0040171e
+push eax
+call 0x00402387
+add esp,0x4
+mov ecx,dword ptr [esp + 0x106c]
+mov eax,dword ptr [esp + 0x14]
+mov dword ptr fs:[0x0],ecx
+add esp,0x1078
+ret
+mov eax,dword ptr [ecx]
+test eax,eax
+jz 0x0040174d
+push eax
+call 0x00402387
+pop ecx
+ret
+sub esp,0x804
+mov edx,dword ptr [esp + 0x808]
+push esi
+push edi
+lea eax,[esp + 0xc]
+push 0x400
+push eax
+mov edi,edx
+or ecx,0xffffffff
+xor eax,eax
+mov byte ptr [esp + 0x10],0x0
+scasb.repne es:edi
+not ecx
+push ecx
+push edx
+push eax
+push eax
+call dword ptr [0x00409028]
+lea ecx,[esp + 0xc]
+push ecx
+call 0x004027ae
+push 0x40a1ac
+call 0x004027ae
+push 0x40ca98
+call 0x004027ae
+push 0x40d0a0
+call 0x004027ae
+push 0x40d4a0
+call 0x004027ae
+push 0x40cfa0
+call 0x004027ae
+mov esi,dword ptr [esp + 0x82c]
+add esp,0x18
+push esi
+call dword ptr [0x00409024]
+cmp eax,-0x1
+jz 0x004017f4
+lea edx,[esp + 0xc]
+push esi
+push edx
+call 0x004012e0
+add esp,0x8
+test eax,eax
+jz 0x004017ec
+mov byte ptr [esp + 0x8],0x1
+push 0x0
+call dword ptr [0x00409010]
+call dword ptr [0x00409000]
+pop edi
+pop esi
+test eax,eax
+jz 0x00401809
+xor eax,eax
+add esp,0x804
+ret
+mov eax,dword ptr [esp]
+and eax,0xff
+add esp,0x804
+ret
+push -0x1
+push 0x408bfb
+mov eax,fs:[0x0]
+push eax
+mov dword ptr fs:[0x0],esp
+sub esp,0x320
+push ebx
+push ebp
+push esi
+push edi
+mov ecx,0x40
+xor eax,eax
+lea edi,[esp + 0x20]
+mov dword ptr [esp + 0x1c],0x409274
+stosd.rep es:edi
+mov ecx,0x40
+lea edi,[esp + 0x120]
+stosd.rep es:edi
+mov ecx,0x40
+lea edi,[esp + 0x220]
+xor ebx,ebx
+stosd.rep es:edi
+mov dword ptr [esp + 0x32c],ebx
+mov dword ptr [esp + 0x328],ebx
+mov dword ptr [esp + 0x324],ebx
+mov dword ptr [esp + 0x320],ebx
+mov edi,0x40a040
+or ecx,0xffffffff
+scasb.repne es:edi
+not ecx
+sub edi,ecx
+lea edx,[esp + 0x220]
+mov eax,ecx
+mov esi,edi
+mov edi,edx
+mov dword ptr [esp + 0x338],ebx
+shr ecx,0x2
+movsd.rep es:edi,esi
+mov ecx,eax
+and ecx,0x3
+xor eax,eax
+movsb.rep es:edi,esi
+mov byte ptr [esp + eax*0x1 + 0x20],al
+inc eax
+cmp eax,0x100
+jl 0x004018be
+xor esi,esi
+lea edi,[esp + 0x220]
+or ecx,0xffffffff
+xor eax,eax
+xor edx,edx
+scasb.repne es:edi
+not ecx
+dec ecx
+mov eax,esi
+div ecx
+inc esi
+cmp esi,0x100
+mov cl,byte ptr [esp + edx*0x1 + 0x220]
+mov byte ptr [esp + esi*0x1 + 0x11f],cl
+jl 0x004018cc
+xor eax,eax
+xor ecx,ecx
+xor edx,edx
+xor ebx,ebx
+mov dl,byte ptr [esp + ecx*0x1 + 0x120]
+mov bl,byte ptr [esp + ecx*0x1 + 0x20]
+add eax,edx
+add eax,ebx
+and eax,0x800000ff
+jns 0x0040191f
+dec eax
+or eax,0xffffff00
+inc eax
+mov bl,byte ptr [esp + eax*0x1 + 0x20]
+mov dl,byte ptr [esp + ecx*0x1 + 0x20]
+mov byte ptr [esp + ecx*0x1 + 0x20],bl
+inc ecx
+cmp ecx,0x100
+mov byte ptr [esp + eax*0x1 + 0x20],dl
+jl 0x004018fe
+mov ebp,dword ptr [esp + 0x340]
+or ecx,0xffffffff
+mov edi,ebp
+xor eax,eax
+scasb.repne es:edi
+not ecx
+dec ecx
+mov ebx,ecx
+xor ecx,ecx
+test ebx,ebx
+mov dword ptr [esp + 0x14],ebx
+jle 0x00401a0d
+mov esi,dword ptr [esp + 0x320]
+mov edi,dword ptr [esp + 0x324]
+mov bl,byte ptr [ecx + ebp*0x1]
+lea eax,[esi + 0x1]
+and eax,0x800000ff
+jns 0x0040197d
+dec eax
+or eax,0xffffff00
+inc eax
+mov dword ptr [esp + 0x320],eax
+lea eax,[esp + eax*0x1 + 0x20]
+xor edx,edx
+mov dl,byte ptr [eax]
+mov esi,edx
+add esi,edi
+and esi,0x800000ff
+jns 0x004019a0
+dec esi
+or esi,0xffffff00
+inc esi
+mov dword ptr [esp + 0x324],esi
+mov dl,byte ptr [eax]
+lea esi,[esp + esi*0x1 + 0x20]
+mov byte ptr [esp + 0x13],dl
+mov dl,byte ptr [esi]
+mov byte ptr [eax],dl
+mov al,byte ptr [esp + 0x13]
+mov byte ptr [esi],al
+mov esi,dword ptr [esp + 0x320]
+mov edi,dword ptr [esp + 0x324]
+xor edx,edx
+mov dl,byte ptr [esp + esi*0x1 + 0x20]
+xor eax,eax
+mov al,byte ptr [esp + edi*0x1 + 0x20]
+add edx,eax
+and edx,0x800000ff
+jns 0x004019e7
+dec edx
+or edx,0xffffff00
+inc edx
+xor eax,eax
+mov dword ptr [esp + 0x32c],edx
+mov al,byte ptr [esp + edx*0x1 + 0x20]
+mov dword ptr [esp + 0x328],eax
+xor al,bl
+mov ebx,dword ptr [esp + 0x14]
+mov byte ptr [ecx + ebp*0x1],al
+inc ecx
+cmp ecx,ebx
+jl 0x00401969
+mov eax,ebx
+xor edx,edx
+mov ecx,0x3
+div ecx
+mov eax,ebx
+test edx,edx
+jbe 0x00401a22
+sub eax,edx
+add eax,ecx
+lea edx,[eax*0x8 + 0x0]
+mov eax,0xaaaaaaab
+mul edx
+shr edx,0x2
+inc edx
+push edx
+call 0x004027df
+add esp,0x4
+mov edi,eax
+lea ecx,[esp + 0x18]
+push edi
+push ebx
+push ebp
+call 0x00401a90
+or ecx,0xffffffff
+xor eax,eax
+scasb.repne es:edi
+not ecx
+sub edi,ecx
+mov eax,ecx
+mov esi,edi
+mov edi,dword ptr [esp + 0x344]
+shr ecx,0x2
+movsd.rep es:edi,esi
+mov ecx,eax
+and ecx,0x3
+movsb.rep es:edi,esi
+mov ecx,dword ptr [esp + 0x330]
+pop edi
+pop esi
+pop ebp
+pop ebx
+mov dword ptr fs:[0x0],ecx
+add esp,0x32c
+ret
+mov edx,dword ptr [esp + 0x8]
+mov ecx,dword ptr [esp + 0xc]
+push ebx
+push ebp
+push esi
+mov esi,dword ptr [esp + 0x10]
+push edi
+lea ebp,[edx + -0x2]
+xor edi,edi
+mov eax,ecx
+test ebp,ebp
+jle 0x00401b1a
+mov dl,byte ptr [esi + edi*0x1]
+add edi,0x3
+sar edx,0x2
+and edx,0x3f
+inc ecx
+mov dl,byte ptr [edx + 0x409230]
+mov byte ptr [ecx + -0x1],dl
+mov dl,byte ptr [esi + edi*0x1 + -0x2]
+mov bl,byte ptr [esi + edi*0x1 + -0x3]
+sar edx,0x4
+and ebx,0x3
+and edx,0xf
+shl ebx,0x4
+or edx,ebx
+inc ecx
+mov dl,byte ptr [edx + 0x409230]
+mov byte ptr [ecx + -0x1],dl
+mov dl,byte ptr [esi + edi*0x1 + -0x2]
+mov bl,byte ptr [esi + edi*0x1 + -0x1]
+and edx,0xf
+sar ebx,0x6
+shl edx,0x2
+and ebx,0x3
+or edx,ebx
+inc ecx
+mov dl,byte ptr [edx + 0x409230]
+mov byte ptr [ecx + -0x1],dl
+mov dl,byte ptr [esi + edi*0x1 + -0x1]
+and edx,0x3f
+inc ecx
+cmp edi,ebp
+mov dl,byte ptr [edx + 0x409230]
+mov byte ptr [ecx + -0x1],dl
+jl 0x00401aab
+mov edx,dword ptr [esp + 0x18]
+sub edx,edi
+add esi,edi
+test dl,0x2
+jz 0x00401b71
+mov dl,byte ptr [esi]
+pop edi
+sar edx,0x2
+and edx,0x3f
+inc ecx
+mov dl,byte ptr [edx + 0x409230]
+mov byte ptr [ecx + -0x1],dl
+mov dl,byte ptr [esi]
+mov bl,byte ptr [esi + 0x1]
+and edx,0x3
+sar ebx,0x4
+shl edx,0x4
+and ebx,0xf
+or edx,ebx
+inc ecx
+mov dl,byte ptr [edx + 0x409230]
+mov byte ptr [ecx + -0x1],dl
+mov dl,byte ptr [esi + 0x1]
+and edx,0xf
+inc ecx
+pop esi
+pop ebp
+mov dl,byte ptr [edx*0x4 + 0x409230]
+pop ebx
+mov byte ptr [ecx + -0x1],dl
+mov byte ptr [ecx],0x3d
+mov byte ptr [ecx + 0x1],0x0
+ret 0xc
+test dl,0x1
+jz 0x00401bac
+mov dl,byte ptr [esi]
+pop edi
+sar edx,0x2
+and edx,0x3f
+inc ecx
+mov dl,byte ptr [edx + 0x409230]
+mov byte ptr [ecx + -0x1],dl
+mov dl,byte ptr [esi]
+and edx,0x3
+pop esi
+shl edx,0x4
+inc ecx
+pop ebp
+mov dl,byte ptr [edx + 0x409230]
+pop ebx
+mov byte ptr [ecx + -0x1],dl
+mov byte ptr [ecx],0x3d
+inc ecx
+mov byte ptr [ecx],0x3d
+mov byte ptr [ecx + 0x1],0x0
+ret 0xc
+pop edi
+pop esi
+pop ebp
+mov byte ptr [ecx],0x0
+pop ebx
+ret 0xc
+mov dword ptr [ecx],0x409274
+ret
+mov al,byte ptr [esp + 0x4]
+push esi
+mov esi,ecx
+test al,0x1
+mov dword ptr [esi],0x409274
+jz 0x00401bea
+push esi
+call 0x00402387
+add esp,0x4
+mov eax,esi
+pop esi
+ret 0x4
+sub esp,0x324
+push ebx
+push ebp
+push esi
+push edi
+mov ecx,0x40
+xor eax,eax
+lea edi,[esp + 0x24]
+mov dword ptr [esp + 0x20],0x409274
+stosd.rep es:edi
+mov ecx,0x40
+lea edi,[esp + 0x124]
+stosd.rep es:edi
+mov ecx,0x40
+lea edi,[esp + 0x224]
+stosd.rep es:edi
+mov edi,0x40a040
+or ecx,0xffffffff
+xor ebx,ebx
+lea edx,[esp + 0x224]
+scasb.repne es:edi
+not ecx
+sub edi,ecx
+mov dword ptr [esp + 0x330],ebx
+mov eax,ecx
+mov esi,edi
+mov edi,edx
+mov dword ptr [esp + 0x32c],ebx
+shr ecx,0x2
+mov dword ptr [esp + 0x328],ebx
+mov dword ptr [esp + 0x324],ebx
+movsd.rep es:edi,esi
+mov ecx,eax
+and ecx,0x3
+xor eax,eax
+movsb.rep es:edi,esi
+mov byte ptr [esp + eax*0x1 + 0x24],al
+inc eax
+cmp eax,0x100
+jl 0x00401c72
+xor esi,esi
+lea edi,[esp + 0x224]
+or ecx,0xffffffff
+xor eax,eax
+xor edx,edx
+scasb.repne es:edi
+not ecx
+dec ecx
+mov eax,esi
+div ecx
+inc esi
+cmp esi,0x100
+mov cl,byte ptr [esp + edx*0x1 + 0x224]
+mov byte ptr [esp + esi*0x1 + 0x123],cl
+jl 0x00401c80
+xor eax,eax
+xor ecx,ecx
+xor edx,edx
+xor ebx,ebx
+mov dl,byte ptr [esp + ecx*0x1 + 0x124]
+mov bl,byte ptr [esp + ecx*0x1 + 0x24]
+add eax,edx
+add eax,ebx
+and eax,0x800000ff
+jns 0x00401cd3
+dec eax
+or eax,0xffffff00
+inc eax
+mov bl,byte ptr [esp + eax*0x1 + 0x24]
+mov dl,byte ptr [esp + ecx*0x1 + 0x24]
+mov byte ptr [esp + ecx*0x1 + 0x24],bl
+inc ecx
+cmp ecx,0x100
+mov byte ptr [esp + eax*0x1 + 0x24],dl
+jl 0x00401cb2
+mov eax,dword ptr [esp + 0x338]
+push 0x40a1b8
+push eax
+call 0x00402dd8
+mov ecx,dword ptr [esp + 0x344]
+push 0x40a1b4
+push ecx
+mov esi,eax
+call 0x00402dd8
+push 0x2
+push 0x0
+push esi
+mov dword ptr [esp + 0x34],eax
+call 0x00402d2c
+push esi
+call 0x00402bd4
+push esi
+mov edi,eax
+call 0x00402b80
+add esp,0x24
+test edi,edi
+jle 0x00401e07
+mov ebp,dword ptr [esp + 0x328]
+mov dword ptr [esp + 0x14],edi
+mov edi,dword ptr [esp + 0x324]
+push esi
+call 0x00402b66
+lea ecx,[edi + 0x1]
+and ecx,0x800000ff
+jns 0x00401d64
+dec ecx
+or ecx,0xffffff00
+inc ecx
+mov dword ptr [esp + 0x328],ecx
+lea ecx,[esp + ecx*0x1 + 0x28]
+xor edx,edx
+mov dl,byte ptr [ecx]
+add edx,ebp
+and edx,0x800000ff
+jns 0x00401d85
+dec edx
+or edx,0xffffff00
+inc edx
+mov dword ptr [esp + 0x32c],edx
+mov bl,byte ptr [ecx]
+lea edx,[esp + edx*0x1 + 0x28]
+mov byte ptr [esp + 0x17],bl
+mov bl,byte ptr [edx]
+mov byte ptr [ecx],bl
+mov cl,byte ptr [esp + 0x17]
+mov byte ptr [edx],cl
+mov edi,dword ptr [esp + 0x328]
+mov ebp,dword ptr [esp + 0x32c]
+xor edx,edx
+mov dl,byte ptr [esp + edi*0x1 + 0x28]
+mov ecx,edx
+xor edx,edx
+mov dl,byte ptr [esp + ebp*0x1 + 0x28]
+add ecx,edx
+and ecx,0x800000ff
+jns 0x00401dce
+dec ecx
+or ecx,0xffffff00
+inc ecx
+xor edx,edx
+mov dword ptr [esp + 0x334],ecx
+mov dl,byte ptr [esp + ecx*0x1 + 0x28]
+mov ecx,dword ptr [esp + 0x1c]
+mov dword ptr [esp + 0x330],edx
+push ecx
+movsx edx,dl
+movsx eax,al
+xor edx,eax
+push edx
+call 0x00402b42
+mov eax,dword ptr [esp + 0x20]
+add esp,0xc
+dec eax
+mov dword ptr [esp + 0x14],eax
+jnz 0x00401d4b
+mov ecx,dword ptr [esp + 0x18]
+push ecx
+call 0x00402aec
+push esi
+call 0x00402aec
+mov edx,dword ptr [esp + 0x344]
+push 0x40a1b8
+push edx
+call 0x00402dd8
+mov edi,eax
+mov eax,dword ptr [esp + 0x350]
+push 0x40a1b0
+push eax
+call 0x00402dd8
+push 0x2
+push 0x0
+push edi
+mov dword ptr [esp + 0x3c],eax
+call 0x00402d2c
+push edi
+call 0x00402bd4
+mov esi,eax
+add esp,0x28
+cmp esi,-0x1
+jnz 0x00401e64
+push edi
+call 0x00402aec
+add esp,0x4
+push edi
+call 0x00402b80
+push esi
+call 0x004027df
+mov ebp,eax
+mov eax,esi
+xor edx,edx
+mov ecx,0x3
+div ecx
+add esp,0x8
+mov eax,esi
+mov ecx,edx
+test ecx,ecx
+jbe 0x00401e8d
+sub eax,ecx
+add eax,0x3
+lea edx,[eax*0x8 + 0x0]
+mov eax,0xaaaaaaab
+mul edx
+shr edx,0x2
+test ecx,ecx
+mov dword ptr [esp + 0x14],edx
+mov eax,esi
+jbe 0x00401ead
+sub eax,ecx
+add eax,0x3
+lea ecx,[eax*0x8 + 0x0]
+mov eax,0xaaaaaaab
+mul ecx
+shr edx,0x2
+inc edx
+push edx
+call 0x004027df
+push edi
+push esi
+push 0x1
+push ebp
+mov ebx,eax
+call 0x00402a04
+add esp,0x14
+lea ecx,[esp + 0x1c]
+push ebx
+push esi
+push ebp
+call 0x00401a90
+mov esi,dword ptr [esp + 0x18]
+mov edx,dword ptr [esp + 0x14]
+push esi
+push edx
+push 0x1
+push ebx
+call 0x004028fa
+push ebp
+call 0x00402891
+push ebx
+call 0x00402891
+push edi
+call 0x00402aec
+push esi
+call 0x00402aec
+add esp,0x20
+pop edi
+pop esi
+pop ebp
+pop ebx
+add esp,0x324
+ret
+sub esp,0x758
+push ebx
+push ebp
+push esi
+push edi
+mov ecx,0x41
+xor eax,eax
+lea edi,[esp + 0x14]
+mov ebx,dword ptr [esp + 0x76c]
+stosd.rep es:edi
+mov ecx,0x41
+lea edi,[esp + 0x424]
+stosd.rep es:edi
+mov ecx,0x41
+lea edi,[esp + 0x21c]
+mov ebp,dword ptr [0x00409048]
+push ebx
+stosd.rep es:edi
+mov ecx,0x41
+lea edi,[esp + 0x11c]
+stosd.rep es:edi
+lea eax,[esp + 0x220]
+push eax
+call ebp
+lea ecx,[esp + 0x424]
+push ebx
+push ecx
+call ebp
+mov esi,dword ptr [0x00409044]
+lea edx,[esp + 0x21c]
+push 0x40a1e0
+push edx
+call esi
+lea eax,[esp + 0x21c]
+push 0x40a1d8
+push eax
+call esi
+lea ecx,[esp + 0x424]
+push 0x40a1d4
+push ecx
+call esi
+lea edx,[esp + 0x424]
+push 0x40a1d8
+push edx
+call esi
+call 0x00401000
+mov ecx,0x41
+xor eax,eax
+lea edi,[esp + 0x14]
+push ebx
+stosd.rep es:edi
+lea eax,[esp + 0x18]
+push eax
+call esi
+lea ecx,[esp + 0x14]
+push 0x40a1cc
+push ecx
+call esi
+mov ecx,0x41
+xor eax,eax
+lea edi,[esp + 0x320]
+lea edx,[esp + 0x320]
+push ebx
+push edx
+stosd.rep es:edi
+call ebp
+lea eax,[esp + 0x320]
+push 0x40a1c4
+push eax
+call esi
+lea ecx,[esp + 0x320]
+push 0x0
+push ecx
+call dword ptr [0x00409040]
+lea edx,[esp + 0x628]
+lea eax,[esp + 0x14]
+push edx
+push eax
+call dword ptr [0x0040903c]
+cmp eax,-0x1
+mov dword ptr [esp + 0x10],eax
+jz 0x004021e4
+jmp 0x0040204f
+mov ebx,dword ptr [esp + 0x76c]
+mov ecx,0x41
+xor eax,eax
+lea edi,[esp + 0x14]
+lea edx,[esp + 0x118]
+stosd.rep es:edi
+mov ecx,0x41
+lea edi,[esp + 0x118]
+stosd.rep es:edi
+lea ecx,[esp + 0x320]
+push ecx
+push edx
+call ebp
+lea eax,[esp + 0x14]
+push ebx
+push eax
+call ebp
+lea ecx,[esp + 0x14]
+push 0x40a1c0
+push ecx
+call esi
+lea edx,[esp + 0x654]
+lea eax,[esp + 0x14]
+push edx
+push eax
+call esi
+mov ecx,0x41
+xor eax,eax
+lea edi,[esp + 0x118]
+lea edx,[esp + 0x118]
+stosd.rep es:edi
+lea ecx,[esp + 0x320]
+push ecx
+push edx
+call ebp
+lea eax,[esp + 0x118]
+push 0x40a1c0
+push eax
+call esi
+lea ecx,[esp + 0x654]
+lea edx,[esp + 0x118]
+push ecx
+push edx
+call esi
+mov ecx,0x40
+xor eax,eax
+lea edi,[esp + 0x528]
+stosd.rep es:edi
+lea eax,[esp + 0x528]
+lea ecx,[esp + 0x654]
+push eax
+push ecx
+call 0x00401820
+lea edx,[esp + 0x224]
+push 0x40a1b4
+push edx
+call 0x00402dd8
+mov ebx,eax
+lea edi,[esp + 0x538]
+or ecx,0xffffffff
+xor eax,eax
+scasb.repne es:edi
+not ecx
+dec ecx
+push ebx
+push ecx
+lea eax,[esp + 0x540]
+push 0x1
+push eax
+call 0x004028fa
+push ebx
+push 0x3
+push 0x1
+push 0x40a1bc
+call 0x004028fa
+push ebx
+call 0x00402aec
+lea ecx,[esp + 0x250]
+lea edx,[esp + 0x458]
+push ecx
+push edx
+lea eax,[esp + 0x50]
+push eax
+call 0x00401bf0
+mov edx,dword ptr [esp + 0x7b0]
+add esp,0x40
+lea ecx,[esp + 0x21c]
+push ecx
+push edx
+call 0x00401750
+add esp,0x8
+cmp eax,0x1
+jnz 0x004021a0
+push eax
+lea eax,[esp + 0x11c]
+lea ecx,[esp + 0x18]
+push eax
+push ecx
+call dword ptr [0x00409038]
+mov edi,dword ptr [0x00409034]
+lea edx,[esp + 0x424]
+push edx
+call edi
+lea eax,[esp + 0x21c]
+push eax
+call edi
+push 0x1d4c0
+call dword ptr [0x00409030]
+mov eax,dword ptr [esp + 0x10]
+test eax,eax
+jz 0x004021e4
+lea ecx,[esp + 0x628]
+push ecx
+push eax
+call dword ptr [0x0040902c]
+test eax,eax
+jnz 0x00402048
+pop edi
+pop esi
+pop ebp
+mov al,0x1
+pop ebx
+add esp,0x758
+ret
+cmp dword ptr [esp + 0x4],0x2
+jz 0x0040220a
+xor eax,eax
+ret
+push edi
+mov ecx,0x41
+xor eax,eax
+mov edi,0x40ce9c
+stosd.rep es:edi
+call 0x004011d0
+mov eax,dword ptr [esp + 0xc]
+mov ecx,dword ptr [eax + 0x4]
+push ecx
+push 0x40ce9c
+call 0x00401f20
+add esp,0x8
+xor eax,eax
+pop edi
+ret
+mov ecx,dword ptr [esp + 0x4]
+cmp word ptr [ecx],0x0
+lea eax,[ecx + 0x2]
+jz 0x00402257
+mov dx,word ptr [eax]
+inc eax
+inc eax
+test dx,dx
+jnz 0x0040224d
+sub eax,ecx
+sar eax,0x1
+dec eax
+ret
+mov ecx,dword ptr [esp + 0xc]
+push edi
+test ecx,ecx
+jz 0x004022e3
+push esi
+push ebx
+mov ebx,ecx
+mov esi,dword ptr [esp + 0x14]
+test esi,0x3
+mov edi,dword ptr [esp + 0x10]
+jnz 0x00402284
+shr ecx,0x2
+jnz 0x004022f1
+jmp 0x004022a5
+mov al,byte ptr [esi]
+inc esi
+mov byte ptr [edi],al
+inc edi
+dec ecx
+jz 0x004022b2
+test al,al
+jz 0x004022ba
+test esi,0x3
+jnz 0x00402284
+mov ebx,ecx
+shr ecx,0x2
+jnz 0x004022f1
+and ebx,0x3
+jz 0x004022b2
+mov al,byte ptr [esi]
+inc esi
+mov byte ptr [edi],al
+inc edi
+test al,al
+jz 0x004022de
+dec ebx
+jnz 0x004022a5
+mov eax,dword ptr [esp + 0x10]
+pop ebx
+pop esi
+pop edi
+ret
+test edi,0x3
+jz 0x004022d4
+mov byte ptr [edi],al
+inc edi
+dec ecx
+jz 0x00402356
+test edi,0x3
+jnz 0x004022c2
+mov ebx,ecx
+shr ecx,0x2
+jnz 0x00402347
+mov byte ptr [edi],al
+inc edi
+dec ebx
+jnz 0x004022db
+pop ebx
+pop esi
+mov eax,dword ptr [esp + 0x8]
+pop edi
+ret
+mov dword ptr [edi],edx
+add edi,0x4
+dec ecx
+jz 0x004022a0
+mov edx,0x7efefeff
+mov eax,dword ptr [esi]
+add edx,eax
+xor eax,0xffffffff
+xor eax,edx
+mov edx,dword ptr [esi]
+add esi,0x4
+test eax,0x81010100
+jz 0x004022e9
+test dl,dl
+jz 0x0040233b
+test dh,dh
+jz 0x00402331
+test edx,0xff0000
+jz 0x00402327
+test edx,0xff000000
+jnz 0x004022e9
+mov dword ptr [edi],edx
+jmp 0x0040233f
+and edx,0xffff
+mov dword ptr [edi],edx
+jmp 0x0040233f
+and edx,0xff
+mov dword ptr [edi],edx
+jmp 0x0040233f
+xor edx,edx
+mov dword ptr [edi],edx
+add edi,0x4
+xor eax,eax
+dec ecx
+jz 0x00402351
+xor eax,eax
+mov dword ptr [edi],eax
+add edi,0x4
+dec ecx
+jnz 0x00402349
+and ebx,0x3
+jnz 0x004022db
+mov eax,dword ptr [esp + 0x10]
+pop ebx
+pop esi
+pop edi
+ret
+push ebp
+mov ebp,esp
+push edi
+mov edi,dword ptr [ebp + 0x8]
+xor eax,eax
+or ecx,0xffffffff
+scasb.repne es:edi
+inc ecx
+neg ecx
+dec edi
+mov al,byte ptr [ebp + 0xc]
+std
+scasb.repne es:edi
+inc edi
+cmp byte ptr [edi],al
+jz 0x00402381
+xor eax,eax
+jmp 0x00402383
+mov eax,edi
+cld
+pop edi
+leave
+ret
+push dword ptr [esp + 0x4]
+call 0x00402891
+pop ecx
+ret
+push 0x1
+push dword ptr [esp + 0x8]
+call 0x004027f1
+pop ecx
+pop ecx
+ret
+push ebp
+mov ebp,esp
+push ecx
+push ebx
+push esi
+push edi
+mov eax,dword ptr [ebp + 0xc]
+add eax,0xc
+mov dword ptr [ebp + -0x4],eax
+mov ebx,dword ptr fs:[0x0]
+mov eax,dword ptr [ebx]
+mov fs:[0x0],eax
+mov eax,dword ptr [ebp + 0x8]
+mov ebx,dword ptr [ebp + 0xc]
+mov esp,dword ptr [ebx + -0x4]
+mov ebp,dword ptr [ebp + -0x4]
+jmp eax
+pop eax
+pop ecx
+xchg dword ptr [esp],eax
+jmp eax
+pop eax
+pop ecx
+xchg dword ptr [esp],eax
+jmp eax
+push ebp
+mov ebp,esp
+push ecx
+push ecx
+push ebx
+push esi
+push edi
+mov eax,fs:[0x0]
+mov dword ptr [ebp + -0x8],eax
+mov dword ptr [ebp + -0x4],0x40240a
+push 0x0
+push dword ptr [ebp + 0xc]
+push dword ptr [ebp + -0x4]
+push dword ptr [ebp + 0x8]
+call 0x00408bc6
+mov eax,dword ptr [ebp + 0xc]
+mov eax,dword ptr [eax + 0x4]
+and al,0xfd
+mov ecx,dword ptr [ebp + 0xc]
+mov dword ptr [ecx + 0x4],eax
+mov eax,fs:[0x0]
+mov ebx,dword ptr [ebp + -0x8]
+mov dword ptr [ebx],eax
+mov dword ptr fs:[0x0],ebx
+pop edi
+pop esi
+pop ebx
+leave
+ret 0x8
+push ebp
+mov ebp,esp
+sub esp,0x4
+push ebx
+push esi
+push edi
+cld
+mov dword ptr [ebp + -0x4],eax
+xor eax,eax
+push eax
+push eax
+push eax
+push dword ptr [ebp + -0x4]
+push dword ptr [ebp + 0x14]
+push dword ptr [ebp + 0x10]
+push dword ptr [ebp + 0xc]
+push dword ptr [ebp + 0x8]
+call 0x00402f13
+add esp,0x20
+mov dword ptr [ebp + 0x14],eax
+pop edi
+pop esi
+pop ebx
+mov eax,dword ptr [ebp + 0x14]
+mov esp,ebp
+pop ebp
+ret
+push ebp
+mov ebp,esp
+sub esp,0x14
+mov eax,dword ptr [ebp + 0xc]
+and dword ptr [ebp + -0x14],0x0
+mov ecx,dword ptr [ebp + 0x8]
+mov dword ptr [ebp + -0xc],eax
+mov eax,dword ptr [ebp + 0x14]
+mov dword ptr [ebp + -0x10],0x4024bb
+inc eax
+mov dword ptr [ebp + -0x8],ecx
+mov dword ptr [ebp + -0x4],eax
+mov eax,fs:[0x0]
+mov dword ptr [ebp + -0x14],eax
+lea eax,[ebp + 0xffffffec]
+mov fs:[0x0],eax
+push dword ptr [ebp + 0x18]
+push ecx
+push dword ptr [ebp + 0x10]
+call 0x00403710
+mov ecx,eax
+mov eax,dword ptr [ebp + -0x14]
+mov fs:[0x0],eax
+mov eax,ecx
+leave
+ret
+push ebp
+mov ebp,esp
+cld
+mov eax,dword ptr [ebp + 0xc]
+push 0x0
+push eax
+push dword ptr [eax + 0x10]
+push dword ptr [eax + 0x8]
+push 0x0
+push dword ptr [ebp + 0x10]
+push dword ptr [eax + 0xc]
+push dword ptr [ebp + 0x8]
+call 0x00402f13
+add esp,0x20
+pop ebp
+ret
+push ebp
+mov ebp,esp
+sub esp,0x34
+push ebx
+push esi
+push edi
+and dword ptr [ebp + -0x28],0x0
+mov dword ptr [ebp + -0x24],0x402594
+mov eax,dword ptr [ebp + 0x18]
+mov dword ptr [ebp + -0x20],eax
+mov eax,dword ptr [ebp + 0xc]
+mov dword ptr [ebp + -0x1c],eax
+mov eax,dword ptr [ebp + 0x1c]
+mov dword ptr [ebp + -0x18],eax
+mov eax,dword ptr [ebp + 0x20]
+mov dword ptr [ebp + -0x14],eax
+and dword ptr [ebp + -0x10],0x0
+and dword ptr [ebp + -0xc],0x0
+and dword ptr [ebp + -0x8],0x0
+and dword ptr [ebp + -0x4],0x0
+mov dword ptr [ebp + -0x10],0x402566
+mov dword ptr [ebp + -0xc],esp
+mov dword ptr [ebp + -0x8],ebp
+mov eax,fs:[0x0]
+mov dword ptr [ebp + -0x28],eax
+lea eax,[ebp + 0xffffffd8]
+mov fs:[0x0],eax
+mov dword ptr [ebp + -0x34],0x1
+mov eax,dword ptr [ebp + 0x8]
+mov dword ptr [ebp + -0x30],eax
+mov eax,dword ptr [ebp + 0x10]
+mov dword ptr [ebp + -0x2c],eax
+lea eax,[ebp + -0x30]
+push eax
+mov eax,dword ptr [ebp + 0x8]
+push dword ptr [eax]
+call dword ptr [0x0040d5b4]
+pop ecx
+pop ecx
+and dword ptr [ebp + -0x34],0x0
+cmp dword ptr [ebp + -0x4],0x0
+jz 0x00402583
+mov ebx,dword ptr fs:[0x0]
+mov eax,dword ptr [ebx]
+mov ebx,dword ptr [ebp + -0x28]
+mov dword ptr [ebx],eax
+mov dword ptr fs:[0x0],ebx
+jmp 0x0040258c
+mov eax,dword ptr [ebp + -0x28]
+mov fs:[0x0],eax
+mov eax,dword ptr [ebp + -0x34]
+pop edi
+pop esi
+pop ebx
+leave
+ret
+push ebp
+mov ebp,esp
+push ebx
+push esi
+push edi
+cld
+mov eax,dword ptr [ebp + 0x8]
+mov eax,dword ptr [eax + 0x4]
+and eax,0x66
+test eax,eax
+jz 0x004025b7
+mov eax,dword ptr [ebp + 0xc]
+mov dword ptr [eax + 0x24],0x1
+push 0x1
+pop eax
+jmp 0x00402604
+push 0x1
+mov eax,dword ptr [ebp + 0xc]
+push dword ptr [eax + 0x14]
+mov eax,dword ptr [ebp + 0xc]
+push dword ptr [eax + 0x10]
+mov eax,dword ptr [ebp + 0xc]
+push dword ptr [eax + 0x8]
+push 0x0
+push dword ptr [ebp + 0x10]
+mov eax,dword ptr [ebp + 0xc]
+push dword ptr [eax + 0xc]
+push dword ptr [ebp + 0x8]
+call 0x00402f13
+add esp,0x20
+mov eax,dword ptr [ebp + 0xc]
+cmp dword ptr [eax + 0x24],0x0
+jnz 0x004025f5
+push dword ptr [ebp + 0x8]
+push dword ptr [ebp + 0xc]
+call 0x004023e2
+mov ebx,dword ptr [ebp + 0xc]
+mov esp,dword ptr [ebx + 0x1c]
+mov ebp,dword ptr [ebx + 0x20]
+jmp dword ptr [ebx + 0x18]
+pop edi
+pop esi
+pop ebx
+pop ebp
+ret
+push ebp
+mov ebp,esp
+push ecx
+push ebx
+push esi
+cmp dword ptr [ebp + 0xc],0x0
+push edi
+mov edi,dword ptr [ebp + 0x8]
+mov esi,dword ptr [edi + 0xc]
+mov ebx,dword ptr [edi + 0x10]
+mov eax,esi
+mov dword ptr [ebp + 0x8],esi
+mov dword ptr [ebp + -0x4],eax
+jl 0x00402660
+cmp esi,-0x1
+jnz 0x00402631
+call 0x004037b2
+mov ecx,dword ptr [ebp + 0x10]
+dec esi
+lea eax,[esi + esi*0x4]
+cmp dword ptr [ebx + eax*0x4 + 0x4],ecx
+lea eax,[ebx + eax*0x4]
+jge 0x00402646
+cmp ecx,dword ptr [eax + 0x8]
+jle 0x0040264b
+cmp esi,-0x1
+jnz 0x00402657
+mov eax,dword ptr [ebp + 0x8]
+dec dword ptr [ebp + 0xc]
+mov dword ptr [ebp + -0x4],eax
+mov dword ptr [ebp + 0x8],esi
+cmp dword ptr [ebp + 0xc],0x0
+jge 0x00402627
+mov eax,dword ptr [ebp + -0x4]
+mov ecx,dword ptr [ebp + 0x14]
+inc esi
+mov dword ptr [ecx],esi
+mov ecx,dword ptr [ebp + 0x18]
+mov dword ptr [ecx],eax
+cmp eax,dword ptr [edi + 0xc]
+ja 0x00402674
+cmp esi,eax
+jbe 0x00402679
+call 0x004037b2
+lea eax,[esi + esi*0x4]
+pop edi
+pop esi
+lea eax,[ebx + eax*0x4]
+pop ebx
+leave
+ret
+push ecx
+cmp eax,0x1000
+lea ecx,[esp + 0x8]
+jc 0x004026b0
+sub ecx,0x1000
+sub eax,0x1000
+test dword ptr [ecx],eax
+cmp eax,0x1000
+jnc 0x0040269c
+sub ecx,eax
+mov eax,esp
+test dword ptr [ecx],eax
+mov esp,ecx
+mov ecx,dword ptr [eax]
+mov eax,dword ptr [eax + 0x4]
+push eax
+ret
+push ebp
+mov ebp,esp
+push ebx
+push esi
+push edi
+push ebp
+push 0x0
+push 0x0
+push 0x4026d8
+push dword ptr [ebp + 0x8]
+call 0x00408bc6
+pop ebp
+pop edi
+pop esi
+pop ebx
+mov esp,ebp
+pop ebp
+ret
+mov ecx,dword ptr [esp + 0x4]
+test dword ptr [ecx + 0x4],0x6
+mov eax,0x1
+jz 0x00402701
+mov eax,dword ptr [esp + 0x8]
+mov edx,dword ptr [esp + 0x10]
+mov dword ptr [edx],eax
+mov eax,0x3
+ret
+push ebx
+push esi
+push edi
+mov eax,dword ptr [esp + 0x10]
+push eax
+push -0x2
+push 0x4026e0
+push dword ptr fs:[0x0]
+mov dword ptr fs:[0x0],esp
+mov eax,dword ptr [esp + 0x20]
+mov ebx,dword ptr [eax + 0x8]
+mov esi,dword ptr [eax + 0xc]
+cmp esi,-0x1
+jz 0x0040275c
+cmp esi,dword ptr [esp + 0x24]
+jz 0x0040275c
+lea esi,[esi + esi*0x2]
+mov ecx,dword ptr [ebx + esi*0x4]
+mov dword ptr [esp + 0x8],ecx
+mov dword ptr [eax + 0xc],ecx
+cmp dword ptr [ebx + esi*0x4 + 0x4],0x0
+jnz 0x0040275a
+push 0x101
+mov eax,dword ptr [ebx + esi*0x4 + 0x8]
+call 0x00402796
+call dword ptr [ebx + esi*0x4 + 0x8]
+jmp 0x0040271f
+pop dword ptr fs:[0x0]
+add esp,0xc
+pop edi
+pop esi
+pop ebx
+ret
+xor eax,eax
+mov ecx,dword ptr fs:[0x0]
+cmp dword ptr [ecx + 0x4],0x4026e0
+jnz 0x0040278c
+mov edx,dword ptr [ecx + 0xc]
+mov edx,dword ptr [edx + 0xc]
+cmp dword ptr [ecx + 0x8],edx
+jnz 0x0040278c
+mov eax,0x1
+ret
+push ebx
+push ecx
+mov ebx,0x40a1f0
+jmp 0x004027a0
+push ebx
+push ecx
+mov ebx,0x40a1f0
+mov ecx,dword ptr [ebp + 0x8]
+mov dword ptr [ebx + 0x8],ecx
+mov dword ptr [ebx + 0x4],eax
+mov dword ptr [ebx + 0xc],ebp
+pop ecx
+pop ebx
+ret 0x4
+push ebx
+push esi
+mov esi,0x40a238
+push edi
+push esi
+call 0x00403808
+mov edi,eax
+lea eax,[esp + 0x18]
+push eax
+push dword ptr [esp + 0x18]
+push esi
+call 0x004038d2
+push esi
+push edi
+mov ebx,eax
+call 0x00403895
+add esp,0x18
+mov eax,ebx
+pop edi
+pop esi
+pop ebx
+ret
+push dword ptr [0x0040d5c8]
+push dword ptr [esp + 0x8]
+call 0x004027f1
+pop ecx
+pop ecx
+ret
+cmp dword ptr [esp + 0x4],-0x20
+ja 0x0040281a
+push dword ptr [esp + 0x4]
+call 0x0040281d
+test eax,eax
+pop ecx
+jnz 0x0040281c
+cmp dword ptr [esp + 0x8],eax
+jz 0x0040281c
+push dword ptr [esp + 0x4]
+call 0x004041c7
+test eax,eax
+pop ecx
+jnz 0x004027f8
+xor eax,eax
+ret
+mov eax,[0x0040dae4]
+push esi
+mov esi,dword ptr [esp + 0x8]
+cmp eax,0x3
+jnz 0x00402841
+cmp esi,dword ptr [0x0040dadc]
+ja 0x00402873
+push esi
+call 0x00404750
+test eax,eax
+pop ecx
+jz 0x00402873
+pop esi
+ret
+cmp eax,0x2
+jnz 0x00402873
+mov eax,dword ptr [esp + 0x8]
+test eax,eax
+jz 0x00402856
+lea esi,[eax + 0xf]
+and esi,0xfffffff0
+jmp 0x00402859
+push 0x10
+pop esi
+cmp esi,dword ptr [0x0040c4c4]
+ja 0x00402880
+mov eax,esi
+shr eax,0x4
+push eax
+call 0x00404efd
+test eax,eax
+pop ecx
+jnz 0x0040288f
+jmp 0x00402880
+test esi,esi
+jnz 0x0040287a
+push 0x1
+pop esi
+add esi,0xf
+and esi,0xfffffff0
+push esi
+push 0x0
+push dword ptr [0x0040dae0]
+call dword ptr [0x00409084]
+pop esi
+ret
+push ebp
+mov ebp,esp
+push ecx
+push esi
+mov esi,dword ptr [ebp + 0x8]
+test esi,esi
+jz 0x004028f7
+mov eax,[0x0040dae4]
+cmp eax,0x3
+jnz 0x004028bd
+push esi
+call 0x004043fc
+pop ecx
+test eax,eax
+push esi
+jz 0x004028e9
+push eax
+call 0x00404427
+pop ecx
+pop ecx
+jmp 0x004028f7
+cmp eax,0x2
+jnz 0x004028e8
+lea eax,[ebp + 0x8]
+push eax
+lea eax,[ebp + -0x4]
+push eax
+push esi
+call 0x00404e61
+add esp,0xc
+test eax,eax
+jz 0x004028e8
+push eax
+push dword ptr [ebp + 0x8]
+push dword ptr [ebp + -0x4]
+call 0x00404eb8
+add esp,0xc
+jmp 0x004028f7
+push esi
+push 0x0
+push dword ptr [0x0040dae0]
+call dword ptr [0x00409088]
+pop esi
+leave
+ret
+push ebp
+mov ebp,esp
+push ecx
+push ebx
+push esi
+push edi
+mov edi,dword ptr [ebp + 0xc]
+imul edi,dword ptr [ebp + 0x10]
+mov eax,dword ptr [ebp + 0x8]
+mov dword ptr [ebp + -0x4],edi
+test edi,edi
+mov dword ptr [ebp + 0x8],eax
+mov ebx,edi
+jnz 0x0040291e
+xor eax,eax
+jmp 0x004029eb
+mov esi,dword ptr [ebp + 0x14]
+test word ptr [esi + 0xc],0x10c
+jz 0x00402931
+mov eax,dword ptr [esi + 0x18]
+mov dword ptr [ebp + 0x14],eax
+jmp 0x00402938
+mov dword ptr [ebp + 0x14],0x1000
+mov ecx,dword ptr [esi + 0xc]
+and ecx,0x108
+jz 0x0040296c
+mov eax,dword ptr [esi + 0x4]
+test eax,eax
+jz 0x0040296c
+cmp ebx,eax
+mov edi,ebx
+jc 0x00402952
+mov edi,eax
+push edi
+push dword ptr [ebp + 0x8]
+push dword ptr [esi]
+call 0x00405600
+sub dword ptr [esi + 0x4],edi
+add dword ptr [esi],edi
+add esp,0xc
+sub ebx,edi
+add dword ptr [ebp + 0x8],edi
+jmp 0x004029b2
+cmp ebx,dword ptr [ebp + 0x14]
+jc 0x004029b7
+test ecx,ecx
+jz 0x00402980
+push esi
+call 0x00405526
+test eax,eax
+pop ecx
+jnz 0x004029f9
+cmp dword ptr [ebp + 0x14],0x0
+jz 0x00402993
+mov eax,ebx
+xor edx,edx
+div dword ptr [ebp + 0x14]
+mov edi,ebx
+sub edi,edx
+jmp 0x00402995
+mov edi,ebx
+push edi
+push dword ptr [ebp + 0x8]
+push dword ptr [esi + 0x10]
+call 0x0040533e
+add esp,0xc
+cmp eax,-0x1
+jz 0x004029f0
+add dword ptr [ebp + 0x8],eax
+sub ebx,eax
+cmp eax,edi
+jc 0x004029f0
+mov edi,dword ptr [ebp + -0x4]
+jmp 0x004029e0
+mov eax,dword ptr [ebp + 0x8]
+push esi
+movsx eax,byte ptr [eax]
+push eax
+call 0x00405229
+pop ecx
+cmp eax,-0x1
+pop ecx
+jz 0x004029f9
+inc dword ptr [ebp + 0x8]
+mov eax,dword ptr [esi + 0x18]
+dec ebx
+mov dword ptr [ebp + 0x14],eax
+test eax,eax
+jg 0x004029e0
+mov dword ptr [ebp + 0x14],0x1
+test ebx,ebx
+jnz 0x00402938
+mov eax,dword ptr [ebp + 0x10]
+pop edi
+pop esi
+pop ebx
+leave
+ret
+or dword ptr [esi + 0xc],0x20
+mov eax,dword ptr [ebp + -0x4]
+jmp 0x004029fb
+mov eax,edi
+sub eax,ebx
+xor edx,edx
+div dword ptr [ebp + 0xc]
+jmp 0x004029eb
+push ebp
+mov ebp,esp
+push ecx
+push ebx
+push esi
+push edi
+mov edi,dword ptr [ebp + 0xc]
+imul edi,dword ptr [ebp + 0x10]
+mov ebx,dword ptr [ebp + 0x8]
+mov ecx,edi
+test edi,edi
+mov dword ptr [ebp + -0x4],edi
+mov dword ptr [ebp + 0x8],ecx
+jnz 0x00402a28
+xor eax,eax
+jmp 0x00402ad1
+mov esi,dword ptr [ebp + 0x14]
+test word ptr [esi + 0xc],0x10c
+jz 0x00402a3b
+mov eax,dword ptr [esi + 0x18]
+mov dword ptr [ebp + 0x14],eax
+jmp 0x00402a47
+mov dword ptr [ebp + 0x14],0x1000
+jmp 0x00402a47
+mov ecx,dword ptr [ebp + 0x8]
+test word ptr [esi + 0xc],0x10c
+jz 0x00402a79
+mov eax,dword ptr [esi + 0x4]
+test eax,eax
+jz 0x00402a79
+cmp ecx,eax
+mov edi,ecx
+jc 0x00402a5e
+mov edi,eax
+push edi
+push dword ptr [esi]
+push ebx
+call 0x00405600
+sub dword ptr [ebp + 0x8],edi
+sub dword ptr [esi + 0x4],edi
+add dword ptr [esi],edi
+add esp,0xc
+add ebx,edi
+mov edi,dword ptr [ebp + -0x4]
+jmp 0x00402ac4
+cmp ecx,dword ptr [ebp + 0x14]
+jc 0x00402aac
+cmp dword ptr [ebp + 0x14],0x0
+mov eax,ecx
+jz 0x00402a8f
+xor edx,edx
+div dword ptr [ebp + 0x14]
+mov eax,ecx
+sub eax,edx
+push eax
+push ebx
+push dword ptr [esi + 0x10]
+call 0x00405a0e
+add esp,0xc
+test eax,eax
+jz 0x00402ad6
+cmp eax,-0x1
+jz 0x00402adc
+sub dword ptr [ebp + 0x8],eax
+add ebx,eax
+jmp 0x00402ac4
+push esi
+call 0x00405935
+cmp eax,-0x1
+pop ecx
+jz 0x00402ae0
+mov byte ptr [ebx],al
+mov eax,dword ptr [esi + 0x18]
+inc ebx
+dec dword ptr [ebp + 0x8]
+mov dword ptr [ebp + 0x14],eax
+cmp dword ptr [ebp + 0x8],0x0
+jnz 0x00402a44
+mov eax,dword ptr [ebp + 0x10]
+pop edi
+pop esi
+pop ebx
+leave
+ret
+or dword ptr [esi + 0xc],0x10
+jmp 0x00402ae0
+or dword ptr [esi + 0xc],0x20
+mov eax,edi
+xor edx,edx
+sub eax,dword ptr [ebp + 0x8]
+div dword ptr [ebp + 0xc]
+jmp 0x00402ad1
+push esi
+mov esi,dword ptr [esp + 0x8]
+push edi
+or edi,0xffffffff
+mov eax,dword ptr [esi + 0xc]
+test al,0x40
+jz 0x00402b01
+or eax,0xffffffff
+jmp 0x00402b3b
+test al,0x83
+jz 0x00402b39
+push esi
+call 0x00405526
+push esi
+mov edi,eax
+call 0x00405cb7
+push dword ptr [esi + 0x10]
+call 0x00405c04
+add esp,0xc
+test eax,eax
+jge 0x00402b27
+or edi,0xffffffff
+jmp 0x00402b39
+mov eax,dword ptr [esi + 0x1c]
+test eax,eax
+jz 0x00402b39
+push eax
+call 0x00402891
+and dword ptr [esi + 0x1c],0x0
+pop ecx
+mov eax,edi
+and dword ptr [esi + 0xc],0x0
+pop edi
+pop esi
+ret
+mov ecx,dword ptr [esp + 0x8]
+dec dword ptr [ecx + 0x4]
+js 0x00402b59
+mov edx,dword ptr [ecx]
+mov al,byte ptr [esp + 0x4]
+mov byte ptr [edx],al
+inc dword ptr [ecx]
+movzx eax,al
+ret
+push ecx
+push dword ptr [esp + 0x8]
+call 0x00405229
+pop ecx
+pop ecx
+ret
+mov edx,dword ptr [esp + 0x4]
+dec dword ptr [edx + 0x4]
+js 0x00402b78
+mov ecx,dword ptr [edx]
+movzx eax,byte ptr [ecx]
+inc ecx
+mov dword ptr [edx],ecx
+ret
+push edx
+call 0x00405935
+pop ecx
+ret
+push esi
+mov esi,dword ptr [esp + 0x8]
+push edi
+push esi
+mov edi,dword ptr [esi + 0x10]
+call 0x00405526
+and dword ptr [esi + 0xc],0xffffffcf
+cmp edi,-0x1
+pop ecx
+jz 0x00402baf
+mov eax,edi
+mov ecx,edi
+sar eax,0x5
+and ecx,0x1f
+mov eax,dword ptr [eax*0x4 + 0x40d9c0]
+lea eax,[eax + ecx*0x8]
+jmp 0x00402bb4
+mov eax,0x40c4d0
+and byte ptr [eax + 0x4],0xfd
+mov eax,dword ptr [esi + 0xc]
+test al,0x80
+jz 0x00402bc4
+and al,0xfc
+mov dword ptr [esi + 0xc],eax
+push 0x0
+push 0x0
+push edi
+call 0x00405ce2
+add esp,0xc
+pop edi
+pop esi
+ret
+push ebp
+mov ebp,esp
+sub esp,0xc
+push ebx
+push esi
+push edi
+mov edi,dword ptr [ebp + 0x8]
+xor ebx,ebx
+mov esi,dword ptr [edi + 0x10]
+cmp dword ptr [edi + 0x4],ebx
+mov dword ptr [ebp + -0xc],esi
+jge 0x00402bf0
+mov dword ptr [edi + 0x4],ebx
+push 0x1
+push ebx
+push esi
+call 0x00405ce2
+add esp,0xc
+cmp eax,ebx
+mov dword ptr [ebp + -0x4],eax
+jl 0x00402c5e
+mov edx,dword ptr [edi + 0xc]
+test dx,0x108
+jnz 0x00402c15
+sub eax,dword ptr [edi + 0x4]
+jmp 0x00402d27
+mov eax,dword ptr [edi]
+mov ecx,dword ptr [edi + 0x8]
+mov ebx,eax
+sub ebx,ecx
+test dl,0x3
+mov dword ptr [ebp + -0x8],ebx
+jz 0x00402c4f
+mov edx,esi
+mov ebx,esi
+sar edx,0x5
+and ebx,0x1f
+mov edx,dword ptr [edx*0x4 + 0x40d9c0]
+test byte ptr [edx + ebx*0x8 + 0x4],0x80
+jz 0x00402c66
+mov edx,ecx
+cmp edx,eax
+jnc 0x00402c66
+cmp byte ptr [edx],0xa
+jnz 0x00402c4c
+inc dword ptr [ebp + -0x8]
+inc edx
+jmp 0x00402c40
+test dl,0x80
+jnz 0x00402c66
+mov dword ptr [0x0040d5d4],0x16
+or eax,0xffffffff
+jmp 0x00402d27
+cmp dword ptr [ebp + -0x4],0x0
+jnz 0x00402c74
+mov eax,dword ptr [ebp + -0x8]
+jmp 0x00402d27
+test byte ptr [edi + 0xc],0x1
+jz 0x00402d1f
+mov edx,dword ptr [edi + 0x4]
+test edx,edx
+jnz 0x00402c8d
+and dword ptr [ebp + -0x8],edx
+jmp 0x00402d1f
+sub eax,ecx
+add eax,edx
+mov dword ptr [ebp + 0x8],eax
+mov eax,esi
+sar eax,0x5
+and esi,0x1f
+lea ebx,[eax*0x4 + 0x40d9c0]
+shl esi,0x3
+mov eax,dword ptr [ebx]
+test byte ptr [esi + eax*0x1 + 0x4],0x80
+jz 0x00402d19
+push 0x2
+push 0x0
+push dword ptr [ebp + -0xc]
+call 0x00405ce2
+add esp,0xc
+cmp eax,dword ptr [ebp + -0x4]
+jnz 0x00402ce0
+mov eax,dword ptr [edi + 0x8]
+mov ecx,dword ptr [ebp + 0x8]
+add ecx,eax
+cmp eax,ecx
+jnc 0x00402cda
+cmp byte ptr [eax],0xa
+jnz 0x00402cd7
+inc dword ptr [ebp + 0x8]
+inc eax
+jmp 0x00402ccb
+test byte ptr [edi + 0xd],0x20
+jmp 0x00402d14
+push 0x0
+push dword ptr [ebp + -0x4]
+push dword ptr [ebp + -0xc]
+call 0x00405ce2
+mov eax,0x200
+add esp,0xc
+cmp dword ptr [ebp + 0x8],eax
+ja 0x00402d07
+mov ecx,dword ptr [edi + 0xc]
+test cl,0x8
+jz 0x00402d07
+test ch,0x4
+jz 0x00402d0a
+mov eax,dword ptr [edi + 0x18]
+mov dword ptr [ebp + 0x8],eax
+mov eax,dword ptr [ebx]
+test byte ptr [esi + eax*0x1 + 0x4],0x4
+jz 0x00402d19
+inc dword ptr [ebp + 0x8]
+mov eax,dword ptr [ebp + 0x8]
+sub dword ptr [ebp + -0x4],eax
+mov eax,dword ptr [ebp + -0x8]
+mov ecx,dword ptr [ebp + -0x4]
+add eax,ecx
+pop edi
+pop esi
+pop ebx
+leave
+ret
+push esi
+mov esi,dword ptr [esp + 0x8]
+push edi
+mov eax,dword ptr [esi + 0xc]
+test al,0x83
+jz 0x00402da8
+mov edi,dword ptr [esp + 0x14]
+test edi,edi
+jz 0x00402d4b
+cmp edi,0x1
+jz 0x00402d4b
+cmp edi,0x2
+jnz 0x00402da8
+and al,0xef
+cmp edi,0x1
+mov dword ptr [esi + 0xc],eax
+jnz 0x00402d62
+push esi
+call 0x00402bd4
+add dword ptr [esp + 0x14],eax
+pop ecx
+xor edi,edi
+push esi
+call 0x00405526
+mov eax,dword ptr [esi + 0xc]
+pop ecx
+test al,0x80
+jz 0x00402d77
+and al,0xfc
+mov dword ptr [esi + 0xc],eax
+jmp 0x00402d8b
+test al,0x1
+jz 0x00402d8b
+test al,0x8
+jz 0x00402d8b
+test ah,0x4
+jnz 0x00402d8b
+mov dword ptr [esi + 0x18],0x200
+push edi
+push dword ptr [esp + 0x14]
+push dword ptr [esi + 0x10]
+call 0x00405ce2
+add esp,0xc
+xor ecx,ecx
+cmp eax,-0x1
+setnz cl
+dec ecx
+mov eax,ecx
+jmp 0x00402db5
+mov dword ptr [0x0040d5d4],0x16
+or eax,0xffffffff
+pop edi
+pop esi
+ret
+call 0x00406199
+test eax,eax
+jnz 0x00402dc2
+ret
+push eax
+push dword ptr [esp + 0x10]
+push dword ptr [esp + 0x10]
+push dword ptr [esp + 0x10]
+call 0x00406029
+add esp,0x10
+ret
+push 0x40
+push dword ptr [esp + 0xc]
+push dword ptr [esp + 0xc]
+call 0x00402db8
+add esp,0xc
+ret
+push ebp
+mov ebp,esp
+push -0x1
+push 0x409278
+push 0x4067d8
+mov eax,fs:[0x0]
+push eax
+mov dword ptr fs:[0x0],esp
+sub esp,0x10
+push ebx
+push esi
+push edi
+mov dword ptr [ebp + -0x18],esp
+call dword ptr [0x00409090]
+xor edx,edx
+mov dl,ah
+mov dword ptr [0x0040d5ec],edx
+mov ecx,eax
+and ecx,0xff
+mov dword ptr [0x0040d5e8],ecx
+shl ecx,0x8
+add ecx,edx
+mov dword ptr [0x0040d5e4],ecx
+shr eax,0x10
+mov [0x0040d5e0],eax
+push 0x0
+call 0x00404357
+pop ecx
+test eax,eax
+jnz 0x00402e56
+push 0x1c
+call 0x00402eef
+pop ecx
+and dword ptr [ebp + -0x4],0x0
+call 0x00405d7c
+call dword ptr [0x0040908c]
+mov [0x0040eb04],eax
+call 0x0040669b
+mov [0x0040d5a0],eax
+call 0x0040644e
+call 0x00406395
+call 0x00405f27
+mov eax,[0x0040d5fc]
+mov [0x0040d600],eax
+push eax
+push dword ptr [0x0040d5f4]
+push dword ptr [0x0040d5f0]
+call 0x00402200
+add esp,0xc
+mov dword ptr [ebp + -0x1c],eax
+push eax
+call 0x00405f54
+mov eax,dword ptr [ebp + -0x14]
+mov ecx,dword ptr [eax]
+mov ecx,dword ptr [ecx]
+mov dword ptr [ebp + -0x20],ecx
+push eax
+push ecx
+call 0x00406211
+pop ecx
+pop ecx
+ret
+cmp dword ptr [0x0040d5a8],0x2
+jz 0x00402ed8
+call 0x004068b0
+push dword ptr [esp + 0x4]
+call 0x004068e9
+push 0xff
+call dword ptr [0x0040a200]
+cmp dword ptr [0x0040d5a8],0x2
+jz 0x00402efd
+call 0x004068b0
+push dword ptr [esp + 0x4]
+call 0x004068e9
+pop ecx
+push 0xff
+call dword ptr [0x00409094]
+push ebp
+mov ebp,esp
+push esi
+mov esi,dword ptr [ebp + 0x18]
+push edi
+mov edi,0x19930520
+cmp dword ptr [esi],edi
+jz 0x00402f29
+call 0x004037b2
+mov eax,dword ptr [ebp + 0x8]
+test byte ptr [eax + 0x4],0x66
+jz 0x00402f51
+cmp dword ptr [esi + 0x4],0x0
+jz 0x00402fa7
+cmp dword ptr [ebp + 0x1c],0x0
+jnz 0x00402fa7
+push -0x1
+push esi
+push dword ptr [ebp + 0x14]
+push dword ptr [ebp + 0xc]
+call 0x0040325a
+add esp,0x10
+jmp 0x00402fa7
+cmp dword ptr [esi + 0xc],0x0
+jz 0x00402fa7
+cmp dword ptr [eax],0xe06d7363
+jnz 0x00402f8b
+cmp dword ptr [eax + 0x14],edi
+jbe 0x00402f8b
+mov ecx,dword ptr [eax + 0x1c]
+mov ecx,dword ptr [ecx + 0x8]
+test ecx,ecx
+jz 0x00402f8b
+movzx edx,byte ptr [ebp + 0x24]
+push edx
+push dword ptr [ebp + 0x20]
+push dword ptr [ebp + 0x1c]
+push esi
+push dword ptr [ebp + 0x14]
+push dword ptr [ebp + 0x10]
+push dword ptr [ebp + 0xc]
+push eax
+call ecx
+add esp,0x20
+jmp 0x00402faa
+push dword ptr [ebp + 0x20]
+push dword ptr [ebp + 0x1c]
+push dword ptr [ebp + 0x24]
+push esi
+push dword ptr [ebp + 0x14]
+push dword ptr [ebp + 0x10]
+push dword ptr [ebp + 0xc]
+push eax
+call 0x00402fae
+add esp,0x20
+push 0x1
+pop eax
+pop edi
+pop esi
+pop ebp
+ret
+push ebp
+mov ebp,esp
+sub esp,0x18
+mov eax,dword ptr [ebp + 0xc]
+and byte ptr [ebp + -0x14],0x0
+mov eax,dword ptr [eax + 0x8]
+cmp eax,-0x1
+mov dword ptr [ebp + -0x10],eax
+jl 0x00402fce
+mov ecx,dword ptr [ebp + 0x18]
+cmp eax,dword ptr [ecx + 0x4]
+jl 0x00402fd3
+call 0x004037b2
+push ebx
+push esi
+mov esi,dword ptr [ebp + 0x8]
+mov ebx,0xe06d7363
+push edi
+mov edi,0x19930520
+cmp dword ptr [esi],ebx
+jnz 0x0040312a
+cmp dword ptr [esi + 0x10],0x3
+jnz 0x00403047
+cmp dword ptr [esi + 0x14],edi
+jnz 0x00403047
+cmp dword ptr [esi + 0x1c],0x0
+jnz 0x00403047
+mov esi,dword ptr [0x0040d5ac]
+test esi,esi
+jz 0x00403125
+mov eax,[0x0040d5b0]
+push 0x1
+push esi
+mov dword ptr [ebp + 0x10],eax
+mov byte ptr [ebp + -0x14],0x1
+call 0x00406aa0
+pop ecx
+test eax,eax
+pop ecx
+jnz 0x00403029
+call 0x004037b2
+cmp dword ptr [esi],ebx
+jnz 0x0040312a
+cmp dword ptr [esi + 0x10],0x3
+jnz 0x00403047
+cmp dword ptr [esi + 0x14],edi
+jnz 0x00403047
+cmp dword ptr [esi + 0x1c],0x0
+jnz 0x00403047
+call 0x004037b2
+cmp dword ptr [esi],ebx
+jnz 0x0040312a
+cmp dword ptr [esi + 0x10],0x3
+jnz 0x0040312a
+cmp dword ptr [esi + 0x14],edi
+jnz 0x0040312a
+mov edi,dword ptr [ebp + -0x10]
+lea eax,[ebp + -0x18]
+push eax
+lea eax,[ebp + -0x4]
+push eax
+push edi
+push dword ptr [ebp + 0x20]
+push dword ptr [ebp + 0x18]
+call 0x00402609
+add esp,0x14
+mov ebx,eax
+mov eax,dword ptr [ebp + -0x4]
+cmp eax,dword ptr [ebp + -0x18]
+jnc 0x00403115
+cmp dword ptr [ebx],edi
+jg 0x0040310a
+cmp edi,dword ptr [ebx + 0x4]
+jg 0x0040310a
+mov eax,dword ptr [ebx + 0x10]
+mov dword ptr [ebp + 0x8],eax
+mov eax,dword ptr [ebx + 0xc]
+test eax,eax
+mov dword ptr [ebp + -0xc],eax
+jle 0x00403107
+mov eax,dword ptr [esi + 0x1c]
+mov eax,dword ptr [eax + 0xc]
+lea edi,[eax + 0x4]
+mov eax,dword ptr [eax]
+test eax,eax
+mov dword ptr [ebp + -0x8],eax
+jle 0x004030d4
+push dword ptr [esi + 0x1c]
+push dword ptr [edi]
+push dword ptr [ebp + 0x8]
+call 0x004031fd
+add esp,0xc
+test eax,eax
+jnz 0x004030e3
+dec dword ptr [ebp + -0x8]
+add edi,0x4
+cmp dword ptr [ebp + -0x8],eax
+jg 0x004030b5
+dec dword ptr [ebp + -0xc]
+add dword ptr [ebp + 0x8],0x10
+cmp dword ptr [ebp + -0xc],0x0
+jg 0x004030a3
+jmp 0x00403107
+push dword ptr [ebp + -0x14]
+push dword ptr [ebp + 0x24]
+push dword ptr [ebp + 0x20]
+push ebx
+push dword ptr [edi]
+push dword ptr [ebp + 0x8]
+push dword ptr [ebp + 0x18]
+push dword ptr [ebp + 0x14]
+push dword ptr [ebp + 0x10]
+push dword ptr [ebp + 0xc]
+push esi
+call 0x0040330e
+add esp,0x2c
+mov edi,dword ptr [ebp + -0x10]
+inc dword ptr [ebp + -0x4]
+add ebx,0x14
+jmp 0x0040307e
+cmp byte ptr [ebp + 0x1c],0x0
+jz 0x00403125
+push 0x1
+push esi
+call 0x00403683
+pop ecx
+pop ecx
+pop edi
+pop esi
+pop ebx
+leave
+ret
+cmp byte ptr [ebp + 0x1c],0x0
+jnz 0x00403150
+push dword ptr [ebp + 0x24]
+push dword ptr [ebp + 0x20]
+push dword ptr [ebp + -0x10]
+push dword ptr [ebp + 0x18]
+push dword ptr [ebp + 0x14]
+push dword ptr [ebp + 0x10]
+push dword ptr [ebp + 0xc]
+push esi
+call 0x00403155
+add esp,0x20
+jmp 0x00403125
+jmp 0x0040375c
+push ebp
+mov ebp,esp
+push ecx
+push ecx
+cmp dword ptr [0x0040d5b4],0x0
+push esi
+push edi
+jz 0x00403186
+push dword ptr [ebp + 0x24]
+push dword ptr [ebp + 0x20]
+push dword ptr [ebp + 0x18]
+push dword ptr [ebp + 0x14]
+push dword ptr [ebp + 0x10]
+push dword ptr [ebp + 0xc]
+push dword ptr [ebp + 0x8]
+call 0x004024e0
+add esp,0x1c
+test eax,eax
+jnz 0x004031f9
+mov edi,dword ptr [ebp + 0x1c]
+lea eax,[ebp + -0x8]
+push eax
+lea eax,[ebp + -0x4]
+push eax
+push edi
+push dword ptr [ebp + 0x20]
+push dword ptr [ebp + 0x18]
+call 0x00402609
+add esp,0x14
+mov esi,eax
+mov eax,dword ptr [ebp + -0x4]
+cmp eax,dword ptr [ebp + -0x8]
+jnc 0x004031f9
+cmp edi,dword ptr [esi]
+jl 0x004031f1
+cmp edi,dword ptr [esi + 0x4]
+jg 0x004031f1
+mov eax,dword ptr [esi + 0xc]
+mov ecx,dword ptr [esi + 0x10]
+shl eax,0x4
+add eax,ecx
+mov ecx,dword ptr [eax + -0xc]
+test ecx,ecx
+jz 0x004031cb
+cmp byte ptr [ecx + 0x8],0x0
+jnz 0x004031f1
+push 0x1
+add eax,-0x10
+push dword ptr [ebp + 0x24]
+push dword ptr [ebp + 0x20]
+push esi
+push 0x0
+push eax
+push dword ptr [ebp + 0x18]
+push dword ptr [ebp + 0x14]
+push dword ptr [ebp + 0x10]
+push dword ptr [ebp + 0xc]
+push dword ptr [ebp + 0x8]
+call 0x0040330e
+add esp,0x2c
+inc dword ptr [ebp + -0x4]
+add esi,0x14
+jmp 0x004031a2
+pop edi
+pop esi
+leave
+ret
+push esi
+push edi
+mov edi,dword ptr [esp + 0xc]
+mov eax,dword ptr [edi + 0x4]
+test eax,eax
+jz 0x00403254
+cmp byte ptr [eax + 0x8],0x0
+lea edx,[eax + 0x8]
+jz 0x00403254
+mov esi,dword ptr [esp + 0x10]
+mov ecx,dword ptr [esi + 0x4]
+cmp eax,ecx
+jz 0x0040322e
+add ecx,0x8
+push ecx
+push edx
+call 0x00406af0
+pop ecx
+test eax,eax
+pop ecx
+jnz 0x00403250
+test byte ptr [esi],0x2
+jz 0x00403238
+test byte ptr [edi],0x8
+jz 0x00403250
+mov eax,dword ptr [esp + 0x14]
+mov eax,dword ptr [eax]
+test al,0x1
+jz 0x00403247
+test byte ptr [edi],0x1
+jz 0x00403250
+test al,0x2
+jz 0x00403254
+test byte ptr [edi],0x2
+jnz 0x00403254
+xor eax,eax
+jmp 0x00403257
+push 0x1
+pop eax
+pop edi
+pop esi
+ret
+push ebp
+mov ebp,esp
+push -0x1
+push 0x409288
+push 0x4067d8
+mov eax,fs:[0x0]
+push eax
+mov dword ptr fs:[0x0],esp
+sub esp,0xc
+push ebx
+push esi
+push edi
+mov dword ptr [ebp + -0x18],esp
+mov ebx,dword ptr [ebp + 0x8]
+mov esi,dword ptr [ebx + 0x8]
+mov dword ptr [ebp + -0x1c],esi
+mov edi,dword ptr [ebp + 0x10]
+cmp esi,dword ptr [ebp + 0x14]
+jz 0x004032e6
+cmp esi,-0x1
+jle 0x0040329b
+cmp esi,dword ptr [edi + 0x4]
+jl 0x004032a0
+call 0x004037b2
+and dword ptr [ebp + -0x4],0x0
+mov eax,dword ptr [edi + 0x8]
+mov eax,dword ptr [eax + esi*0x8 + 0x4]
+test eax,eax
+jz 0x004032bb
+push 0x103
+push ebx
+push eax
+call 0x00403710
+or dword ptr [ebp + -0x4],0xffffffff
+jmp 0x004032db
+push dword ptr [ebp + -0x14]
+call 0x004032f8
+pop ecx
+ret
+mov esp,dword ptr [ebp + -0x18]
+or dword ptr [ebp + -0x4],0xffffffff
+mov edi,dword ptr [ebp + 0x10]
+mov ebx,dword ptr [ebp + 0x8]
+mov esi,dword ptr [ebp + -0x1c]
+mov eax,dword ptr [edi + 0x8]
+mov esi,dword ptr [eax + esi*0x8]
+mov dword ptr [ebp + -0x1c],esi
+jmp 0x0040328c
+mov dword ptr [ebx + 0x8],esi
+mov ecx,dword ptr [ebp + -0x10]
+mov dword ptr fs:[0x0],ecx
+pop edi
+pop esi
+pop ebx
+leave
+ret
+mov eax,dword ptr [esp + 0x4]
+mov eax,dword ptr [eax]
+cmp dword ptr [eax],0xe06d7363
+jz 0x00403309
+xor eax,eax
+ret
+jmp 0x0040375c
+push ebp
+mov ebp,esp
+cmp dword ptr [ebp + 0x20],0x0
+push ebx
+mov ebx,dword ptr [ebp + 0x1c]
+push esi
+push edi
+mov edi,dword ptr [ebp + 0xc]
+jz 0x00403330
+push dword ptr [ebp + 0x20]
+push ebx
+push edi
+push dword ptr [ebp + 0x8]
+call 0x004034bf
+add esp,0x10
+cmp dword ptr [ebp + 0x2c],0x0
+push dword ptr [ebp + 0x8]
+jnz 0x0040333c
+push edi
+jmp 0x0040333f
+push dword ptr [ebp + 0x2c]
+call 0x004023e2
+mov esi,dword ptr [ebp + 0x24]
+push dword ptr [esi]
+push dword ptr [ebp + 0x18]
+push dword ptr [ebp + 0x14]
+push edi
+call 0x0040325a
+mov eax,dword ptr [esi + 0x4]
+push 0x100
+push dword ptr [ebp + 0x28]
+inc eax
+mov dword ptr [edi + 0x8],eax
+push dword ptr [ebx + 0xc]
+push dword ptr [ebp + 0x18]
+push dword ptr [ebp + 0x10]
+push edi
+push dword ptr [ebp + 0x8]
+call 0x00403389
+add esp,0x2c
+test eax,eax
+jz 0x00403384
+push edi
+push eax
+call 0x004023a0
+pop edi
+pop esi
+pop ebx
+pop ebp
+ret
+push ebp
+mov ebp,esp
+push -0x1
+push 0x409298
+push 0x4067d8
+mov eax,fs:[0x0]
+push eax
+mov dword ptr fs:[0x0],esp
+sub esp,0x1c
+push ebx
+push esi
+push edi
+mov dword ptr [ebp + -0x18],esp
+mov eax,dword ptr [ebp + 0x18]
+mov dword ptr [ebp + -0x2c],eax
+xor ebx,ebx
+mov dword ptr [ebp + -0x24],ebx
+mov esi,dword ptr [ebp + 0xc]
+mov ecx,dword ptr [esi + -0x4]
+mov dword ptr [ebp + -0x28],ecx
+mov ecx,dword ptr [0x0040d5ac]
+mov dword ptr [ebp + -0x1c],ecx
+mov ecx,dword ptr [0x0040d5b0]
+mov dword ptr [ebp + -0x20],ecx
+mov edi,dword ptr [ebp + 0x8]
+mov dword ptr [0x0040d5ac],edi
+mov ecx,dword ptr [ebp + 0x10]
+mov dword ptr [0x0040d5b0],ecx
+mov dword ptr [ebp + -0x4],ebx
+mov dword ptr [ebp + -0x4],0x1
+push dword ptr [ebp + 0x20]
+push dword ptr [ebp + 0x1c]
+push eax
+push dword ptr [ebp + 0x14]
+push esi
+call 0x00402467
+add esp,0x14
+mov dword ptr [ebp + -0x2c],eax
+mov dword ptr [ebp + -0x4],ebx
+or dword ptr [ebp + -0x4],0xffffffff
+call 0x0040344f
+mov eax,dword ptr [ebp + -0x2c]
+mov ecx,dword ptr [ebp + -0x10]
+mov dword ptr fs:[0x0],ecx
+pop edi
+pop esi
+pop ebx
+leave
+ret
+push dword ptr [ebp + -0x14]
+call 0x00403495
+pop ecx
+ret
+mov esp,dword ptr [ebp + -0x18]
+and dword ptr [ebp + -0x2c],0x0
+push -0x1
+lea eax,[ebp + -0x10]
+push eax
+call 0x00402702
+pop ecx
+pop ecx
+xor eax,eax
+jmp 0x00403416
+mov eax,dword ptr [ebp + -0x28]
+mov dword ptr [esi + -0x4],eax
+mov eax,dword ptr [ebp + -0x1c]
+mov [0x0040d5ac],eax
+mov eax,dword ptr [ebp + -0x20]
+mov [0x0040d5b0],eax
+cmp dword ptr [edi],0xe06d7363
+jnz 0x00403494
+cmp dword ptr [edi + 0x10],0x3
+jnz 0x00403494
+cmp dword ptr [edi + 0x14],0x19930520
+jnz 0x00403494
+cmp dword ptr [ebp + -0x24],ebx
+jnz 0x00403494
+cmp dword ptr [ebp + -0x2c],ebx
+jz 0x00403494
+call 0x0040276a
+push eax
+push edi
+call 0x00403683
+pop ecx
+pop ecx
+ret
+mov eax,dword ptr [esp + 0x4]
+mov eax,dword ptr [eax]
+cmp dword ptr [eax],0xe06d7363
+jnz 0x004034bc
+cmp dword ptr [eax + 0x10],0x3
+jnz 0x004034bc
+cmp dword ptr [eax + 0x14],0x19930520
+jnz 0x004034bc
+cmp dword ptr [eax + 0x1c],0x0
+jnz 0x004034bc
+push 0x1
+pop eax
+ret
+xor eax,eax
+ret
+push ebp
+mov ebp,esp
+push -0x1
+push 0x4092b0
+push 0x4067d8
+mov eax,fs:[0x0]
+push eax
+mov dword ptr fs:[0x0],esp
+sub esp,0xc
+push ebx
+push esi
+push edi
+mov dword ptr [ebp + -0x18],esp
+mov ecx,dword ptr [ebp + 0x10]
+mov eax,dword ptr [ecx + 0x4]
+test eax,eax
+jz 0x00403668
+cmp byte ptr [eax + 0x8],0x0
+jz 0x00403668
+mov eax,dword ptr [ecx + 0x8]
+test eax,eax
+jz 0x00403668
+mov edx,dword ptr [ebp + 0xc]
+lea edi,[eax + edx*0x1 + 0xc]
+and dword ptr [ebp + -0x4],0x0
+test byte ptr [ecx],0x8
+jz 0x0040355c
+mov esi,dword ptr [ebp + 0x8]
+push 0x1
+push dword ptr [esi + 0x18]
+call 0x00406aa0
+pop ecx
+pop ecx
+test eax,eax
+jz 0x0040365f
+push 0x1
+push edi
+call 0x00406abc
+pop ecx
+pop ecx
+test eax,eax
+jz 0x0040365f
+mov eax,dword ptr [esi + 0x18]
+mov dword ptr [edi],eax
+mov ecx,dword ptr [ebp + 0x14]
+add ecx,0x8
+push ecx
+push eax
+call 0x004036ea
+pop ecx
+pop ecx
+mov dword ptr [edi],eax
+jmp 0x00403664
+mov esi,dword ptr [ebp + 0x14]
+test byte ptr [esi],0x1
+jz 0x004035b6
+mov ebx,dword ptr [ebp + 0x8]
+push 0x1
+push dword ptr [ebx + 0x18]
+call 0x00406aa0
+pop ecx
+pop ecx
+test eax,eax
+jz 0x0040365f
+push 0x1
+push edi
+call 0x00406abc
+pop ecx
+pop ecx
+test eax,eax
+jz 0x0040365f
+push dword ptr [esi + 0x14]
+push dword ptr [ebx + 0x18]
+push edi
+call 0x00406b80
+add esp,0xc
+cmp dword ptr [esi + 0x14],0x4
+jnz 0x00403664
+mov eax,dword ptr [edi]
+test eax,eax
+jz 0x00403664
+add esi,0x8
+push esi
+jmp 0x0040354d
+cmp dword ptr [esi + 0x18],0x0
+mov ebx,dword ptr [ebp + 0x8]
+push 0x1
+push dword ptr [ebx + 0x18]
+jnz 0x004035fe
+call 0x00406aa0
+pop ecx
+pop ecx
+test eax,eax
+jz 0x0040365f
+push 0x1
+push edi
+call 0x00406abc
+pop ecx
+pop ecx
+test eax,eax
+jz 0x0040365f
+push dword ptr [esi + 0x14]
+add esi,0x8
+push esi
+push dword ptr [ebx + 0x18]
+call 0x004036ea
+pop ecx
+pop ecx
+push eax
+push edi
+call 0x00406b80
+add esp,0xc
+jmp 0x00403664
+call 0x00406aa0
+pop ecx
+pop ecx
+test eax,eax
+jz 0x0040365f
+push 0x1
+push edi
+call 0x00406abc
+pop ecx
+pop ecx
+test eax,eax
+jz 0x0040365f
+push dword ptr [esi + 0x18]
+call 0x00406ad8
+pop ecx
+test eax,eax
+jz 0x0040365f
+test byte ptr [esi],0x4
+jz 0x00403645
+push 0x1
+lea eax,[esi + 0x8]
+push eax
+push dword ptr [ebx + 0x18]
+call 0x004036ea
+pop ecx
+pop ecx
+push eax
+push dword ptr [esi + 0x18]
+push edi
+call 0x004023db
+jmp 0x00403664
+lea eax,[esi + 0x8]
+push eax
+push dword ptr [ebx + 0x18]
+call 0x004036ea
+pop ecx
+pop ecx
+push eax
+push dword ptr [esi + 0x18]
+push edi
+call 0x004023d4
+jmp 0x00403664
+call 0x004037b2
+or dword ptr [ebp + -0x4],0xffffffff
+mov ecx,dword ptr [ebp + -0x10]
+mov dword ptr fs:[0x0],ecx
+pop edi
+pop esi
+pop ebx
+leave
+ret
+push 0x1
+pop eax
+ret
+mov esp,dword ptr [ebp + -0x18]
+jmp 0x0040375c
+push ebp
+mov ebp,esp
+push -0x1
+push 0x4092c0
+push 0x4067d8
+mov eax,fs:[0x0]
+push eax
+mov dword ptr fs:[0x0],esp
+push ecx
+push ecx
+push ebx
+push esi
+push edi
+mov dword ptr [ebp + -0x18],esp
+mov eax,dword ptr [ebp + 0x8]
+test eax,eax
+jz 0x004036ca
+mov ecx,dword ptr [eax + 0x1c]
+mov ecx,dword ptr [ecx + 0x4]
+test ecx,ecx
+jz 0x004036ca
+and dword ptr [ebp + -0x4],0x0
+push ecx
+push dword ptr [eax + 0x18]
+call 0x004023d4
+or dword ptr [ebp + -0x4],0xffffffff
+mov ecx,dword ptr [ebp + -0x10]
+mov dword ptr fs:[0x0],ecx
+pop edi
+pop esi
+pop ebx
+leave
+ret
+xor eax,eax
+cmp byte ptr [ebp + 0xc],al
+setnz al
+ret
+mov esp,dword ptr [ebp + -0x18]
+jmp 0x0040375c
+mov ecx,dword ptr [esp + 0x8]
+push esi
+mov esi,dword ptr [esp + 0x8]
+mov eax,dword ptr [ecx]
+mov edx,dword ptr [ecx + 0x4]
+add eax,esi
+test edx,edx
+jl 0x0040370b
+mov esi,dword ptr [edx + esi*0x1]
+mov ecx,dword ptr [ecx + 0x8]
+mov ecx,dword ptr [esi + ecx*0x1]
+add ecx,edx
+add eax,ecx
+pop esi
+ret
+push ebp
+mov ebp,esp
+sub esp,0x4
+push ebx
+push ecx
+mov eax,dword ptr [ebp + 0xc]
+add eax,0xc
+mov dword ptr [ebp + -0x4],eax
+mov eax,dword ptr [ebp + 0x8]
+push ebp
+push dword ptr [ebp + 0x10]
+mov ecx,dword ptr [ebp + 0x10]
+mov ebp,dword ptr [ebp + -0x4]
+call 0x0040278d
+push esi
+push edi
+call eax
+pop edi
+pop esi
+mov ebx,ebp
+pop ebp
+mov ecx,dword ptr [ebp + 0x10]
+push ebp
+mov ebp,ebx
+cmp ecx,0x100
+jnz 0x0040374f
+mov ecx,0x2
+push ecx
+call 0x0040278d
+pop ebp
+pop ecx
+pop ebx
+leave
+ret 0xc
+push ebp
+mov ebp,esp
+push -0x1
+push 0x4092d0
+push 0x4067d8
+mov eax,fs:[0x0]
+push eax
+mov dword ptr fs:[0x0],esp
+push ecx
+push ecx
+push ebx
+push esi
+push edi
+mov dword ptr [ebp + -0x18],esp
+and dword ptr [ebp + -0x4],0x0
+mov eax,[0x0040d5b8]
+test eax,eax
+jz 0x004037a4
+mov dword ptr [ebp + -0x4],0x1
+call eax
+jmp 0x004037a0
+push 0x1
+pop eax
+ret
+mov esp,dword ptr [ebp + -0x18]
+and dword ptr [ebp + -0x4],0x0
+or dword ptr [ebp + -0x4],0xffffffff
+call 0x004037ad
+jmp 0x00406eb5
+push ebp
+mov ebp,esp
+push -0x1
+push 0x4092e8
+push 0x4067d8
+mov eax,fs:[0x0]
+push eax
+mov dword ptr fs:[0x0],esp
+push ecx
+push ecx
+push ebx
+push esi
+push edi
+mov dword ptr [ebp + -0x18],esp
+and dword ptr [ebp + -0x4],0x0
+mov eax,[0x0040a214]
+test eax,eax
+jz 0x004037fa
+mov dword ptr [ebp + -0x4],0x1
+call eax
+jmp 0x004037f6
+push 0x1
+pop eax
+ret
+mov esp,dword ptr [ebp + -0x18]
+and dword ptr [ebp + -0x4],0x0
+or dword ptr [ebp + -0x4],0xffffffff
+call 0x00403803
+jmp 0x0040375c
+push esi
+mov esi,dword ptr [esp + 0x8]
+push dword ptr [esi + 0x10]
+call 0x00406ecc
+test eax,eax
+pop ecx
+jz 0x00403891
+cmp esi,0x40a238
+jnz 0x00403826
+xor eax,eax
+jmp 0x00403831
+cmp esi,0x40a258
+jnz 0x00403891
+push 0x1
+pop eax
+inc dword ptr [0x0040d5c4]
+test word ptr [esi + 0xc],0x10c
+jnz 0x00403891
+cmp dword ptr [eax*0x4 + 0x40d5bc],0x0
+push ebx
+push edi
+lea edi,[eax*0x4 + 0x40d5bc]
+mov ebx,0x1000
+jnz 0x00403877
+push ebx
+call 0x004027df
+test eax,eax
+pop ecx
+mov dword ptr [edi],eax
+jnz 0x00403877
+lea eax,[esi + 0x14]
+push 0x2
+mov dword ptr [esi + 0x8],eax
+mov dword ptr [esi],eax
+pop eax
+mov dword ptr [esi + 0x18],eax
+mov dword ptr [esi + 0x4],eax
+jmp 0x00403884
+mov edi,dword ptr [edi]
+mov dword ptr [esi + 0x18],ebx
+mov dword ptr [esi + 0x8],edi
+mov dword ptr [esi],edi
+mov dword ptr [esi + 0x4],ebx
+or word ptr [esi + 0xc],0x1102
+push 0x1
+pop eax
+pop edi
+pop ebx
+pop esi
+ret
+xor eax,eax
+pop esi
+ret
+cmp dword ptr [esp + 0x4],0x0
+push esi
+jz 0x004038bf
+mov esi,dword ptr [esp + 0xc]
+test byte ptr [esi + 0xd],0x10
+jz 0x004038d0
+push esi
+call 0x00405526
+and byte ptr [esi + 0xd],0xee
+and dword ptr [esi + 0x18],0x0
+and dword ptr [esi],0x0
+and dword ptr [esi + 0x8],0x0
+pop ecx
+pop esi
+ret
+mov eax,dword ptr [esp + 0xc]
+test byte ptr [eax + 0xd],0x10
+jz 0x004038d0
+push eax
+call 0x00405526
+pop ecx
+pop esi
+ret
+push ebp
+mov ebp,esp
+sub esp,0x454
+mov eax,dword ptr [ebp + 0xc]
+add dword ptr [ebp + 0xc],0x2
+push ebx
+xor ecx,ecx
+mov bx,word ptr [eax]
+push esi
+cmp bx,cx
+push edi
+mov dword ptr [ebp + -0x10],ecx
+mov dword ptr [ebp + -0x14],ecx
+mov dword ptr [ebp + -0x34],ecx
+jz 0x0040403f
+push 0x8
+pop esi
+push 0x2
+pop edi
+jmp 0x0040390a
+mov ecx,dword ptr [ebp + -0x44]
+push 0x8
+pop esi
+cmp dword ptr [ebp + -0x14],0x0
+jl 0x0040403f
+push 0x20
+pop edx
+cmp bx,dx
+jc 0x00403930
+cmp bx,0x78
+ja 0x00403930
+movzx eax,bx
+mov al,byte ptr [eax + 0x409600]
+and eax,0xf
+jmp 0x00403932
+xor eax,eax
+movsx eax,byte ptr [ecx + eax*0x8 + 0x409620]
+push 0x7
+sar eax,0x4
+pop ecx
+mov dword ptr [ebp + -0x44],eax
+cmp eax,ecx
+ja 0x0040402a
+jmp dword ptr [eax*0x4 + 0x404047]
+xor eax,eax
+or dword ptr [ebp + -0x8],0xffffffff
+mov dword ptr [ebp + -0x40],eax
+mov dword ptr [ebp + -0x3c],eax
+mov dword ptr [ebp + -0x2c],eax
+mov dword ptr [ebp + -0x20],eax
+mov dword ptr [ebp + -0x4],eax
+mov dword ptr [ebp + -0x24],eax
+jmp 0x0040402a
+movzx eax,bx
+sub eax,edx
+jz 0x004039af
+sub eax,0x3
+jz 0x004039a6
+sub eax,esi
+jz 0x0040399d
+sub eax,edi
+jz 0x00403994
+sub eax,0x3
+jnz 0x0040402a
+or dword ptr [ebp + -0x4],esi
+jmp 0x0040402a
+or dword ptr [ebp + -0x4],0x4
+jmp 0x0040402a
+or dword ptr [ebp + -0x4],0x1
+jmp 0x0040402a
+or byte ptr [ebp + -0x4],0x80
+jmp 0x0040402a
+or dword ptr [ebp + -0x4],edi
+jmp 0x0040402a
+cmp bx,0x2a
+jnz 0x004039e0
+lea eax,[ebp + 0x10]
+push eax
+call 0x004040f1
+test eax,eax
+pop ecx
+mov dword ptr [ebp + -0x2c],eax
+jge 0x0040402a
+or dword ptr [ebp + -0x4],0x4
+neg eax
+mov dword ptr [ebp + -0x2c],eax
+jmp 0x0040402a
+mov eax,dword ptr [ebp + -0x2c]
+movzx ecx,bx
+lea eax,[eax + eax*0x4]
+lea eax,[ecx + eax*0x2 + -0x30]
+jmp 0x004039d8
+and dword ptr [ebp + -0x8],0x0
+jmp 0x0040402a
+cmp bx,0x2a
+jnz 0x00403a1c
+lea eax,[ebp + 0x10]
+push eax
+call 0x004040f1
+test eax,eax
+pop ecx
+mov dword ptr [ebp + -0x8],eax
+jge 0x0040402a
+or dword ptr [ebp + -0x8],0xffffffff
+jmp 0x0040402a
+mov eax,dword ptr [ebp + -0x8]
+movzx ecx,bx
+lea eax,[eax + eax*0x4]
+lea eax,[ecx + eax*0x2 + -0x30]
+mov dword ptr [ebp + -0x8],eax
+jmp 0x0040402a
+movzx eax,bx
+cmp eax,0x49
+jz 0x00403a58
+cmp eax,0x68
+jz 0x00403a50
+cmp eax,0x77
+jnz 0x0040402a
+or byte ptr [ebp + -0x3],0x8
+jmp 0x0040402a
+or dword ptr [ebp + -0x4],edx
+jmp 0x0040402a
+mov eax,dword ptr [ebp + 0xc]
+cmp word ptr [eax],0x36
+jnz 0x00403a75
+cmp word ptr [eax + 0x2],0x34
+jnz 0x00403a75
+add dword ptr [ebp + 0xc],0x4
+or byte ptr [ebp + -0x3],0x80
+jmp 0x0040402a
+and dword ptr [ebp + -0x44],0x0
+lea eax,[ebp + -0x14]
+mov dword ptr [ebp + -0x24],0x1
+push eax
+push dword ptr [ebp + 0x8]
+push ebx
+call 0x00404067
+add esp,0xc
+jmp 0x0040402a
+movzx eax,bx
+cmp eax,0x67
+jg 0x00403cfc
+cmp eax,0x65
+jge 0x00403b54
+cmp eax,0x58
+jg 0x00403bc4
+jz 0x00403d6a
+sub eax,0x43
+jz 0x00403b77
+sub eax,edi
+jz 0x00403b4b
+sub eax,edi
+jz 0x00403b4b
+sub eax,0xc
+jnz 0x00403f0d
+test word ptr [ebp + -0x4],0x830
+jnz 0x00403ae2
+or dword ptr [ebp + -0x4],edx
+cmp dword ptr [ebp + -0x8],-0x1
+mov edi,0x7fffffff
+jz 0x00403af0
+mov edi,dword ptr [ebp + -0x8]
+lea eax,[ebp + 0x10]
+push eax
+call 0x004040f1
+test byte ptr [ebp + -0x4],0x20
+pop ecx
+mov ecx,eax
+mov dword ptr [ebp + -0xc],ecx
+jz 0x00403d37
+test ecx,ecx
+jnz 0x00403b16
+mov ecx,dword ptr [0x0040c5f0]
+mov dword ptr [ebp + -0xc],ecx
+and dword ptr [ebp + -0x10],0x0
+test edi,edi
+jle 0x00403f0d
+mov al,byte ptr [ecx]
+test al,al
+jz 0x00403f0d
+mov edx,dword ptr [0x0040c624]
+movzx eax,al
+test byte ptr [edx + eax*0x2 + 0x1],0x80
+jz 0x00403b3d
+inc ecx
+inc ecx
+inc dword ptr [ebp + -0x10]
+cmp dword ptr [ebp + -0x10],edi
+jl 0x00403b22
+jmp 0x00403f0d
+mov dword ptr [ebp + -0x40],0x1
+add ebx,edx
+or dword ptr [ebp + -0x4],0x40
+cmp dword ptr [ebp + -0x8],0x0
+lea edi,[ebp + 0xfffffbac]
+mov dword ptr [ebp + -0xc],edi
+jge 0x00403c41
+mov dword ptr [ebp + -0x8],0x6
+jmp 0x00403c8c
+test word ptr [ebp + -0x4],0x830
+jnz 0x00403b82
+or dword ptr [ebp + -0x4],edx
+push 0x1
+lea eax,[ebp + 0x10]
+pop esi
+push eax
+mov dword ptr [ebp + -0x24],esi
+call 0x004040f1
+test byte ptr [ebp + -0x4],0x20
+pop ecx
+mov dword ptr [ebp + -0x48],eax
+jz 0x00403bda
+push dword ptr [0x0040c618]
+and byte ptr [ebp + -0x2d],0x0
+mov byte ptr [ebp + -0x2e],al
+lea eax,[ebp + -0x2e]
+push eax
+lea eax,[ebp + 0xfffffbac]
+push eax
+call 0x00406f7b
+add esp,0xc
+test eax,eax
+jge 0x00403be1
+mov dword ptr [ebp + -0x3c],esi
+jmp 0x00403be1
+sub eax,0x5a
+jz 0x00403bf2
+sub eax,0x9
+jz 0x00403b82
+dec eax
+jz 0x00403dc8
+jmp 0x00403f0d
+mov word ptr [ebp + 0xfffffbac],ax
+lea eax,[ebp + 0xfffffbac]
+mov dword ptr [ebp + -0x10],esi
+mov dword ptr [ebp + -0xc],eax
+jmp 0x00403f0d
+lea eax,[ebp + 0x10]
+push eax
+call 0x004040f1
+test eax,eax
+pop ecx
+jz 0x00403c33
+mov ecx,dword ptr [eax + 0x4]
+test ecx,ecx
+jz 0x00403c33
+test byte ptr [ebp + -0x3],0x8
+jz 0x00403c24
+movsx eax,word ptr [eax]
+shr eax,0x1
+mov dword ptr [ebp + -0xc],ecx
+mov dword ptr [ebp + -0x10],eax
+mov dword ptr [ebp + -0x24],0x1
+jmp 0x00403f0d
+and dword ptr [ebp + -0x24],0x0
+mov dword ptr [ebp + -0xc],ecx
+movsx eax,word ptr [eax]
+jmp 0x00403f0a
+mov eax,[0x0040c5f0]
+mov dword ptr [ebp + -0xc],eax
+push eax
+jmp 0x00403cf1
+jnz 0x00403c52
+cmp bx,0x67
+jnz 0x00403c8c
+mov dword ptr [ebp + -0x8],0x1
+jmp 0x00403c8c
+mov eax,0x200
+cmp dword ptr [ebp + -0x8],eax
+jle 0x00403c5f
+mov dword ptr [ebp + -0x8],eax
+cmp dword ptr [ebp + -0x8],0xa3
+jle 0x00403c8c
+mov eax,dword ptr [ebp + -0x8]
+add eax,0x15d
+push eax
+call 0x004027df
+test eax,eax
+pop ecx
+mov dword ptr [ebp + -0x34],eax
+jz 0x00403c85
+mov edi,eax
+mov dword ptr [ebp + -0xc],edi
+jmp 0x00403c8c
+mov dword ptr [ebp + -0x8],0xa3
+mov eax,dword ptr [ebp + 0x10]
+push dword ptr [ebp + -0x40]
+add eax,esi
+mov dword ptr [ebp + 0x10],eax
+push dword ptr [ebp + -0x8]
+mov ecx,dword ptr [eax + -0x8]
+mov dword ptr [ebp + -0x54],ecx
+mov eax,dword ptr [eax + -0x4]
+mov dword ptr [ebp + -0x50],eax
+movsx eax,bl
+push eax
+lea eax,[ebp + -0x54]
+push edi
+push eax
+call dword ptr [0x0040c600]
+mov esi,dword ptr [ebp + -0x4]
+add esp,0x14
+and esi,0x80
+jz 0x00403cd1
+cmp dword ptr [ebp + -0x8],0x0
+jnz 0x00403cd1
+push edi
+call dword ptr [0x0040c60c]
+pop ecx
+cmp bx,0x67
+jnz 0x00403ce3
+test esi,esi
+jnz 0x00403ce3
+push edi
+call dword ptr [0x0040c604]
+pop ecx
+cmp byte ptr [edi],0x2d
+jnz 0x00403cf0
+or byte ptr [ebp + -0x3],0x1
+inc edi
+mov dword ptr [ebp + -0xc],edi
+push edi
+call 0x00406f00
+pop ecx
+jmp 0x00403f0a
+sub eax,0x69
+jz 0x00403dc8
+sub eax,0x5
+jz 0x00403d9e
+dec eax
+jz 0x00403d8f
+dec eax
+jz 0x00403d67
+sub eax,0x3
+jz 0x00403ae2
+sub eax,edi
+jz 0x00403dcc
+sub eax,0x3
+jnz 0x00403f0d
+mov dword ptr [ebp + -0x38],0x27
+jmp 0x00403d6d
+test ecx,ecx
+jnz 0x00403d44
+mov ecx,dword ptr [0x0040c5f4]
+mov dword ptr [ebp + -0xc],ecx
+mov dword ptr [ebp + -0x24],0x1
+mov eax,ecx
+mov edx,edi
+dec edi
+test edx,edx
+jz 0x00403d5e
+cmp word ptr [eax],0x0
+jz 0x00403d5e
+inc eax
+inc eax
+jmp 0x00403d4d
+sub eax,ecx
+sar eax,0x1
+jmp 0x00403f0a
+mov dword ptr [ebp + -0x8],esi
+mov dword ptr [ebp + -0x38],ecx
+test byte ptr [ebp + -0x4],0x80
+mov dword ptr [ebp + -0x10],0x10
+jz 0x00403dd3
+mov eax,dword ptr [ebp + -0x38]
+mov word ptr [ebp + -0x28],0x30
+add eax,0x51
+mov dword ptr [ebp + -0x20],edi
+mov word ptr [ebp + -0x26],ax
+jmp 0x00403dd3
+test byte ptr [ebp + -0x4],0x80
+mov dword ptr [ebp + -0x10],esi
+jz 0x00403dd3
+or byte ptr [ebp + -0x3],0x2
+jmp 0x00403dd3
+lea eax,[ebp + 0x10]
+push eax
+call 0x004040f1
+test byte ptr [ebp + -0x4],0x20
+pop ecx
+jz 0x00403db7
+mov cx,word ptr [ebp + -0x14]
+mov word ptr [eax],cx
+jmp 0x00403dbc
+mov ecx,dword ptr [ebp + -0x14]
+mov dword ptr [eax],ecx
+mov dword ptr [ebp + -0x3c],0x1
+jmp 0x00404017
+or dword ptr [ebp + -0x4],0x40
+mov dword ptr [ebp + -0x10],0xa
+test byte ptr [ebp + -0x3],0x80
+jz 0x00403de5
+lea eax,[ebp + 0x10]
+push eax
+call 0x004040fe
+pop ecx
+jmp 0x00403e26
+test byte ptr [ebp + -0x4],0x20
+jz 0x00403e0c
+test byte ptr [ebp + -0x4],0x40
+lea eax,[ebp + 0x10]
+push eax
+jz 0x00403e01
+call 0x004040f1
+pop ecx
+movsx eax,ax
+cdq
+jmp 0x00403e26
+call 0x004040f1
+pop ecx
+movzx eax,ax
+jmp 0x00403dfe
+test byte ptr [ebp + -0x4],0x40
+lea eax,[ebp + 0x10]
+push eax
+jz 0x00403e1e
+call 0x004040f1
+pop ecx
+jmp 0x00403dfe
+call 0x004040f1
+pop ecx
+xor edx,edx
+test byte ptr [ebp + -0x4],0x40
+jz 0x00403e49
+test edx,edx
+jg 0x00403e49
+jl 0x00403e36
+test eax,eax
+jnc 0x00403e49
+neg eax
+adc edx,0x0
+mov dword ptr [ebp + -0x1c],eax
+neg edx
+or byte ptr [ebp + -0x3],0x1
+mov dword ptr [ebp + -0x18],edx
+jmp 0x00403e4f
+mov dword ptr [ebp + -0x1c],eax
+mov dword ptr [ebp + -0x18],edx
+test byte ptr [ebp + -0x3],0x80
+jnz 0x00403e59
+and dword ptr [ebp + -0x18],0x0
+cmp dword ptr [ebp + -0x8],0x0
+jge 0x00403e68
+mov dword ptr [ebp + -0x8],0x1
+jmp 0x00403e79
+and dword ptr [ebp + -0x4],0xfffffff7
+mov eax,0x200
+cmp dword ptr [ebp + -0x8],eax
+jle 0x00403e79
+mov dword ptr [ebp + -0x8],eax
+mov eax,dword ptr [ebp + -0x1c]
+or eax,dword ptr [ebp + -0x18]
+jnz 0x00403e85
+and dword ptr [ebp + -0x20],0x0
+lea eax,[ebp + 0xfffffdab]
+mov dword ptr [ebp + -0xc],eax
+mov eax,dword ptr [ebp + -0x8]
+dec dword ptr [ebp + -0x8]
+test eax,eax
+jg 0x00403ea0
+mov eax,dword ptr [ebp + -0x1c]
+or eax,dword ptr [ebp + -0x18]
+jz 0x00403edf
+mov eax,dword ptr [ebp + -0x10]
+cdq
+mov edi,edx
+mov esi,eax
+push edi
+push esi
+push dword ptr [ebp + -0x18]
+push dword ptr [ebp + -0x1c]
+call 0x004070c0
+push edi
+push esi
+push dword ptr [ebp + -0x18]
+mov ebx,eax
+add ebx,0x30
+push dword ptr [ebp + -0x1c]
+call 0x00407050
+cmp ebx,0x39
+mov dword ptr [ebp + -0x1c],eax
+mov dword ptr [ebp + -0x18],edx
+jle 0x00403ed5
+add ebx,dword ptr [ebp + -0x38]
+mov eax,dword ptr [ebp + -0xc]
+dec dword ptr [ebp + -0xc]
+mov byte ptr [eax],bl
+jmp 0x00403e8e
+lea eax,[ebp + 0xfffffdab]
+sub eax,dword ptr [ebp + -0xc]
+inc dword ptr [ebp + -0xc]
+test byte ptr [ebp + -0x3],0x2
+mov dword ptr [ebp + -0x10],eax
+jz 0x00403f0d
+mov ecx,dword ptr [ebp + -0xc]
+cmp byte ptr [ecx],0x30
+jnz 0x00403f00
+test eax,eax
+jnz 0x00403f0d
+dec dword ptr [ebp + -0xc]
+inc eax
+mov ecx,dword ptr [ebp + -0xc]
+mov byte ptr [ecx],0x30
+mov dword ptr [ebp + -0x10],eax
+cmp dword ptr [ebp + -0x3c],0x0
+jnz 0x00404017
+mov ebx,dword ptr [ebp + -0x4]
+test bl,0x40
+jz 0x00403f4b
+test bh,0x1
+jz 0x00403f2c
+mov word ptr [ebp + -0x28],0x2d
+jmp 0x00403f44
+test bl,0x1
+jz 0x00403f39
+mov word ptr [ebp + -0x28],0x2b
+jmp 0x00403f44
+test bl,0x2
+jz 0x00403f4b
+mov word ptr [ebp + -0x28],0x20
+mov dword ptr [ebp + -0x20],0x1
+mov esi,dword ptr [ebp + -0x2c]
+sub esi,dword ptr [ebp + -0x20]
+sub esi,dword ptr [ebp + -0x10]
+test bl,0xc
+jnz 0x00403f6b
+lea eax,[ebp + -0x14]
+push eax
+push dword ptr [ebp + 0x8]
+push esi
+push 0x20
+call 0x00404087
+add esp,0x10
+lea eax,[ebp + -0x14]
+push eax
+lea eax,[ebp + -0x28]
+push dword ptr [ebp + 0x8]
+push dword ptr [ebp + -0x20]
+push eax
+call 0x004040b8
+add esp,0x10
+test bl,0x8
+jz 0x00403f9d
+test bl,0x4
+jnz 0x00403f9d
+lea eax,[ebp + -0x14]
+push eax
+push dword ptr [ebp + 0x8]
+push esi
+push 0x30
+call 0x00404087
+add esp,0x10
+cmp dword ptr [ebp + -0x24],0x0
+jnz 0x00403fea
+cmp dword ptr [ebp + -0x10],0x0
+jle 0x00403fea
+mov eax,dword ptr [ebp + -0x10]
+mov ebx,dword ptr [ebp + -0xc]
+lea edi,[eax + -0x1]
+push dword ptr [0x0040c618]
+lea eax,[ebp + -0x48]
+push ebx
+push eax
+call 0x00406f7b
+add esp,0xc
+mov dword ptr [ebp + -0x4c],eax
+test eax,eax
+jle 0x00403fff
+lea eax,[ebp + -0x14]
+push eax
+push dword ptr [ebp + 0x8]
+push dword ptr [ebp + -0x48]
+call 0x00404067
+add ebx,dword ptr [ebp + -0x4c]
+add esp,0xc
+mov eax,edi
+dec edi
+test eax,eax
+jg 0x00403fb2
+jmp 0x00403fff
+lea eax,[ebp + -0x14]
+push eax
+push dword ptr [ebp + 0x8]
+push dword ptr [ebp + -0x10]
+push dword ptr [ebp + -0xc]
+call 0x004040b8
+add esp,0x10
+test byte ptr [ebp + -0x4],0x4
+jz 0x00404017
+lea eax,[ebp + -0x14]
+push eax
+push dword ptr [ebp + 0x8]
+push esi
+push 0x20
+call 0x00404087
+add esp,0x10
+cmp dword ptr [ebp + -0x34],0x0
+jz 0x0040402a
+push dword ptr [ebp + -0x34]
+call 0x00402891
+and dword ptr [ebp + -0x34],0x0
+pop ecx
+mov eax,dword ptr [ebp + 0xc]
+push 0x2
+pop edi
+mov bx,word ptr [eax]
+add dword ptr [ebp + 0xc],edi
+test bx,bx
+jnz 0x00403904
+mov eax,dword ptr [ebp + -0x14]
+pop edi
+pop esi
+pop ebx
+leave
+ret
+push dword ptr [esp + 0x8]
+push dword ptr [esp + 0x8]
+call 0x00407135
+pop ecx
+cmp ax,0xffff
+mov eax,dword ptr [esp + 0x10]
+pop ecx
+jnz 0x00404084
+or dword ptr [eax],0xffffffff
+ret
+inc dword ptr [eax]
+ret
+push esi
+push edi
+mov edi,dword ptr [esp + 0x10]
+mov eax,edi
+dec edi
+test eax,eax
+jle 0x004040b5
+mov esi,dword ptr [esp + 0x18]
+push esi
+push dword ptr [esp + 0x18]
+push dword ptr [esp + 0x14]
+call 0x00404067
+add esp,0xc
+cmp dword ptr [esi],-0x1
+jz 0x004040b5
+mov eax,edi
+dec edi
+test eax,eax
+jg 0x00404098
+pop edi
+pop esi
+ret
+push ebx
+mov ebx,dword ptr [esp + 0xc]
+mov eax,ebx
+dec ebx
+push esi
+push edi
+test eax,eax
+jle 0x004040ed
+mov edi,dword ptr [esp + 0x1c]
+mov esi,dword ptr [esp + 0x10]
+mov ax,word ptr [esi]
+push edi
+push dword ptr [esp + 0x1c]
+inc esi
+inc esi
+push eax
+call 0x00404067
+add esp,0xc
+cmp dword ptr [edi],-0x1
+jz 0x004040ed
+mov eax,ebx
+dec ebx
+test eax,eax
+jg 0x004040ce
+pop edi
+pop esi
+pop ebx
+ret
+mov eax,dword ptr [esp + 0x4]
+add dword ptr [eax],0x4
+mov eax,dword ptr [eax]
+mov eax,dword ptr [eax + -0x4]
+ret
+mov eax,dword ptr [esp + 0x4]
+add dword ptr [eax],0x8
+mov ecx,dword ptr [eax]
+mov eax,dword ptr [ecx + -0x8]
+mov edx,dword ptr [ecx + -0x4]
+ret
+mov eax,[0x0040eb00]
+push esi
+push 0x14
+test eax,eax
+pop esi
+jnz 0x00404122
+mov eax,0x200
+jmp 0x00404128
+cmp eax,esi
+jge 0x0040412d
+mov eax,esi
+mov [0x0040eb00],eax
+push 0x4
+push eax
+call 0x0040722a
+pop ecx
+mov [0x0040dae8],eax
+test eax,eax
+pop ecx
+jnz 0x00404161
+push 0x4
+push esi
+mov dword ptr [0x0040eb00],esi
+call 0x0040722a
+pop ecx
+mov [0x0040dae8],eax
+test eax,eax
+pop ecx
+jnz 0x00404161
+push 0x1a
+call 0x00402eca
+pop ecx
+xor ecx,ecx
+mov eax,0x40a218
+mov edx,dword ptr [0x0040dae8]
+mov dword ptr [ecx + edx*0x1],eax
+add eax,0x20
+add ecx,0x4
+cmp eax,0x40a498
+jl 0x00404168
+xor edx,edx
+mov ecx,0x40a228
+mov eax,edx
+mov esi,edx
+sar eax,0x5
+and esi,0x1f
+mov eax,dword ptr [eax*0x4 + 0x40d9c0]
+mov eax,dword ptr [eax + esi*0x8]
+cmp eax,-0x1
+jz 0x004041a2
+test eax,eax
+jnz 0x004041a5
+or dword ptr [ecx],0xffffffff
+add ecx,0x20
+inc edx
+cmp ecx,0x40a288
+jl 0x00404185
+pop esi
+ret
+mov eax,[0x0040d5cc]
+test eax,eax
+jz 0x004041df
+push dword ptr [esp + 0x4]
+call eax
+test eax,eax
+pop ecx
+jz 0x004041df
+push 0x1
+pop eax
+ret
+xor eax,eax
+ret
+push esi
+mov esi,dword ptr [esp + 0x8]
+push 0x0
+and dword ptr [esi],0x0
+call dword ptr [0x00409008]
+cmp word ptr [eax],0x5a4d
+jnz 0x0040420d
+mov ecx,dword ptr [eax + 0x3c]
+test ecx,ecx
+jz 0x0040420d
+add eax,ecx
+mov cl,byte ptr [eax + 0x1a]
+mov byte ptr [esi],cl
+mov al,byte ptr [eax + 0x1b]
+mov byte ptr [esi + 0x1],al
+pop esi
+ret
+push ebp
+mov ebp,esp
+mov eax,0x122c
+call 0x00402690
+lea eax,[ebp + 0xffffff68]
+push ebx
+push eax
+mov dword ptr [ebp + 0xffffff68],0x94
+call dword ptr [0x0040909c]
+test eax,eax
+jz 0x00404252
+cmp dword ptr [ebp + 0xffffff78],0x2
+jnz 0x00404252
+cmp dword ptr [ebp + 0xffffff6c],0x5
+jc 0x00404252
+push 0x1
+pop eax
+jmp 0x00404354
+lea eax,[ebp + 0xffffedd4]
+push 0x1090
+push eax
+push 0x409318
+call dword ptr [0x00409098]
+test eax,eax
+jz 0x00404341
+xor ebx,ebx
+lea ecx,[ebp + 0xffffedd4]
+cmp byte ptr [ebp + 0xffffedd4],bl
+jz 0x00404294
+mov al,byte ptr [ecx]
+cmp al,0x61
+jl 0x0040428f
+cmp al,0x7a
+jg 0x0040428f
+sub al,0x20
+mov byte ptr [ecx],al
+inc ecx
+cmp byte ptr [ecx],bl
+jnz 0x00404281
+lea eax,[ebp + 0xffffedd4]
+push 0x16
+push eax
+push 0x409300
+call 0x004076b0
+add esp,0xc
+test eax,eax
+jnz 0x004042b6
+lea eax,[ebp + 0xffffedd4]
+jmp 0x004042ff
+lea eax,[ebp + 0xfffffe64]
+push 0x104
+push eax
+push ebx
+call dword ptr [0x00409004]
+cmp byte ptr [ebp + 0xfffffe64],bl
+lea ecx,[ebp + 0xfffffe64]
+jz 0x004042ea
+mov al,byte ptr [ecx]
+cmp al,0x61
+jl 0x004042e5
+cmp al,0x7a
+jg 0x004042e5
+sub al,0x20
+mov byte ptr [ecx],al
+inc ecx
+cmp byte ptr [ecx],bl
+jnz 0x004042d7
+lea eax,[ebp + 0xfffffe64]
+push eax
+lea eax,[ebp + 0xffffedd4]
+push eax
+call 0x00407630
+pop ecx
+pop ecx
+cmp eax,ebx
+jz 0x00404341
+push 0x2c
+push eax
+call 0x00407570
+pop ecx
+cmp eax,ebx
+pop ecx
+jz 0x00404341
+inc eax
+mov ecx,eax
+cmp byte ptr [eax],bl
+jz 0x00404326
+cmp byte ptr [ecx],0x3b
+jnz 0x00404321
+mov byte ptr [ecx],bl
+jmp 0x00404322
+inc ecx
+cmp byte ptr [ecx],bl
+jnz 0x00404318
+push 0xa
+push ebx
+push eax
+call 0x00407333
+add esp,0xc
+cmp eax,0x2
+jz 0x00404354
+cmp eax,0x3
+jz 0x00404354
+cmp eax,0x1
+jz 0x00404354
+lea eax,[ebp + -0x4]
+push eax
+call 0x004041e2
+cmp byte ptr [ebp + -0x4],0x6
+pop ecx
+sbb eax,eax
+add eax,0x3
+pop ebx
+leave
+ret
+xor eax,eax
+push 0x0
+cmp dword ptr [esp + 0x8],eax
+push 0x1000
+setz al
+push eax
+call dword ptr [0x004090a4]
+test eax,eax
+mov [0x0040dae0],eax
+jz 0x004043ad
+call 0x0040420f
+cmp eax,0x3
+mov [0x0040dae4],eax
+jnz 0x00404393
+push 0x3f8
+call 0x004043b4
+pop ecx
+jmp 0x0040439d
+cmp eax,0x2
+jnz 0x004043b0
+call 0x00404c05
+test eax,eax
+jnz 0x004043b0
+push dword ptr [0x0040dae0]
+call dword ptr [0x004090a0]
+xor eax,eax
+ret
+push 0x1
+pop eax
+ret
+push 0x140
+push 0x0
+push dword ptr [0x0040dae0]
+call dword ptr [0x00409084]
+test eax,eax
+mov [0x0040dad8],eax
+jnz 0x004043d1
+ret
+mov ecx,dword ptr [esp + 0x4]
+and dword ptr [0x0040dad0],0x0
+and dword ptr [0x0040dad4],0x0
+push 0x1
+mov [0x0040dacc],eax
+mov dword ptr [0x0040dadc],ecx
+mov dword ptr [0x0040dac4],0x10
+pop eax
+ret
+mov eax,[0x0040dad4]
+lea ecx,[eax + eax*0x4]
+mov eax,[0x0040dad8]
+lea ecx,[eax + ecx*0x4]
+cmp eax,ecx
+jnc 0x00404424
+mov edx,dword ptr [esp + 0x4]
+sub edx,dword ptr [eax + 0xc]
+cmp edx,0x100000
+jc 0x00404426
+add eax,0x14
+jmp 0x0040440c
+xor eax,eax
+ret
+push ebp
+mov ebp,esp
+sub esp,0x10
+mov ecx,dword ptr [ebp + 0x8]
+push ebx
+push esi
+mov esi,dword ptr [ebp + 0xc]
+mov eax,dword ptr [ecx + 0x10]
+push edi
+mov edi,esi
+add esi,-0x4
+sub edi,dword ptr [ecx + 0xc]
+shr edi,0xf
+mov ecx,edi
+imul ecx,ecx,0x204
+lea ecx,[ecx + eax*0x1 + 0x144]
+mov dword ptr [ebp + -0x10],ecx
+mov ecx,dword ptr [esi]
+dec ecx
+test cl,0x1
+mov dword ptr [ebp + -0x4],ecx
+jnz 0x0040474b
+mov edx,dword ptr [ecx + esi*0x1]
+lea ebx,[ecx + esi*0x1]
+mov dword ptr [ebp + -0xc],edx
+mov edx,dword ptr [esi + -0x4]
+mov dword ptr [ebp + -0x8],edx
+mov edx,dword ptr [ebp + -0xc]
+test dl,0x1
+mov dword ptr [ebp + 0xc],ebx
+jnz 0x004044fd
+sar edx,0x4
+dec edx
+cmp edx,0x3f
+jbe 0x0040448b
+push 0x3f
+pop edx
+mov ecx,dword ptr [ebx + 0x4]
+cmp ecx,dword ptr [ebx + 0x8]
+jnz 0x004044df
+cmp edx,0x20
+jnc 0x004044b6
+mov ebx,0x80000000
+mov ecx,edx
+shr ebx,cl
+lea ecx,[edx + eax*0x1 + 0x4]
+not ebx
+and dword ptr [eax + edi*0x4 + 0x44],ebx
+dec byte ptr [ecx]
+jnz 0x004044d7
+mov ecx,dword ptr [ebp + 0x8]
+and dword ptr [ecx],ebx
+jmp 0x004044d7
+lea ecx,[edx + -0x20]
+mov ebx,0x80000000
+shr ebx,cl
+lea ecx,[edx + eax*0x1 + 0x4]
+not ebx
+and dword ptr [eax + edi*0x4 + 0xc4],ebx
+dec byte ptr [ecx]
+jnz 0x004044d7
+mov ecx,dword ptr [ebp + 0x8]
+and dword ptr [ecx + 0x4],ebx
+mov ecx,dword ptr [ebp + -0x4]
+mov ebx,dword ptr [ebp + 0xc]
+jmp 0x004044e2
+mov ecx,dword ptr [ebp + -0x4]
+mov edx,dword ptr [ebx + 0x8]
+mov ebx,dword ptr [ebx + 0x4]
+add ecx,dword ptr [ebp + -0xc]
+mov dword ptr [edx + 0x4],ebx
+mov edx,dword ptr [ebp + 0xc]
+mov dword ptr [ebp + -0x4],ecx
+mov ebx,dword ptr [edx + 0x4]
+mov edx,dword ptr [edx + 0x8]
+mov dword ptr [ebx + 0x8],edx
+mov edx,ecx
+sar edx,0x4
+dec edx
+cmp edx,0x3f
+jbe 0x0040450b
+push 0x3f
+pop edx
+mov ebx,dword ptr [ebp + -0x8]
+and ebx,0x1
+mov dword ptr [ebp + -0xc],ebx
+jnz 0x004045ae
+sub esi,dword ptr [ebp + -0x8]
+mov ebx,dword ptr [ebp + -0x8]
+sar ebx,0x4
+push 0x3f
+mov dword ptr [ebp + 0xc],esi
+dec ebx
+pop esi
+cmp ebx,esi
+jbe 0x00404530
+mov ebx,esi
+add ecx,dword ptr [ebp + -0x8]
+mov edx,ecx
+mov dword ptr [ebp + -0x4],ecx
+sar edx,0x4
+dec edx
+cmp edx,esi
+jbe 0x00404542
+mov edx,esi
+cmp ebx,edx
+jz 0x004045a9
+mov ecx,dword ptr [ebp + 0xc]
+mov esi,dword ptr [ecx + 0x4]
+cmp esi,dword ptr [ecx + 0x8]
+jnz 0x00404591
+cmp ebx,0x20
+jnc 0x00404572
+mov esi,0x80000000
+mov ecx,ebx
+shr esi,cl
+not esi
+and dword ptr [eax + edi*0x4 + 0x44],esi
+dec byte ptr [ebx + eax*0x1 + 0x4]
+jnz 0x00404591
+mov ecx,dword ptr [ebp + 0x8]
+and dword ptr [ecx],esi
+jmp 0x00404591
+lea ecx,[ebx + -0x20]
+mov esi,0x80000000
+shr esi,cl
+not esi
+and dword ptr [eax + edi*0x4 + 0xc4],esi
+dec byte ptr [ebx + eax*0x1 + 0x4]
+jnz 0x00404591
+mov ecx,dword ptr [ebp + 0x8]
+and dword ptr [ecx + 0x4],esi
+mov ecx,dword ptr [ebp + 0xc]
+mov esi,dword ptr [ecx + 0x8]
+mov ecx,dword ptr [ecx + 0x4]
+mov dword ptr [esi + 0x4],ecx
+mov ecx,dword ptr [ebp + 0xc]
+mov esi,dword ptr [ecx + 0x4]
+mov ecx,dword ptr [ecx + 0x8]
+mov dword ptr [esi + 0x8],ecx
+mov esi,dword ptr [ebp + 0xc]
+jmp 0x004045b1
+mov ebx,dword ptr [ebp + 0x8]
+cmp dword ptr [ebp + -0xc],0x0
+jnz 0x004045bf
+cmp ebx,edx
+jz 0x00404640
+mov ecx,dword ptr [ebp + -0x10]
+mov ebx,dword ptr [ecx + edx*0x8 + 0x4]
+lea ecx,[ecx + edx*0x8]
+mov dword ptr [esi + 0x4],ebx
+mov dword ptr [esi + 0x8],ecx
+mov dword ptr [ecx + 0x4],esi
+mov ecx,dword ptr [esi + 0x4]
+mov dword ptr [ecx + 0x8],esi
+mov ecx,dword ptr [esi + 0x4]
+cmp ecx,dword ptr [esi + 0x8]
+jnz 0x00404640
+mov cl,byte ptr [edx + eax*0x1 + 0x4]
+cmp edx,0x20
+mov byte ptr [ebp + 0xf],cl
+inc cl
+mov byte ptr [edx + eax*0x1 + 0x4],cl
+jnc 0x00404617
+cmp byte ptr [ebp + 0xf],0x0
+jnz 0x00404606
+mov ebx,0x80000000
+mov ecx,edx
+shr ebx,cl
+mov ecx,dword ptr [ebp + 0x8]
+or dword ptr [ecx],ebx
+mov ebx,0x80000000
+mov ecx,edx
+shr ebx,cl
+lea eax,[eax + edi*0x4 + 0x44]
+or dword ptr [eax],ebx
+jmp 0x00404640
+cmp byte ptr [ebp + 0xf],0x0
+jnz 0x0040462d
+lea ecx,[edx + -0x20]
+mov ebx,0x80000000
+shr ebx,cl
+mov ecx,dword ptr [ebp + 0x8]
+or dword ptr [ecx + 0x4],ebx
+lea ecx,[edx + -0x20]
+mov edx,0x80000000
+shr edx,cl
+lea eax,[eax + edi*0x4 + 0xc4]
+or dword ptr [eax],edx
+mov eax,dword ptr [ebp + -0x4]
+mov dword ptr [esi],eax
+mov dword ptr [eax + esi*0x1 + -0x4],eax
+mov eax,dword ptr [ebp + -0x10]
+dec dword ptr [eax]
+jnz 0x0040474b
+mov eax,[0x0040dad0]
+test eax,eax
+jz 0x0040473d
+mov ecx,dword ptr [0x0040dac8]
+mov esi,dword ptr [0x004090a8]
+shl ecx,0xf
+add ecx,dword ptr [eax + 0xc]
+mov ebx,0x8000
+push 0x4000
+push ebx
+push ecx
+call esi
+mov ecx,dword ptr [0x0040dac8]
+mov eax,[0x0040dad0]
+mov edx,0x80000000
+shr edx,cl
+or dword ptr [eax + 0x8],edx
+mov eax,[0x0040dad0]
+mov ecx,dword ptr [0x0040dac8]
+mov eax,dword ptr [eax + 0x10]
+and dword ptr [eax + ecx*0x4 + 0xc4],0x0
+mov eax,[0x0040dad0]
+mov eax,dword ptr [eax + 0x10]
+dec byte ptr [eax + 0x43]
+mov eax,[0x0040dad0]
+mov ecx,dword ptr [eax + 0x10]
+cmp byte ptr [ecx + 0x43],0x0
+jnz 0x004046ce
+and dword ptr [eax + 0x4],0xfffffffe
+mov eax,[0x0040dad0]
+cmp dword ptr [eax + 0x8],-0x1
+jnz 0x0040473d
+push ebx
+push 0x0
+push dword ptr [eax + 0xc]
+call esi
+mov eax,[0x0040dad0]
+push dword ptr [eax + 0x10]
+push 0x0
+push dword ptr [0x0040dae0]
+call dword ptr [0x00409088]
+mov eax,[0x0040dad4]
+mov edx,dword ptr [0x0040dad8]
+lea eax,[eax + eax*0x4]
+shl eax,0x2
+mov ecx,eax
+mov eax,[0x0040dad0]
+sub ecx,eax
+lea ecx,[ecx + edx*0x1 + -0x14]
+push ecx
+lea ecx,[eax + 0x14]
+push ecx
+push eax
+call 0x00406b80
+mov eax,dword ptr [ebp + 0x8]
+add esp,0xc
+dec dword ptr [0x0040dad4]
+cmp eax,dword ptr [0x0040dad0]
+jbe 0x00404733
+sub dword ptr [ebp + 0x8],0x14
+mov eax,[0x0040dad8]
+mov [0x0040dacc],eax
+mov eax,dword ptr [ebp + 0x8]
+mov dword ptr [0x0040dac8],edi
+mov [0x0040dad0],eax
+pop edi
+pop esi
+pop ebx
+leave
+ret
+push ebp
+mov ebp,esp
+sub esp,0x14
+mov eax,[0x0040dad4]
+mov edx,dword ptr [0x0040dad8]
+push ebx
+push esi
+lea eax,[eax + eax*0x4]
+push edi
+lea edi,[edx + eax*0x4]
+mov eax,dword ptr [ebp + 0x8]
+mov dword ptr [ebp + -0x4],edi
+lea ecx,[eax + 0x17]
+and ecx,0xfffffff0
+mov dword ptr [ebp + -0x10],ecx
+sar ecx,0x4
+dec ecx
+cmp ecx,0x20
+jge 0x00404790
+or esi,0xffffffff
+shr esi,cl
+or dword ptr [ebp + -0x8],0xffffffff
+mov dword ptr [ebp + -0xc],esi
+jmp 0x004047a0
+add ecx,-0x20
+or eax,0xffffffff
+xor esi,esi
+shr eax,cl
+mov dword ptr [ebp + -0xc],esi
+mov dword ptr [ebp + -0x8],eax
+mov eax,[0x0040dacc]
+mov ebx,eax
+cmp ebx,edi
+mov dword ptr [ebp + 0x8],ebx
+jnc 0x004047c7
+mov ecx,dword ptr [ebx + 0x4]
+mov edi,dword ptr [ebx]
+and ecx,dword ptr [ebp + -0x8]
+and edi,esi
+or ecx,edi
+jnz 0x004047c7
+add ebx,0x14
+cmp ebx,dword ptr [ebp + -0x4]
+mov dword ptr [ebp + 0x8],ebx
+jc 0x004047ae
+cmp ebx,dword ptr [ebp + -0x4]
+jnz 0x00404845
+mov ebx,edx
+cmp ebx,eax
+mov dword ptr [ebp + 0x8],ebx
+jnc 0x004047ea
+mov ecx,dword ptr [ebx + 0x4]
+mov edi,dword ptr [ebx]
+and ecx,dword ptr [ebp + -0x8]
+and edi,esi
+or ecx,edi
+jnz 0x004047e8
+add ebx,0x14
+jmp 0x004047ce
+cmp ebx,eax
+jnz 0x00404845
+cmp ebx,dword ptr [ebp + -0x4]
+jnc 0x00404802
+cmp dword ptr [ebx + 0x8],0x0
+jnz 0x004047ff
+add ebx,0x14
+mov dword ptr [ebp + 0x8],ebx
+jmp 0x004047ec
+cmp ebx,dword ptr [ebp + -0x4]
+jnz 0x0040482a
+mov ebx,edx
+cmp ebx,eax
+mov dword ptr [ebp + 0x8],ebx
+jnc 0x0040481a
+cmp dword ptr [ebx + 0x8],0x0
+jnz 0x00404818
+add ebx,0x14
+jmp 0x00404806
+cmp ebx,eax
+jnz 0x0040482a
+call 0x00404a59
+mov ebx,eax
+test ebx,ebx
+mov dword ptr [ebp + 0x8],ebx
+jz 0x0040483e
+push ebx
+call 0x00404b0a
+pop ecx
+mov ecx,dword ptr [ebx + 0x10]
+mov dword ptr [ecx],eax
+mov eax,dword ptr [ebx + 0x10]
+cmp dword ptr [eax],-0x1
+jnz 0x00404845
+xor eax,eax
+jmp 0x00404a54
+mov dword ptr [0x0040dacc],ebx
+mov eax,dword ptr [ebx + 0x10]
+mov edx,dword ptr [eax]
+cmp edx,-0x1
+mov dword ptr [ebp + -0x4],edx
+jz 0x0040486c
+mov ecx,dword ptr [eax + edx*0x4 + 0xc4]
+mov edi,dword ptr [eax + edx*0x4 + 0x44]
+and ecx,dword ptr [ebp + -0x8]
+and edi,esi
+or ecx,edi
+jnz 0x004048a3
+mov edx,dword ptr [eax + 0xc4]
+mov esi,dword ptr [eax + 0x44]
+and edx,dword ptr [ebp + -0x8]
+and esi,dword ptr [ebp + -0xc]
+and dword ptr [ebp + -0x4],0x0
+lea ecx,[eax + 0x44]
+or edx,esi
+mov esi,dword ptr [ebp + -0xc]
+jnz 0x004048a0
+mov edx,dword ptr [ecx + 0x84]
+inc dword ptr [ebp + -0x4]
+and edx,dword ptr [ebp + -0x8]
+add ecx,0x4
+mov edi,esi
+and edi,dword ptr [ecx]
+or edx,edi
+jz 0x00404889
+mov edx,dword ptr [ebp + -0x4]
+mov ecx,edx
+xor edi,edi
+imul ecx,ecx,0x204
+lea ecx,[ecx + eax*0x1 + 0x144]
+mov dword ptr [ebp + -0xc],ecx
+mov ecx,dword ptr [eax + edx*0x4 + 0x44]
+and ecx,esi
+jnz 0x004048cc
+mov ecx,dword ptr [eax + edx*0x4 + 0xc4]
+push 0x20
+and ecx,dword ptr [ebp + -0x8]
+pop edi
+test ecx,ecx
+jl 0x004048d5
+shl ecx,0x1
+inc edi
+jmp 0x004048cc
+mov ecx,dword ptr [ebp + -0xc]
+mov edx,dword ptr [ecx + edi*0x8 + 0x4]
+mov ecx,dword ptr [edx]
+sub ecx,dword ptr [ebp + -0x10]
+mov esi,ecx
+mov dword ptr [ebp + -0x8],ecx
+sar esi,0x4
+dec esi
+cmp esi,0x3f
+jle 0x004048f2
+push 0x3f
+pop esi
+cmp esi,edi
+jz 0x00404a07
+mov ecx,dword ptr [edx + 0x4]
+cmp ecx,dword ptr [edx + 0x8]
+jnz 0x00404963
+cmp edi,0x20
+jge 0x00404932
+mov ebx,0x80000000
+mov ecx,edi
+shr ebx,cl
+mov ecx,dword ptr [ebp + -0x4]
+lea edi,[eax + edi*0x1 + 0x4]
+not ebx
+mov dword ptr [ebp + -0x14],ebx
+and ebx,dword ptr [eax + ecx*0x4 + 0x44]
+mov dword ptr [eax + ecx*0x4 + 0x44],ebx
+dec byte ptr [edi]
+jnz 0x00404960
+mov ebx,dword ptr [ebp + 0x8]
+mov ecx,dword ptr [ebp + -0x14]
+and dword ptr [ebx],ecx
+jmp 0x00404963
+lea ecx,[edi + -0x20]
+mov ebx,0x80000000
+shr ebx,cl
+mov ecx,dword ptr [ebp + -0x4]
+lea edi,[eax + edi*0x1 + 0x4]
+lea ecx,[eax + ecx*0x4 + 0xc4]
+not ebx
+and dword ptr [ecx],ebx
+dec byte ptr [edi]
+mov dword ptr [ebp + -0x14],ebx
+jnz 0x00404960
+mov ebx,dword ptr [ebp + 0x8]
+mov ecx,dword ptr [ebp + -0x14]
+and dword ptr [ebx + 0x4],ecx
+jmp 0x00404963
+mov ebx,dword ptr [ebp + 0x8]
+mov ecx,dword ptr [edx + 0x8]
+mov edi,dword ptr [edx + 0x4]
+cmp dword ptr [ebp + -0x8],0x0
+mov dword ptr [ecx + 0x4],edi
+mov ecx,dword ptr [edx + 0x4]
+mov edi,dword ptr [edx + 0x8]
+mov dword ptr [ecx + 0x8],edi
+jz 0x00404a13
+mov ecx,dword ptr [ebp + -0xc]
+mov edi,dword ptr [ecx + esi*0x8 + 0x4]
+lea ecx,[ecx + esi*0x8]
+mov dword ptr [edx + 0x4],edi
+mov dword ptr [edx + 0x8],ecx
+mov dword ptr [ecx + 0x4],edx
+mov ecx,dword ptr [edx + 0x4]
+mov dword ptr [ecx + 0x8],edx
+mov ecx,dword ptr [edx + 0x4]
+cmp ecx,dword ptr [edx + 0x8]
+jnz 0x00404a04
+mov cl,byte ptr [esi + eax*0x1 + 0x4]
+cmp esi,0x20
+mov byte ptr [ebp + 0xb],cl
+jge 0x004049d5
+inc cl
+cmp byte ptr [ebp + 0xb],0x0
+mov byte ptr [esi + eax*0x1 + 0x4],cl
+jnz 0x004049c3
+mov edi,0x80000000
+mov ecx,esi
+shr edi,cl
+or dword ptr [ebx],edi
+mov edi,0x80000000
+mov ecx,esi
+shr edi,cl
+mov ecx,dword ptr [ebp + -0x4]
+or dword ptr [eax + ecx*0x4 + 0x44],edi
+jmp 0x00404a04
+inc cl
+cmp byte ptr [ebp + 0xb],0x0
+mov byte ptr [esi + eax*0x1 + 0x4],cl
+jnz 0x004049ee
+lea ecx,[esi + -0x20]
+mov edi,0x80000000
+shr edi,cl
+or dword ptr [ebx + 0x4],edi
+mov ecx,dword ptr [ebp + -0x4]
+lea edi,[eax + ecx*0x4 + 0xc4]
+lea ecx,[esi + -0x20]
+mov esi,0x80000000
+shr esi,cl
+or dword ptr [edi],esi
+mov ecx,dword ptr [ebp + -0x8]
+test ecx,ecx
+jz 0x00404a16
+mov dword ptr [edx],ecx
+mov dword ptr [ecx + edx*0x1 + -0x4],ecx
+jmp 0x00404a16
+mov ecx,dword ptr [ebp + -0x8]
+mov esi,dword ptr [ebp + -0x10]
+add edx,ecx
+lea ecx,[esi + 0x1]
+mov dword ptr [edx],ecx
+mov dword ptr [edx + esi*0x1 + -0x4],ecx
+mov esi,dword ptr [ebp + -0xc]
+mov ecx,dword ptr [esi]
+test ecx,ecx
+lea edi,[ecx + 0x1]
+mov dword ptr [esi],edi
+jnz 0x00404a4c
+cmp ebx,dword ptr [0x0040dad0]
+jnz 0x00404a4c
+mov ecx,dword ptr [ebp + -0x4]
+cmp ecx,dword ptr [0x0040dac8]
+jnz 0x00404a4c
+and dword ptr [0x0040dad0],0x0
+mov ecx,dword ptr [ebp + -0x4]
+mov dword ptr [eax],ecx
+lea eax,[edx + 0x4]
+pop edi
+pop esi
+pop ebx
+leave
+ret
+mov eax,[0x0040dad4]
+mov ecx,dword ptr [0x0040dac4]
+push esi
+push edi
+xor edi,edi
+cmp eax,ecx
+jnz 0x00404a9c
+lea eax,[ecx + ecx*0x4 + 0x50]
+shl eax,0x2
+push eax
+push dword ptr [0x0040dad8]
+push edi
+push dword ptr [0x0040dae0]
+call dword ptr [0x004090b0]
+cmp eax,edi
+jz 0x00404aec
+add dword ptr [0x0040dac4],0x10
+mov [0x0040dad8],eax
+mov eax,[0x0040dad4]
+mov ecx,dword ptr [0x0040dad8]
+push 0x41c4
+push 0x8
+lea eax,[eax + eax*0x4]
+push dword ptr [0x0040dae0]
+lea esi,[ecx + eax*0x4]
+call dword ptr [0x00409084]
+cmp eax,edi
+mov dword ptr [esi + 0x10],eax
+jz 0x00404aec
+push 0x4
+push 0x2000
+push 0x100000
+push edi
+call dword ptr [0x004090ac]
+cmp eax,edi
+mov dword ptr [esi + 0xc],eax
+jnz 0x00404af0
+push dword ptr [esi + 0x10]
+push edi
+push dword ptr [0x0040dae0]
+call dword ptr [0x00409088]
+xor eax,eax
+jmp 0x00404b07
+or dword ptr [esi + 0x8],0xffffffff
+mov dword ptr [esi],edi
+mov dword ptr [esi + 0x4],edi
+inc dword ptr [0x0040dad4]
+mov eax,dword ptr [esi + 0x10]
+or dword ptr [eax],0xffffffff
+mov eax,esi
+pop edi
+pop esi
+ret
+push ebp
+mov ebp,esp
+push ecx
+mov ecx,dword ptr [ebp + 0x8]
+push ebx
+push esi
+push edi
+mov esi,dword ptr [ecx + 0x10]
+mov eax,dword ptr [ecx + 0x8]
+xor ebx,ebx
+test eax,eax
+jl 0x00404b25
+shl eax,0x1
+inc ebx
+jmp 0x00404b1c
+mov eax,ebx
+push 0x3f
+imul eax,eax,0x204
+pop edx
+lea eax,[eax + esi*0x1 + 0x144]
+mov dword ptr [ebp + -0x4],eax
+mov dword ptr [eax + 0x8],eax
+mov dword ptr [eax + 0x4],eax
+add eax,0x8
+dec edx
+jnz 0x00404b3a
+mov edi,ebx
+push 0x4
+shl edi,0xf
+add edi,dword ptr [ecx + 0xc]
+push 0x1000
+push 0x8000
+push edi
+call dword ptr [0x004090ac]
+test eax,eax
+jnz 0x00404b6d
+or eax,0xffffffff
+jmp 0x00404c00
+lea edx,[edi + 0x7000]
+cmp edi,edx
+ja 0x00404bb3
+lea eax,[edi + 0x10]
+or dword ptr [eax + -0x8],0xffffffff
+or dword ptr [eax + 0xfec],0xffffffff
+lea ecx,[eax + 0xffc]
+mov dword ptr [eax + -0x4],0xff0
+mov dword ptr [eax],ecx
+lea ecx,[eax + 0xffffeffc]
+mov dword ptr [eax + 0x4],ecx
+mov dword ptr [eax + 0xfe8],0xff0
+add eax,0x1000
+lea ecx,[eax + -0x10]
+cmp ecx,edx
+jbe 0x00404b7a
+mov eax,dword ptr [ebp + -0x4]
+lea ecx,[edi + 0xc]
+add eax,0x1f8
+push 0x1
+pop edi
+mov dword ptr [eax + 0x4],ecx
+mov dword ptr [ecx + 0x8],eax
+lea ecx,[edx + 0xc]
+mov dword ptr [eax + 0x8],ecx
+mov dword ptr [ecx + 0x4],eax
+and dword ptr [esi + ebx*0x4 + 0x44],0x0
+mov dword ptr [esi + ebx*0x4 + 0xc4],edi
+mov al,byte ptr [esi + 0x43]
+mov cl,al
+inc cl
+test al,al
+mov eax,dword ptr [ebp + 0x8]
+mov byte ptr [esi + 0x43],cl
+jnz 0x00404bf0
+or dword ptr [eax + 0x4],edi
+mov edx,0x80000000
+mov ecx,ebx
+shr edx,cl
+not edx
+and dword ptr [eax + 0x8],edx
+mov eax,ebx
+pop edi
+pop esi
+pop ebx
+leave
+ret
+cmp dword ptr [0x0040a4b0],-0x1
+push ebx
+push ebp
+push esi
+push edi
+jnz 0x00404c19
+mov esi,0x40a4a0
+jmp 0x00404c36
+push 0x2020
+push 0x0
+push dword ptr [0x0040dae0]
+call dword ptr [0x00409084]
+mov esi,eax
+test esi,esi
+jz 0x00404d42
+mov ebp,dword ptr [0x004090ac]
+push 0x4
+push 0x2000
+push 0x400000
+push 0x0
+call ebp
+mov edi,eax
+test edi,edi
+jz 0x00404d2b
+push 0x4
+mov ebx,0x10000
+push 0x1000
+push ebx
+push edi
+call ebp
+test eax,eax
+jz 0x00404d1d
+mov eax,0x40a4a0
+cmp esi,eax
+jnz 0x00404c95
+cmp dword ptr [0x0040a4a0],0x0
+jnz 0x00404c85
+mov [0x0040a4a0],eax
+cmp dword ptr [0x0040a4a4],0x0
+jnz 0x00404caa
+mov [0x0040a4a4],eax
+jmp 0x00404caa
+mov dword ptr [esi],eax
+mov eax,[0x0040a4a4]
+mov dword ptr [esi + 0x4],eax
+mov dword ptr [0x0040a4a4],esi
+mov eax,dword ptr [esi + 0x4]
+mov dword ptr [eax],esi
+lea eax,[edi + 0x400000]
+lea ecx,[esi + 0x98]
+mov dword ptr [esi + 0x14],eax
+lea eax,[esi + 0x18]
+mov dword ptr [esi + 0xc],ecx
+mov dword ptr [esi + 0x10],edi
+mov dword ptr [esi + 0x8],eax
+xor ebp,ebp
+mov ecx,0xf1
+xor edx,edx
+cmp ebp,0x10
+setge dl
+dec edx
+and edx,ecx
+dec edx
+inc ebp
+mov dword ptr [eax],edx
+mov dword ptr [eax + 0x4],ecx
+add eax,0x8
+cmp ebp,0x400
+jl 0x00404ccc
+push ebx
+push 0x0
+push edi
+call 0x004076f0
+add esp,0xc
+mov eax,dword ptr [esi + 0x10]
+add eax,ebx
+cmp edi,eax
+jnc 0x00404d19
+or byte ptr [edi + 0xf8],0xff
+lea eax,[edi + 0x8]
+mov dword ptr [edi],eax
+mov dword ptr [edi + 0x4],0xf0
+add edi,0x1000
+jmp 0x00404cf5
+mov eax,esi
+jmp 0x00404d44
+push 0x8000
+push 0x0
+push edi
+call dword ptr [0x004090a8]
+cmp esi,0x40a4a0
+jz 0x00404d42
+push esi
+push 0x0
+push dword ptr [0x0040dae0]
+call dword ptr [0x00409088]
+xor eax,eax
+pop edi
+pop esi
+pop ebp
+pop ebx
+ret
+push esi
+mov esi,dword ptr [esp + 0x8]
+push 0x8000
+push 0x0
+push dword ptr [esi + 0x10]
+call dword ptr [0x004090a8]
+cmp dword ptr [0x0040c4c0],esi
+jnz 0x00404d6e
+mov eax,dword ptr [esi + 0x4]
+mov [0x0040c4c0],eax
+cmp esi,0x40a4a0
+jz 0x00404d96
+mov eax,dword ptr [esi + 0x4]
+mov ecx,dword ptr [esi]
+push esi
+push 0x0
+mov dword ptr [eax],ecx
+mov eax,dword ptr [esi]
+mov ecx,dword ptr [esi + 0x4]
+mov dword ptr [eax + 0x4],ecx
+push dword ptr [0x0040dae0]
+call dword ptr [0x00409088]
+pop esi
+ret
+or dword ptr [0x0040a4b0],0xffffffff
+pop esi
+ret
+push ebp
+mov ebp,esp
+push ecx
+push ebx
+push esi
+mov esi,dword ptr [0x0040a4a4]
+push edi
+cmp dword ptr [esi + 0x10],-0x1
+jz 0x00404e4a
+and dword ptr [ebp + -0x4],0x0
+lea edi,[esi + 0x2010]
+mov ebx,0x3ff000
+cmp dword ptr [edi],0xf0
+jnz 0x00404e06
+mov eax,ebx
+push 0x4000
+add eax,dword ptr [esi + 0x10]
+push 0x1000
+push eax
+call dword ptr [0x004090a8]
+test eax,eax
+jz 0x00404e06
+or dword ptr [edi],0xffffffff
+dec dword ptr [0x0040d5d0]
+mov eax,dword ptr [esi + 0xc]
+test eax,eax
+jz 0x00404dfb
+cmp eax,edi
+jbe 0x00404dfe
+mov dword ptr [esi + 0xc],edi
+inc dword ptr [ebp + -0x4]
+dec dword ptr [ebp + 0x8]
+jz 0x00404e13
+sub ebx,0x1000
+sub edi,0x8
+test ebx,ebx
+jge 0x00404dc5
+cmp dword ptr [ebp + -0x4],0x0
+mov ecx,esi
+mov esi,dword ptr [esi + 0x4]
+jz 0x00404e4a
+cmp dword ptr [ecx + 0x18],-0x1
+jnz 0x00404e4a
+push 0x1
+lea eax,[ecx + 0x20]
+pop edx
+cmp dword ptr [eax],-0x1
+jnz 0x00404e3b
+inc edx
+add eax,0x8
+cmp edx,0x400
+jl 0x00404e2a
+cmp edx,0x400
+jnz 0x00404e4a
+push ecx
+call 0x00404d49
+pop ecx
+cmp esi,dword ptr [0x0040a4a4]
+jz 0x00404e5c
+cmp dword ptr [ebp + 0x8],0x0
+jg 0x00404dac
+pop edi
+pop esi
+pop ebx
+leave
+ret
+mov eax,dword ptr [esp + 0x4]
+mov edx,0x40a4a0
+push esi
+mov ecx,edx
+cmp eax,dword ptr [ecx + 0x10]
+jbe 0x00404e77
+cmp eax,dword ptr [ecx + 0x14]
+jc 0x00404e7f
+mov ecx,dword ptr [ecx]
+cmp ecx,edx
+jz 0x00404eb4
+jmp 0x00404e6d
+test al,0xf
+jnz 0x00404eb4
+mov esi,eax
+mov edx,0x100
+and esi,0xfff
+cmp esi,edx
+jc 0x00404eb4
+mov esi,dword ptr [esp + 0xc]
+mov dword ptr [esi],ecx
+mov esi,dword ptr [esp + 0x10]
+mov ecx,eax
+and cx,0xf000
+sub eax,ecx
+mov dword ptr [esi],ecx
+sub eax,edx
+pop esi
+sar eax,0x4
+lea eax,[eax + ecx*0x1 + 0x8]
+ret
+xor eax,eax
+pop esi
+ret
+mov eax,dword ptr [esp + 0x4]
+mov ecx,dword ptr [esp + 0x8]
+sub ecx,dword ptr [eax + 0x10]
+sar ecx,0xc
+lea eax,[eax + ecx*0x8 + 0x18]
+mov ecx,dword ptr [esp + 0xc]
+movzx edx,byte ptr [ecx]
+add dword ptr [eax],edx
+and byte ptr [ecx],0x0
+cmp dword ptr [eax],0xf0
+mov dword ptr [eax + 0x4],0xf1
+jnz 0x00404efc
+inc dword ptr [0x0040d5d0]
+cmp dword ptr [0x0040d5d0],0x20
+jnz 0x00404efc
+push 0x10
+call 0x00404d9f
+pop ecx
+ret
+push ebp
+mov ebp,esp
+push ecx
+push ecx
+push ebx
+push esi
+mov esi,dword ptr [0x0040c4c0]
+push edi
+mov edx,dword ptr [esi + 0x10]
+cmp edx,-0x1
+jz 0x00404fb6
+mov edi,dword ptr [esi + 0x8]
+lea ecx,[esi + 0x2018]
+mov eax,edi
+sub eax,esi
+sub eax,0x18
+sar eax,0x3
+shl eax,0xc
+add eax,edx
+cmp edi,ecx
+mov dword ptr [ebp + -0x4],eax
+jnc 0x00404f70
+mov ecx,dword ptr [edi]
+mov ebx,dword ptr [ebp + 0x8]
+cmp ecx,ebx
+jl 0x00404f59
+cmp dword ptr [edi + 0x4],ebx
+jbe 0x00404f59
+push ebx
+push ecx
+push eax
+call 0x00405105
+add esp,0xc
+test eax,eax
+jnz 0x00404fc8
+mov eax,dword ptr [ebp + -0x4]
+mov dword ptr [edi + 0x4],ebx
+add edi,0x8
+lea ecx,[esi + 0x2018]
+add eax,0x1000
+cmp edi,ecx
+mov dword ptr [ebp + -0x4],eax
+jc 0x00404f36
+jmp 0x00404f73
+mov ebx,dword ptr [ebp + 0x8]
+mov eax,dword ptr [esi + 0x8]
+mov ecx,dword ptr [esi + 0x10]
+lea edi,[esi + 0x18]
+mov dword ptr [ebp + -0x8],eax
+cmp edi,eax
+mov dword ptr [ebp + -0x4],ecx
+jnc 0x00404fb9
+mov eax,dword ptr [edi]
+cmp eax,ebx
+jl 0x00404fa5
+cmp dword ptr [edi + 0x4],ebx
+jbe 0x00404fa5
+push ebx
+push eax
+push dword ptr [ebp + -0x4]
+call 0x00405105
+add esp,0xc
+test eax,eax
+jnz 0x00404fc8
+mov dword ptr [edi + 0x4],ebx
+add dword ptr [ebp + -0x4],0x1000
+add edi,0x8
+cmp edi,dword ptr [ebp + -0x8]
+jc 0x00404f86
+jmp 0x00404fb9
+mov ebx,dword ptr [ebp + 0x8]
+mov esi,dword ptr [esi]
+cmp esi,dword ptr [0x0040c4c0]
+jz 0x00404fd8
+jmp 0x00404f0b
+mov dword ptr [0x0040c4c0],esi
+sub dword ptr [edi],ebx
+mov dword ptr [esi + 0x8],edi
+jmp 0x00405100
+mov eax,0x40a4a0
+mov edi,eax
+cmp dword ptr [edi + 0x10],-0x1
+jz 0x00404feb
+cmp dword ptr [edi + 0xc],0x0
+jnz 0x00404ff7
+mov edi,dword ptr [edi]
+cmp edi,eax
+jz 0x004050cc
+jmp 0x00404fdf
+mov ebx,dword ptr [edi + 0xc]
+and dword ptr [ebp + -0x4],0x0
+mov esi,ebx
+mov eax,ebx
+sub esi,edi
+sub esi,0x18
+sar esi,0x3
+shl esi,0xc
+add esi,dword ptr [edi + 0x10]
+cmp dword ptr [ebx],-0x1
+jnz 0x00405026
+cmp dword ptr [ebp + -0x4],0x10
+jge 0x00405026
+add eax,0x8
+inc dword ptr [ebp + -0x4]
+cmp dword ptr [eax],-0x1
+jz 0x00405015
+mov eax,dword ptr [ebp + -0x4]
+push 0x4
+shl eax,0xc
+push 0x1000
+push eax
+push esi
+mov dword ptr [ebp + -0x8],eax
+call dword ptr [0x004090ac]
+cmp eax,esi
+jnz 0x004050fe
+push 0x0
+push dword ptr [ebp + -0x8]
+push esi
+call 0x004076f0
+mov edx,dword ptr [ebp + -0x4]
+add esp,0xc
+test edx,edx
+mov ecx,ebx
+jle 0x0040508d
+lea eax,[esi + 0x4]
+mov dword ptr [ebp + -0x4],edx
+or byte ptr [eax + 0xf4],0xff
+lea edx,[eax + 0x4]
+mov dword ptr [eax + -0x4],edx
+mov edx,0xf0
+mov dword ptr [eax],edx
+mov dword ptr [ecx],edx
+mov dword ptr [ecx + 0x4],0xf1
+add eax,0x1000
+add ecx,0x8
+dec dword ptr [ebp + -0x4]
+jnz 0x00405063
+mov dword ptr [0x0040c4c0],edi
+lea eax,[edi + 0x2018]
+cmp ecx,eax
+jnc 0x004050a9
+cmp dword ptr [ecx],-0x1
+jz 0x004050a7
+add ecx,0x8
+jmp 0x00405099
+cmp ecx,eax
+sbb eax,eax
+and eax,ecx
+mov dword ptr [edi + 0xc],eax
+mov eax,dword ptr [ebp + 0x8]
+mov byte ptr [esi + 0x8],al
+mov dword ptr [edi + 0x8],ebx
+sub dword ptr [ebx],eax
+sub dword ptr [esi + 0x4],eax
+lea ecx,[esi + eax*0x1 + 0x8]
+lea eax,[esi + 0x100]
+mov dword ptr [esi],ecx
+jmp 0x00405100
+call 0x00404c05
+test eax,eax
+jz 0x004050fe
+mov ecx,dword ptr [eax + 0x10]
+mov byte ptr [ecx + 0x8],bl
+lea edx,[ecx + ebx*0x1 + 0x8]
+mov [0x0040c4c0],eax
+mov dword ptr [ecx],edx
+mov edx,0xf0
+sub edx,ebx
+mov dword ptr [ecx + 0x4],edx
+movzx edx,bl
+sub dword ptr [eax + 0x18],edx
+lea eax,[ecx + 0x100]
+jmp 0x00405100
+xor eax,eax
+pop edi
+pop esi
+pop ebx
+leave
+ret
+push ebp
+mov ebp,esp
+push ecx
+mov ecx,dword ptr [ebp + 0x8]
+mov edx,dword ptr [ebp + 0x10]
+push ebx
+push esi
+mov esi,dword ptr [ecx + 0x4]
+push edi
+mov edi,dword ptr [ecx]
+lea ebx,[ecx + 0xf8]
+cmp esi,edx
+mov dword ptr [ebp + -0x4],edi
+mov eax,edi
+mov dword ptr [ebp + 0x8],ebx
+jc 0x0040514a
+lea eax,[edi + edx*0x1]
+mov byte ptr [edi],dl
+cmp eax,ebx
+jnc 0x00405139
+add dword ptr [ecx],edx
+sub dword ptr [ecx + 0x4],edx
+jmp 0x00405142
+and dword ptr [ecx + 0x4],0x0
+lea eax,[ecx + 0x8]
+mov dword ptr [ecx],eax
+lea eax,[edi + 0x8]
+jmp 0x00405218
+add esi,edi
+cmp byte ptr [esi],0x0
+jz 0x00405153
+mov eax,esi
+lea esi,[eax + edx*0x1]
+cmp esi,ebx
+jnc 0x0040519d
+mov bl,byte ptr [eax]
+test bl,bl
+jnz 0x00405190
+push 0x1
+lea ebx,[eax + 0x1]
+pop esi
+cmp byte ptr [ebx],0x0
+jnz 0x0040516f
+inc ebx
+inc esi
+jmp 0x00405166
+cmp esi,edx
+jnc 0x004051c1
+cmp eax,dword ptr [ebp + -0x4]
+jnz 0x0040517d
+mov dword ptr [ecx + 0x4],esi
+jmp 0x00405189
+sub dword ptr [ebp + 0xc],esi
+cmp dword ptr [ebp + 0xc],edx
+jc 0x00405222
+mov edi,dword ptr [ebp + -0x4]
+mov eax,ebx
+jmp 0x00405195
+movzx esi,bl
+add eax,esi
+lea esi,[eax + edx*0x1]
+cmp esi,dword ptr [ebp + 0x8]
+jc 0x0040515a
+lea esi,[ecx + 0x8]
+cmp esi,edi
+jnc 0x00405222
+lea eax,[esi + edx*0x1]
+cmp eax,dword ptr [ebp + 0x8]
+jnc 0x00405222
+mov al,byte ptr [esi]
+test al,al
+jnz 0x004051f2
+push 0x1
+lea ebx,[esi + 0x1]
+pop eax
+cmp byte ptr [ebx],0x0
+jnz 0x004051e2
+inc ebx
+inc eax
+jmp 0x004051b8
+lea ebx,[eax + edx*0x1]
+cmp ebx,dword ptr [ebp + 0x8]
+jnc 0x004051d2
+sub esi,edx
+mov dword ptr [ecx],ebx
+mov dword ptr [ecx + 0x4],esi
+jmp 0x004051db
+and dword ptr [ecx + 0x4],0x0
+lea esi,[ecx + 0x8]
+mov dword ptr [ecx],esi
+mov byte ptr [eax],dl
+add eax,0x8
+jmp 0x00405218
+cmp eax,edx
+jnc 0x004051f9
+sub dword ptr [ebp + 0xc],eax
+cmp dword ptr [ebp + 0xc],edx
+jc 0x00405222
+mov esi,ebx
+jmp 0x004051a0
+movzx eax,al
+add esi,eax
+jmp 0x004051a0
+lea ebx,[esi + edx*0x1]
+cmp ebx,dword ptr [ebp + 0x8]
+jnc 0x0040520a
+sub eax,edx
+mov dword ptr [ecx],ebx
+mov dword ptr [ecx + 0x4],eax
+jmp 0x00405213
+and dword ptr [ecx + 0x4],0x0
+lea eax,[ecx + 0x8]
+mov dword ptr [ecx],eax
+mov byte ptr [esi],dl
+lea eax,[esi + 0x8]
+imul ecx,ecx,0xf
+shl eax,0x4
+sub eax,ecx
+jmp 0x00405224
+xor eax,eax
+pop edi
+pop esi
+pop ebx
+leave
+ret
+push ebp
+mov ebp,esp
+push ebx
+push esi
+mov esi,dword ptr [ebp + 0xc]
+mov eax,dword ptr [esi + 0xc]
+mov ebx,dword ptr [esi + 0x10]
+test al,0x82
+jz 0x00405332
+test al,0x40
+jnz 0x00405332
+test al,0x1
+jz 0x00405261
+and dword ptr [esi + 0x4],0x0
+test al,0x10
+jz 0x00405332
+mov ecx,dword ptr [esi + 0x8]
+and al,0xfe
+mov dword ptr [esi],ecx
+mov dword ptr [esi + 0xc],eax
+mov eax,dword ptr [esi + 0xc]
+and dword ptr [esi + 0x4],0x0
+and dword ptr [ebp + 0xc],0x0
+and al,0xef
+or al,0x2
+test ax,0x10c
+mov dword ptr [esi + 0xc],eax
+jnz 0x0040529b
+cmp esi,0x40a238
+jz 0x00405289
+cmp esi,0x40a258
+jnz 0x00405294
+push ebx
+call 0x00406ecc
+test eax,eax
+pop ecx
+jnz 0x0040529b
+push esi
+call 0x00407748
+pop ecx
+test word ptr [esi + 0xc],0x108
+push edi
+jz 0x00405308
+mov eax,dword ptr [esi + 0x8]
+mov edi,dword ptr [esi]
+sub edi,eax
+lea ecx,[eax + 0x1]
+mov dword ptr [esi],ecx
+mov ecx,dword ptr [esi + 0x18]
+dec ecx
+test edi,edi
+mov dword ptr [esi + 0x4],ecx
+jle 0x004052cb
+push edi
+push eax
+push ebx
+call 0x0040533e
+add esp,0xc
+mov dword ptr [ebp + 0xc],eax
+jmp 0x004052fe
+cmp ebx,-0x1
+jz 0x004052e6
+mov eax,ebx
+mov ecx,ebx
+sar eax,0x5
+and ecx,0x1f
+mov eax,dword ptr [eax*0x4 + 0x40d9c0]
+lea eax,[eax + ecx*0x8]
+jmp 0x004052eb
+mov eax,0x40c4d0
+test byte ptr [eax + 0x4],0x20
+jz 0x004052fe
+push 0x2
+push 0x0
+push ebx
+call 0x00405ce2
+add esp,0xc
+mov eax,dword ptr [esi + 0x8]
+mov cl,byte ptr [ebp + 0x8]
+mov byte ptr [eax],cl
+jmp 0x0040531c
+push 0x1
+lea eax,[ebp + 0x8]
+pop edi
+push edi
+push eax
+push ebx
+call 0x0040533e
+add esp,0xc
+mov dword ptr [ebp + 0xc],eax
+cmp dword ptr [ebp + 0xc],edi
+pop edi
+jz 0x00405328
+or dword ptr [esi + 0xc],0x20
+jmp 0x00405337
+mov eax,dword ptr [ebp + 0x8]
+and eax,0xff
+jmp 0x0040533a
+or al,0x20
+mov dword ptr [esi + 0xc],eax
+or eax,0xffffffff
+pop esi
+pop ebx
+pop ebp
+ret
+push ebp
+mov ebp,esp
+sub esp,0x414
+mov ecx,dword ptr [ebp + 0x8]
+push ebx
+cmp ecx,dword ptr [0x0040dac0]
+push esi
+push edi
+jnc 0x004054d2
+mov eax,ecx
+mov esi,ecx
+sar eax,0x5
+and esi,0x1f
+lea ebx,[eax*0x4 + 0x40d9c0]
+shl esi,0x3
+mov eax,dword ptr [ebx]
+mov al,byte ptr [eax + esi*0x1 + 0x4]
+test al,0x1
+jz 0x004054d2
+xor edi,edi
+cmp dword ptr [ebp + 0x10],edi
+mov dword ptr [ebp + -0x8],edi
+mov dword ptr [ebp + -0x10],edi
+jnz 0x0040538f
+xor eax,eax
+jmp 0x004054e6
+test al,0x20
+jz 0x0040539f
+push 0x2
+push edi
+push ecx
+call 0x00405ce2
+add esp,0xc
+mov eax,dword ptr [ebx]
+add eax,esi
+test byte ptr [eax + 0x4],0x80
+jz 0x0040546e
+mov eax,dword ptr [ebp + 0xc]
+cmp dword ptr [ebp + 0x10],edi
+mov dword ptr [ebp + -0x4],eax
+mov dword ptr [ebp + 0x8],edi
+jbe 0x004054a6
+lea eax,[ebp + 0xfffffbec]
+mov ecx,dword ptr [ebp + -0x4]
+sub ecx,dword ptr [ebp + 0xc]
+cmp ecx,dword ptr [ebp + 0x10]
+jnc 0x004053f9
+mov ecx,dword ptr [ebp + -0x4]
+inc dword ptr [ebp + -0x4]
+mov cl,byte ptr [ecx]
+cmp cl,0xa
+jnz 0x004053e4
+inc dword ptr [ebp + -0x10]
+mov byte ptr [eax],0xd
+inc eax
+mov byte ptr [eax],cl
+inc eax
+mov ecx,eax
+lea edx,[ebp + 0xfffffbec]
+sub ecx,edx
+cmp ecx,0x400
+jl 0x004053c5
+mov edi,eax
+lea eax,[ebp + 0xfffffbec]
+sub edi,eax
+lea eax,[ebp + -0xc]
+push 0x0
+push eax
+lea eax,[ebp + 0xfffffbec]
+push edi
+push eax
+mov eax,dword ptr [ebx]
+push dword ptr [eax + esi*0x1]
+call dword ptr [0x004090b8]
+test eax,eax
+jz 0x00405463
+mov eax,dword ptr [ebp + -0xc]
+add dword ptr [ebp + -0x8],eax
+cmp eax,edi
+jl 0x00405435
+mov eax,dword ptr [ebp + -0x4]
+sub eax,dword ptr [ebp + 0xc]
+cmp eax,dword ptr [ebp + 0x10]
+jc 0x004053bf
+xor edi,edi
+mov eax,dword ptr [ebp + -0x8]
+cmp eax,edi
+jnz 0x004054cd
+cmp dword ptr [ebp + 0x8],edi
+jz 0x004054a6
+push 0x5
+pop eax
+cmp dword ptr [ebp + 0x8],eax
+jnz 0x0040549b
+mov dword ptr [0x0040d5d4],0x9
+mov [0x0040d5d8],eax
+jmp 0x004054e3
+call dword ptr [0x00409000]
+mov dword ptr [ebp + 0x8],eax
+jmp 0x00405435
+lea ecx,[ebp + -0xc]
+push edi
+push ecx
+push dword ptr [ebp + 0x10]
+push dword ptr [ebp + 0xc]
+push dword ptr [eax]
+call dword ptr [0x004090b8]
+test eax,eax
+jz 0x00405490
+mov eax,dword ptr [ebp + -0xc]
+mov dword ptr [ebp + 0x8],edi
+mov dword ptr [ebp + -0x8],eax
+jmp 0x00405437
+call dword ptr [0x00409000]
+mov dword ptr [ebp + 0x8],eax
+jmp 0x00405437
+push dword ptr [ebp + 0x8]
+call 0x0040778c
+pop ecx
+jmp 0x004054e3
+mov eax,dword ptr [ebx]
+test byte ptr [eax + esi*0x1 + 0x4],0x40
+jz 0x004054bb
+mov eax,dword ptr [ebp + 0xc]
+cmp byte ptr [eax],0x1a
+jz 0x00405388
+mov dword ptr [0x0040d5d4],0x1c
+mov dword ptr [0x0040d5d8],edi
+jmp 0x004054e3
+sub eax,dword ptr [ebp + -0x10]
+jmp 0x004054e6
+and dword ptr [0x0040d5d8],0x0
+mov dword ptr [0x0040d5d4],0x9
+or eax,0xffffffff
+pop edi
+pop esi
+pop ebx
+leave
+ret
+push esi
+mov esi,dword ptr [esp + 0x8]
+test esi,esi
+jnz 0x004054fd
+push esi
+call 0x0040558b
+pop ecx
+pop esi
+ret
+push esi
+call 0x00405526
+test eax,eax
+pop ecx
+jz 0x0040550d
+or eax,0xffffffff
+pop esi
+ret
+test byte ptr [esi + 0xd],0x40
+jz 0x00405522
+push dword ptr [esi + 0x10]
+call 0x004077f3
+neg eax
+pop ecx
+pop esi
+sbb eax,eax
+ret
+xor eax,eax
+pop esi
+ret
+push ebx
+push esi
+mov esi,dword ptr [esp + 0xc]
+xor ebx,ebx
+push edi
+mov eax,dword ptr [esi + 0xc]
+mov ecx,eax
+and ecx,0x3
+cmp cl,0x2
+jnz 0x00405573
+test ax,0x108
+jz 0x00405573
+mov eax,dword ptr [esi + 0x8]
+mov edi,dword ptr [esi]
+sub edi,eax
+test edi,edi
+jle 0x00405573
+push edi
+push eax
+push dword ptr [esi + 0x10]
+call 0x0040533e
+add esp,0xc
+cmp eax,edi
+jnz 0x0040556c
+mov eax,dword ptr [esi + 0xc]
+test al,0x80
+jz 0x00405573
+and al,0xfd
+mov dword ptr [esi + 0xc],eax
+jmp 0x00405573
+or dword ptr [esi + 0xc],0x20
+or ebx,0xffffffff
+mov eax,dword ptr [esi + 0x8]
+and dword ptr [esi + 0x4],0x0
+mov dword ptr [esi],eax
+pop edi
+mov eax,ebx
+pop esi
+pop ebx
+ret
+push ebx
+push esi
+push edi
+xor esi,esi
+xor ebx,ebx
+xor edi,edi
+cmp dword ptr [0x0040eb00],esi
+jle 0x004055e9
+mov eax,[0x0040dae8]
+mov eax,dword ptr [eax + esi*0x4]
+test eax,eax
+jz 0x004055e0
+mov ecx,dword ptr [eax + 0xc]
+test cl,0x83
+jz 0x004055e0
+cmp dword ptr [esp + 0x10],0x1
+jnz 0x004055c6
+push eax
+call 0x004054eb
+cmp eax,-0x1
+pop ecx
+jz 0x004055e0
+inc ebx
+jmp 0x004055e0
+cmp dword ptr [esp + 0x10],0x0
+jnz 0x004055e0
+test cl,0x2
+jz 0x004055e0
+push eax
+call 0x004054eb
+cmp eax,-0x1
+pop ecx
+jnz 0x004055e0
+or edi,eax
+inc esi
+cmp esi,dword ptr [0x0040eb00]
+jl 0x0040559c
+cmp dword ptr [esp + 0x10],0x1
+mov eax,ebx
+jz 0x004055f4
+mov eax,edi
+pop edi
+pop esi
+pop ebx
+ret
+push ebp
+mov ebp,esp
+push edi
+push esi
+mov esi,dword ptr [ebp + 0xc]
+mov ecx,dword ptr [ebp + 0x10]
+mov edi,dword ptr [ebp + 0x8]
+mov eax,ecx
+mov edx,ecx
+add eax,esi
+cmp edi,esi
+jbe 0x00405620
+cmp edi,eax
+jc 0x00405798
+test edi,0x3
+jnz 0x0040563c
+shr ecx,0x2
+and edx,0x3
+cmp ecx,0x8
+jc 0x0040565c
+movsd.rep es:edi,esi
+jmp dword ptr [edx*0x4 + 0x405748]
+mov eax,edi
+mov edx,0x3
+sub ecx,0x4
+jc 0x00405654
+and eax,0x3
+add ecx,eax
+jmp dword ptr [eax*0x4 + 0x405660]
+jmp dword ptr [ecx*0x4 + 0x405758]
+jmp dword ptr [ecx*0x4 + 0x4056dc]
+and edx,ecx
+mov al,byte ptr [esi]
+mov byte ptr [edi],al
+mov al,byte ptr [esi + 0x1]
+mov byte ptr [edi + 0x1],al
+mov al,byte ptr [esi + 0x2]
+shr ecx,0x2
+mov byte ptr [edi + 0x2],al
+add esi,0x3
+add edi,0x3
+cmp ecx,0x8
+jc 0x0040565c
+movsd.rep es:edi,esi
+jmp dword ptr [edx*0x4 + 0x405748]
+and edx,ecx
+mov al,byte ptr [esi]
+mov byte ptr [edi],al
+mov al,byte ptr [esi + 0x1]
+shr ecx,0x2
+mov byte ptr [edi + 0x1],al
+add esi,0x2
+add edi,0x2
+cmp ecx,0x8
+jc 0x0040565c
+movsd.rep es:edi,esi
+jmp dword ptr [edx*0x4 + 0x405748]
+and edx,ecx
+mov al,byte ptr [esi]
+mov byte ptr [edi],al
+inc esi
+shr ecx,0x2
+inc edi
+cmp ecx,0x8
+jc 0x0040565c
+movsd.rep es:edi,esi
+jmp dword ptr [edx*0x4 + 0x405748]
+mov eax,dword ptr [esi + ecx*0x4 + -0x1c]
+mov dword ptr [edi + ecx*0x4 + -0x1c],eax
+mov eax,dword ptr [esi + ecx*0x4 + -0x18]
+mov dword ptr [edi + ecx*0x4 + -0x18],eax
+mov eax,dword ptr [esi + ecx*0x4 + -0x14]
+mov dword ptr [edi + ecx*0x4 + -0x14],eax
+mov eax,dword ptr [esi + ecx*0x4 + -0x10]
+mov dword ptr [edi + ecx*0x4 + -0x10],eax
+mov eax,dword ptr [esi + ecx*0x4 + -0xc]
+mov dword ptr [edi + ecx*0x4 + -0xc],eax
+mov eax,dword ptr [esi + ecx*0x4 + -0x8]
+mov dword ptr [edi + ecx*0x4 + -0x8],eax
+mov eax,dword ptr [esi + ecx*0x4 + -0x4]
+mov dword ptr [edi + ecx*0x4 + -0x4],eax
+lea eax,[ecx*0x4 + 0x0]
+add esi,eax
+add edi,eax
+jmp dword ptr [edx*0x4 + 0x405748]
+mov eax,dword ptr [ebp + 0x8]
+pop esi
+pop edi
+leave
+ret
+mov al,byte ptr [esi]
+mov byte ptr [edi],al
+mov eax,dword ptr [ebp + 0x8]
+pop esi
+pop edi
+leave
+ret
+mov al,byte ptr [esi]
+mov byte ptr [edi],al
+mov al,byte ptr [esi + 0x1]
+mov byte ptr [edi + 0x1],al
+mov eax,dword ptr [ebp + 0x8]
+pop esi
+pop edi
+leave
+ret
+mov al,byte ptr [esi]
+mov byte ptr [edi],al
+mov al,byte ptr [esi + 0x1]
+mov byte ptr [edi + 0x1],al
+mov al,byte ptr [esi + 0x2]
+mov byte ptr [edi + 0x2],al
+mov eax,dword ptr [ebp + 0x8]
+pop esi
+pop edi
+leave
+ret
+lea esi,[ecx + esi*0x1 + -0x4]
+lea edi,[ecx + edi*0x1 + -0x4]
+test edi,0x3
+jnz 0x004057cc
+shr ecx,0x2
+and edx,0x3
+cmp ecx,0x8
+jc 0x004057c0
+std
+movsd.rep es:edi,esi
+cld
+jmp dword ptr [edx*0x4 + 0x4058e0]
+neg ecx
+jmp dword ptr [ecx*0x4 + 0x405890]
+mov eax,edi
+mov edx,0x3
+cmp ecx,0x4
+jc 0x004057e4
+and eax,0x3
+sub ecx,eax
+jmp dword ptr [eax*0x4 + 0x4057e8]
+jmp dword ptr [ecx*0x4 + 0x4058e0]
+mov al,byte ptr [esi + 0x3]
+and edx,ecx
+mov byte ptr [edi + 0x3],al
+dec esi
+shr ecx,0x2
+dec edi
+cmp ecx,0x8
+jc 0x004057c0
+std
+movsd.rep es:edi,esi
+cld
+jmp dword ptr [edx*0x4 + 0x4058e0]
+mov al,byte ptr [esi + 0x3]
+and edx,ecx
+mov byte ptr [edi + 0x3],al
+mov al,byte ptr [esi + 0x2]
+shr ecx,0x2
+mov byte ptr [edi + 0x2],al
+sub esi,0x2
+sub edi,0x2
+cmp ecx,0x8
+jc 0x004057c0
+std
+movsd.rep es:edi,esi
+cld
+jmp dword ptr [edx*0x4 + 0x4058e0]
+mov al,byte ptr [esi + 0x3]
+and edx,ecx
+mov byte ptr [edi + 0x3],al
+mov al,byte ptr [esi + 0x2]
+mov byte ptr [edi + 0x2],al
+mov al,byte ptr [esi + 0x1]
+shr ecx,0x2
+mov byte ptr [edi + 0x1],al
+sub esi,0x3
+sub edi,0x3
+cmp ecx,0x8
+jc 0x004057c0
+std
+movsd.rep es:edi,esi
+cld
+jmp dword ptr [edx*0x4 + 0x4058e0]
+mov eax,dword ptr [esi + ecx*0x4 + 0x1c]
+mov dword ptr [edi + ecx*0x4 + 0x1c],eax
+mov eax,dword ptr [esi + ecx*0x4 + 0x18]
+mov dword ptr [edi + ecx*0x4 + 0x18],eax
+mov eax,dword ptr [esi + ecx*0x4 + 0x14]
+mov dword ptr [edi + ecx*0x4 + 0x14],eax
+mov eax,dword ptr [esi + ecx*0x4 + 0x10]
+mov dword ptr [edi + ecx*0x4 + 0x10],eax
+mov eax,dword ptr [esi + ecx*0x4 + 0xc]
+mov dword ptr [edi + ecx*0x4 + 0xc],eax
+mov eax,dword ptr [esi + ecx*0x4 + 0x8]
+mov dword ptr [edi + ecx*0x4 + 0x8],eax
+mov eax,dword ptr [esi + ecx*0x4 + 0x4]
+mov dword ptr [edi + ecx*0x4 + 0x4],eax
+lea eax,[ecx*0x4 + 0x0]
+add esi,eax
+add edi,eax
+jmp dword ptr [edx*0x4 + 0x4058e0]
+mov eax,dword ptr [ebp + 0x8]
+pop esi
+pop edi
+leave
+ret
+mov al,byte ptr [esi + 0x3]
+mov byte ptr [edi + 0x3],al
+mov eax,dword ptr [ebp + 0x8]
+pop esi
+pop edi
+leave
+ret
+mov al,byte ptr [esi + 0x3]
+mov byte ptr [edi + 0x3],al
+mov al,byte ptr [esi + 0x2]
+mov byte ptr [edi + 0x2],al
+mov eax,dword ptr [ebp + 0x8]
+pop esi
+pop edi
+leave
+ret
+mov al,byte ptr [esi + 0x3]
+mov byte ptr [edi + 0x3],al
+mov al,byte ptr [esi + 0x2]
+mov byte ptr [edi + 0x2],al
+mov al,byte ptr [esi + 0x1]
+mov byte ptr [edi + 0x1],al
+mov eax,dword ptr [ebp + 0x8]
+pop esi
+pop edi
+leave
+ret
+push esi
+mov esi,dword ptr [esp + 0x8]
+mov eax,dword ptr [esi + 0xc]
+test al,0x83
+jz 0x00405a09
+test al,0x40
+jnz 0x00405a09
+test al,0x2
+jz 0x0040595b
+or al,0x20
+mov dword ptr [esi + 0xc],eax
+jmp 0x00405a09
+or al,0x1
+test ax,0x10c
+mov dword ptr [esi + 0xc],eax
+jnz 0x0040596f
+push esi
+call 0x00407748
+pop ecx
+jmp 0x00405974
+mov eax,dword ptr [esi + 0x8]
+mov dword ptr [esi],eax
+push dword ptr [esi + 0x18]
+push dword ptr [esi + 0x8]
+push dword ptr [esi + 0x10]
+call 0x00405a0e
+add esp,0xc
+mov dword ptr [esi + 0x4],eax
+test eax,eax
+jz 0x004059f8
+cmp eax,-0x1
+jz 0x004059f8
+mov edx,dword ptr [esi + 0xc]
+test dl,0x82
+jnz 0x004059cd
+mov ecx,dword ptr [esi + 0x10]
+push edi
+cmp ecx,-0x1
+jz 0x004059b6
+mov edi,ecx
+sar edi,0x5
+and ecx,0x1f
+mov edi,dword ptr [edi*0x4 + 0x40d9c0]
+lea edi,[edi + ecx*0x8]
+jmp 0x004059bb
+mov edi,0x40c4d0
+mov cl,byte ptr [edi + 0x4]
+pop edi
+and cl,0x82
+cmp cl,0x82
+jnz 0x004059cd
+or dh,0x20
+mov dword ptr [esi + 0xc],edx
+cmp dword ptr [esi + 0x18],0x200
+jnz 0x004059ea
+mov ecx,dword ptr [esi + 0xc]
+test cl,0x8
+jz 0x004059ea
+test ch,0x4
+jnz 0x004059ea
+mov dword ptr [esi + 0x18],0x1000
+mov ecx,dword ptr [esi]
+dec eax
+mov dword ptr [esi + 0x4],eax
+movzx eax,byte ptr [ecx]
+inc ecx
+mov dword ptr [esi],ecx
+pop esi
+ret
+neg eax
+sbb eax,eax
+and eax,0x10
+add eax,0x10
+or dword ptr [esi + 0xc],eax
+and dword ptr [esi + 0x4],0x0
+or eax,0xffffffff
+pop esi
+ret
+push ebp
+mov ebp,esp
+sub esp,0xc
+push ebx
+push esi
+mov esi,dword ptr [ebp + 0x8]
+push edi
+cmp esi,dword ptr [0x0040dac0]
+jnc 0x00405beb
+mov eax,esi
+and esi,0x1f
+sar eax,0x5
+shl esi,0x3
+lea ebx,[eax*0x4 + 0x40d9c0]
+mov eax,dword ptr [eax*0x4 + 0x40d9c0]
+add eax,esi
+mov dl,byte ptr [eax + 0x4]
+test dl,0x1
+jz 0x00405beb
+and dword ptr [ebp + -0x8],0x0
+mov edi,dword ptr [ebp + 0xc]
+cmp dword ptr [ebp + 0x10],0x0
+mov ecx,edi
+jz 0x00405ac3
+test dl,0x2
+jnz 0x00405ac3
+test dl,0x48
+jz 0x00405a83
+mov al,byte ptr [eax + 0x5]
+cmp al,0xa
+jz 0x00405a83
+dec dword ptr [ebp + 0x10]
+mov byte ptr [edi],al
+mov eax,dword ptr [ebx]
+lea ecx,[edi + 0x1]
+mov dword ptr [ebp + -0x8],0x1
+mov byte ptr [eax + esi*0x1 + 0x5],0xa
+lea eax,[ebp + -0xc]
+push 0x0
+push eax
+mov eax,dword ptr [ebx]
+push dword ptr [ebp + 0x10]
+push ecx
+push dword ptr [eax + esi*0x1]
+call dword ptr [0x00409020]
+test eax,eax
+jnz 0x00405ad6
+call dword ptr [0x00409000]
+push 0x5
+pop ecx
+cmp eax,ecx
+jnz 0x00405abe
+mov dword ptr [0x0040d5d4],0x9
+mov dword ptr [0x0040d5d8],ecx
+jmp 0x00405bfc
+cmp eax,0x6d
+jnz 0x00405aca
+xor eax,eax
+jmp 0x00405bff
+push eax
+call 0x0040778c
+pop ecx
+jmp 0x00405bfc
+mov eax,dword ptr [ebx]
+mov edx,dword ptr [ebp + -0xc]
+add dword ptr [ebp + -0x8],edx
+lea ecx,[eax + esi*0x1 + 0x4]
+mov al,byte ptr [eax + esi*0x1 + 0x4]
+test al,0x80
+jz 0x00405be6
+test edx,edx
+jz 0x00405afb
+cmp byte ptr [edi],0xa
+jnz 0x00405afb
+or al,0x4
+jmp 0x00405afd
+and al,0xfb
+mov byte ptr [ecx],al
+mov eax,dword ptr [ebp + 0xc]
+mov ecx,dword ptr [ebp + -0x8]
+mov dword ptr [ebp + 0x10],eax
+add ecx,eax
+cmp eax,ecx
+mov dword ptr [ebp + -0x8],ecx
+jnc 0x00405be0
+mov eax,dword ptr [ebp + 0x10]
+mov al,byte ptr [eax]
+cmp al,0x1a
+jz 0x00405bd0
+cmp al,0xd
+jz 0x00405b31
+mov byte ptr [edi],al
+inc edi
+inc dword ptr [ebp + 0x10]
+jmp 0x00405bc2
+dec ecx
+cmp dword ptr [ebp + 0x10],ecx
+jnc 0x00405b4f
+mov eax,dword ptr [ebp + 0x10]
+inc eax
+cmp byte ptr [eax],0xa
+jnz 0x00405b46
+add dword ptr [ebp + 0x10],0x2
+jmp 0x00405ba4
+mov byte ptr [edi],0xd
+inc edi
+mov dword ptr [ebp + 0x10],eax
+jmp 0x00405bc2
+lea eax,[ebp + -0xc]
+push 0x0
+push eax
+inc dword ptr [ebp + 0x10]
+lea eax,[ebp + -0x1]
+push 0x1
+push eax
+mov eax,dword ptr [ebx]
+push dword ptr [eax + esi*0x1]
+call dword ptr [0x00409020]
+test eax,eax
+jnz 0x00405b77
+call dword ptr [0x00409000]
+test eax,eax
+jnz 0x00405bbe
+cmp dword ptr [ebp + -0xc],0x0
+jz 0x00405bbe
+mov eax,dword ptr [ebx]
+test byte ptr [eax + esi*0x1 + 0x4],0x48
+jz 0x00405b99
+mov al,byte ptr [ebp + -0x1]
+cmp al,0xa
+jz 0x00405ba4
+mov byte ptr [edi],0xd
+mov ecx,dword ptr [ebx]
+inc edi
+mov byte ptr [ecx + esi*0x1 + 0x5],al
+jmp 0x00405bc2
+cmp edi,dword ptr [ebp + 0xc]
+jnz 0x00405ba9
+cmp byte ptr [ebp + -0x1],0xa
+jnz 0x00405ba9
+mov byte ptr [edi],0xa
+jmp 0x00405bc1
+push 0x1
+push -0x1
+push dword ptr [ebp + 0x8]
+call 0x00405ce2
+add esp,0xc
+cmp byte ptr [ebp + -0x1],0xa
+jz 0x00405bc2
+mov byte ptr [edi],0xd
+inc edi
+mov ecx,dword ptr [ebp + -0x8]
+cmp dword ptr [ebp + 0x10],ecx
+jc 0x00405b15
+jmp 0x00405be0
+mov eax,dword ptr [ebx]
+lea esi,[eax + esi*0x1 + 0x4]
+mov al,byte ptr [esi]
+test al,0x40
+jnz 0x00405be0
+or al,0x2
+mov byte ptr [esi],al
+sub edi,dword ptr [ebp + 0xc]
+mov dword ptr [ebp + -0x8],edi
+mov eax,dword ptr [ebp + -0x8]
+jmp 0x00405bff
+and dword ptr [0x0040d5d8],0x0
+mov dword ptr [0x0040d5d4],0x9
+or eax,0xffffffff
+pop edi
+pop esi
+pop ebx
+leave
+ret
+push ebx
+push ebp
+push esi
+push edi
+mov edi,dword ptr [esp + 0x14]
+cmp edi,dword ptr [0x0040dac0]
+jnc 0x00405c9e
+mov eax,edi
+mov esi,edi
+sar eax,0x5
+and esi,0x1f
+lea ebx,[eax*0x4 + 0x40d9c0]
+shl esi,0x3
+mov eax,dword ptr [ebx]
+test byte ptr [eax + esi*0x1 + 0x4],0x1
+jz 0x00405c9e
+push edi
+call 0x004079d0
+cmp eax,-0x1
+pop ecx
+jz 0x00405c7d
+cmp edi,0x1
+jz 0x00405c4b
+cmp edi,0x2
+jnz 0x00405c61
+push 0x2
+call 0x004079d0
+push 0x1
+mov ebp,eax
+call 0x004079d0
+pop ecx
+cmp eax,ebp
+pop ecx
+jz 0x00405c7d
+push edi
+call 0x004079d0
+pop ecx
+push eax
+call dword ptr [0x0040900c]
+test eax,eax
+jnz 0x00405c7d
+call dword ptr [0x00409000]
+mov ebp,eax
+jmp 0x00405c7f
+xor ebp,ebp
+push edi
+call 0x00407956
+mov eax,dword ptr [ebx]
+pop ecx
+and byte ptr [eax + esi*0x1 + 0x4],0x0
+test ebp,ebp
+jz 0x00405c9a
+push ebp
+call 0x0040778c
+pop ecx
+jmp 0x00405caf
+xor eax,eax
+jmp 0x00405cb2
+and dword ptr [0x0040d5d8],0x0
+mov dword ptr [0x0040d5d4],0x9
+or eax,0xffffffff
+pop edi
+pop esi
+pop ebp
+pop ebx
+ret
+push esi
+mov esi,dword ptr [esp + 0x8]
+mov eax,dword ptr [esi + 0xc]
+test al,0x83
+jz 0x00405ce0
+test al,0x8
+jz 0x00405ce0
+push dword ptr [esi + 0x8]
+call 0x00402891
+and word ptr [esi + 0xc],0xfbf7
+xor eax,eax
+pop ecx
+mov dword ptr [esi],eax
+mov dword ptr [esi + 0x8],eax
+mov dword ptr [esi + 0x4],eax
+pop esi
+ret
+mov eax,dword ptr [esp + 0x4]
+push ebx
+cmp eax,dword ptr [0x0040dac0]
+push esi
+push edi
+jnc 0x00405d64
+mov ecx,eax
+mov esi,eax
+sar ecx,0x5
+and esi,0x1f
+lea edi,[ecx*0x4 + 0x40d9c0]
+shl esi,0x3
+mov ecx,dword ptr [edi]
+test byte ptr [ecx + esi*0x1 + 0x4],0x1
+jz 0x00405d64
+push eax
+call 0x004079d0
+cmp eax,-0x1
+pop ecx
+jnz 0x00405d26
+mov dword ptr [0x0040d5d4],0x9
+jmp 0x00405d75
+push dword ptr [esp + 0x18]
+push 0x0
+push dword ptr [esp + 0x1c]
+push eax
+call dword ptr [0x0040901c]
+mov ebx,eax
+cmp ebx,-0x1
+jnz 0x00405d46
+call dword ptr [0x00409000]
+jmp 0x00405d48
+xor eax,eax
+test eax,eax
+jz 0x00405d55
+push eax
+call 0x0040778c
+pop ecx
+jmp 0x00405d75
+mov eax,dword ptr [edi]
+and byte ptr [eax + esi*0x1 + 0x4],0xfd
+lea eax,[eax + esi*0x1 + 0x4]
+mov eax,ebx
+jmp 0x00405d78
+and dword ptr [0x0040d5d8],0x0
+mov dword ptr [0x0040d5d4],0x9
+or eax,0xffffffff
+pop edi
+pop esi
+pop ebx
+ret
+sub esp,0x44
+push ebx
+push ebp
+push esi
+push edi
+push 0x100
+call 0x004027df
+mov esi,eax
+pop ecx
+test esi,esi
+jnz 0x00405d9c
+push 0x1b
+call 0x00402eca
+pop ecx
+mov dword ptr [0x0040d9c0],esi
+mov dword ptr [0x0040dac0],0x20
+lea eax,[esi + 0x100]
+cmp esi,eax
+jnc 0x00405dd0
+and byte ptr [esi + 0x4],0x0
+or dword ptr [esi],0xffffffff
+mov byte ptr [esi + 0x5],0xa
+mov eax,[0x0040d9c0]
+add esi,0x8
+add eax,0x100
+jmp 0x00405db2
+lea eax,[esp + 0x10]
+push eax
+call dword ptr [0x004090c8]
+cmp word ptr [esp + 0x42],0x0
+jz 0x00405eac
+mov eax,dword ptr [esp + 0x44]
+test eax,eax
+jz 0x00405eac
+mov esi,dword ptr [eax]
+lea ebp,[eax + 0x4]
+mov eax,0x800
+cmp esi,eax
+lea ebx,[esi + ebp*0x1]
+jl 0x00405e06
+mov esi,eax
+cmp dword ptr [0x0040dac0],esi
+jge 0x00405e60
+mov edi,0x40d9c4
+push 0x100
+call 0x004027df
+test eax,eax
+pop ecx
+jz 0x00405e5a
+add dword ptr [0x0040dac0],0x20
+mov dword ptr [edi],eax
+lea ecx,[eax + 0x100]
+cmp eax,ecx
+jnc 0x00405e4d
+and byte ptr [eax + 0x4],0x0
+or dword ptr [eax],0xffffffff
+mov byte ptr [eax + 0x5],0xa
+mov ecx,dword ptr [edi]
+add eax,0x8
+add ecx,0x100
+jmp 0x00405e31
+add edi,0x4
+cmp dword ptr [0x0040dac0],esi
+jl 0x00405e13
+jmp 0x00405e60
+mov esi,dword ptr [0x0040dac0]
+xor edi,edi
+test esi,esi
+jle 0x00405eac
+mov eax,dword ptr [ebx]
+cmp eax,-0x1
+jz 0x00405ea3
+mov cl,byte ptr [ebp]
+test cl,0x1
+jz 0x00405ea3
+test cl,0x8
+jnz 0x00405e85
+push eax
+call dword ptr [0x004090c4]
+test eax,eax
+jz 0x00405ea3
+mov eax,edi
+mov ecx,edi
+sar eax,0x5
+and ecx,0x1f
+mov eax,dword ptr [eax*0x4 + 0x40d9c0]
+lea eax,[eax + ecx*0x8]
+mov ecx,dword ptr [ebx]
+mov dword ptr [eax],ecx
+mov cl,byte ptr [ebp]
+mov byte ptr [eax + 0x4],cl
+inc edi
+inc ebp
+add ebx,0x4
+cmp edi,esi
+jl 0x00405e66
+xor ebx,ebx
+mov eax,[0x0040d9c0]
+cmp dword ptr [eax + ebx*0x8],-0x1
+lea esi,[eax + ebx*0x8]
+jnz 0x00405f09
+test ebx,ebx
+mov byte ptr [esi + 0x4],0x81
+jnz 0x00405ec9
+push -0xa
+pop eax
+jmp 0x00405ed3
+mov eax,ebx
+dec eax
+neg eax
+sbb eax,eax
+add eax,-0xb
+push eax
+call dword ptr [0x004090c0]
+mov edi,eax
+cmp edi,-0x1
+jz 0x00405ef8
+push edi
+call dword ptr [0x004090c4]
+test eax,eax
+jz 0x00405ef8
+and eax,0xff
+mov dword ptr [esi],edi
+cmp eax,0x2
+jnz 0x00405efe
+or byte ptr [esi + 0x4],0x40
+jmp 0x00405f0d
+cmp eax,0x3
+jnz 0x00405f0d
+or byte ptr [esi + 0x4],0x8
+jmp 0x00405f0d
+or byte ptr [esi + 0x4],0x80
+inc ebx
+cmp ebx,0x3
+jl 0x00405eae
+push dword ptr [0x0040dac0]
+call dword ptr [0x004090bc]
+pop edi
+pop esi
+pop ebp
+pop ebx
+add esp,0x44
+ret
+mov eax,[0x0040d9b8]
+test eax,eax
+jz 0x00405f32
+call eax
+push 0x40a018
+push 0x40a008
+call 0x0040600f
+push 0x40a004
+push 0x40a000
+call 0x0040600f
+add esp,0x10
+ret
+push 0x0
+push 0x0
+push dword ptr [esp + 0xc]
+call 0x00405f76
+add esp,0xc
+ret
+push 0x0
+push 0x1
+push dword ptr [esp + 0xc]
+call 0x00405f76
+add esp,0xc
+ret
+push edi
+push 0x1
+pop edi
+cmp dword ptr [0x0040d61c],edi
+jnz 0x00405f93
+push dword ptr [esp + 0x8]
+call dword ptr [0x004090d0]
+push eax
+call dword ptr [0x004090cc]
+cmp dword ptr [esp + 0xc],0x0
+push ebx
+mov ebx,dword ptr [esp + 0x14]
+mov dword ptr [0x0040d618],edi
+mov byte ptr [0x0040d614],bl
+jnz 0x00405fe7
+mov eax,[0x0040d9b4]
+test eax,eax
+jz 0x00405fd6
+mov ecx,dword ptr [0x0040d9b0]
+push esi
+lea esi,[ecx + -0x4]
+cmp esi,eax
+jc 0x00405fd5
+mov eax,dword ptr [esi]
+test eax,eax
+jz 0x00405fca
+call eax
+sub esi,0x4
+cmp esi,dword ptr [0x0040d9b4]
+jnc 0x00405fc2
+pop esi
+push 0x40a024
+push 0x40a01c
+call 0x0040600f
+pop ecx
+pop ecx
+push 0x40a030
+push 0x40a028
+call 0x0040600f
+pop ecx
+pop ecx
+test ebx,ebx
+pop ebx
+jnz 0x0040600d
+push dword ptr [esp + 0x8]
+mov dword ptr [0x0040d61c],edi
+call dword ptr [0x00409094]
+pop edi
+ret
+push esi
+mov esi,dword ptr [esp + 0x8]
+cmp esi,dword ptr [esp + 0xc]
+jnc 0x00406027
+mov eax,dword ptr [esi]
+test eax,eax
+jz 0x00406022
+call eax
+add esi,0x4
+jmp 0x00406014
+pop esi
+ret
+push ebp
+mov ebp,esp
+push ecx
+push ecx
+push ebx
+push esi
+mov esi,dword ptr [0x0040d734]
+push edi
+mov edi,dword ptr [ebp + 0xc]
+xor ebx,ebx
+mov dword ptr [ebp + -0x8],ebx
+mov dword ptr [ebp + -0x4],ebx
+mov al,byte ptr [edi]
+cmp al,0x61
+jz 0x00406062
+cmp al,0x72
+jz 0x0040605b
+cmp al,0x77
+jnz 0x00406176
+mov ecx,0x301
+jmp 0x00406067
+xor ecx,ecx
+or esi,0x1
+jmp 0x0040606a
+mov ecx,0x109
+or esi,0x2
+push 0x1
+pop edx
+mov al,byte ptr [edi + 0x1]
+inc edi
+cmp al,bl
+jz 0x0040615c
+cmp edx,ebx
+jz 0x0040615c
+movsx eax,al
+cmp eax,0x54
+jg 0x004060fb
+jz 0x004060eb
+sub eax,0x2b
+jz 0x004060d5
+sub eax,0x19
+jz 0x004060cb
+sub eax,0xe
+jz 0x004060b6
+dec eax
+jnz 0x0040614d
+cmp dword ptr [ebp + -0x4],ebx
+jnz 0x0040614d
+mov dword ptr [ebp + -0x4],0x1
+or ecx,0x20
+jmp 0x0040606d
+cmp dword ptr [ebp + -0x4],ebx
+jnz 0x0040614d
+mov dword ptr [ebp + -0x4],0x1
+or ecx,0x10
+jmp 0x0040606d
+test cl,0x40
+jnz 0x0040614d
+or ecx,0x40
+jmp 0x0040606d
+test cl,0x2
+jnz 0x0040614d
+and ecx,0xfffffffe
+and esi,0xfffffffc
+or ecx,0x2
+or esi,0x80
+jmp 0x0040606d
+mov eax,0x1000
+test eax,ecx
+jnz 0x0040614d
+or ecx,eax
+jmp 0x0040606d
+sub eax,0x62
+jz 0x00406148
+dec eax
+jz 0x00406131
+sub eax,0xb
+jz 0x0040611a
+sub eax,0x6
+jnz 0x0040614d
+test ch,0xc0
+jnz 0x0040614d
+or ch,0x40
+jmp 0x0040606d
+cmp dword ptr [ebp + -0x8],ebx
+jnz 0x0040614d
+mov dword ptr [ebp + -0x8],0x1
+and esi,0xffffbfff
+jmp 0x0040606d
+cmp dword ptr [ebp + -0x8],ebx
+jnz 0x0040614d
+mov dword ptr [ebp + -0x8],0x1
+or esi,0x4000
+jmp 0x0040606d
+test ch,0xc0
+jz 0x00406154
+xor edx,edx
+jmp 0x0040606d
+or ch,0x80
+jmp 0x0040606d
+push 0x1a4
+push dword ptr [ebp + 0x10]
+push ecx
+push dword ptr [ebp + 0x8]
+call 0x00407a0d
+mov ecx,eax
+add esp,0x10
+cmp ecx,ebx
+jge 0x0040617a
+xor eax,eax
+jmp 0x00406194
+mov eax,dword ptr [ebp + 0x14]
+inc dword ptr [0x0040d5c4]
+mov dword ptr [eax + 0xc],esi
+mov dword ptr [eax + 0x4],ebx
+mov dword ptr [eax],ebx
+mov dword ptr [eax + 0x8],ebx
+mov dword ptr [eax + 0x1c],ebx
+mov dword ptr [eax + 0x10],ecx
+pop edi
+pop esi
+pop ebx
+leave
+ret
+mov edx,dword ptr [0x0040eb00]
+push ebx
+push ebp
+push esi
+xor ebp,ebp
+xor esi,esi
+xor eax,eax
+cmp edx,ebp
+push edi
+jle 0x0040620a
+mov ebx,dword ptr [0x0040dae8]
+mov edi,ebx
+mov ecx,dword ptr [edi]
+cmp ecx,ebp
+jz 0x004061d0
+test byte ptr [ecx + 0xc],0x83
+jz 0x004061cb
+inc eax
+add edi,0x4
+cmp eax,edx
+jl 0x004061b5
+jmp 0x0040620a
+mov esi,dword ptr [ebx + eax*0x4]
+jmp 0x004061f4
+mov edi,eax
+push 0x20
+shl edi,0x2
+call 0x004027df
+pop ecx
+mov ecx,dword ptr [0x0040dae8]
+mov dword ptr [edi + ecx*0x1],eax
+mov eax,[0x0040dae8]
+mov edi,dword ptr [edi + eax*0x1]
+cmp edi,ebp
+jz 0x0040620a
+mov esi,edi
+cmp esi,ebp
+jz 0x0040620a
+or dword ptr [esi + 0x10],0xffffffff
+mov dword ptr [esi + 0x4],ebp
+mov dword ptr [esi + 0xc],ebp
+mov dword ptr [esi + 0x8],ebp
+mov dword ptr [esi],ebp
+mov dword ptr [esi + 0x1c],ebp
+mov eax,esi
+pop edi
+pop esi
+pop ebp
+pop ebx
+ret
+push ebp
+mov ebp,esp
+push ebx
+push dword ptr [ebp + 0x8]
+call 0x00406352
+test eax,eax
+pop ecx
+jz 0x00406346
+mov ebx,dword ptr [eax + 0x8]
+test ebx,ebx
+jz 0x00406346
+cmp ebx,0x5
+jnz 0x00406242
+and dword ptr [eax + 0x8],0x0
+push 0x1
+pop eax
+jmp 0x0040634f
+cmp ebx,0x1
+jz 0x00406341
+mov ecx,dword ptr [0x0040d620]
+mov dword ptr [ebp + 0x8],ecx
+mov ecx,dword ptr [ebp + 0xc]
+mov dword ptr [0x0040d620],ecx
+mov ecx,dword ptr [eax + 0x4]
+cmp ecx,0x8
+jnz 0x00406331
+mov ecx,dword ptr [0x0040c550]
+mov edx,dword ptr [0x0040c554]
+add edx,ecx
+push esi
+cmp ecx,edx
+jge 0x00406291
+lea esi,[ecx + ecx*0x2]
+sub edx,ecx
+lea esi,[esi*0x4 + 0x40c4e0]
+and dword ptr [esi],0x0
+add esi,0xc
+dec edx
+jnz 0x00406288
+mov eax,dword ptr [eax]
+mov esi,dword ptr [0x0040c55c]
+cmp eax,0xc000008e
+jnz 0x004062ac
+mov dword ptr [0x0040c55c],0x83
+jmp 0x0040631c
+cmp eax,0xc0000090
+jnz 0x004062bf
+mov dword ptr [0x0040c55c],0x81
+jmp 0x0040631c
+cmp eax,0xc0000091
+jnz 0x004062d2
+mov dword ptr [0x0040c55c],0x84
+jmp 0x0040631c
+cmp eax,0xc0000093
+jnz 0x004062e5
+mov dword ptr [0x0040c55c],0x85
+jmp 0x0040631c
+cmp eax,0xc000008d
+jnz 0x004062f8
+mov dword ptr [0x0040c55c],0x82
+jmp 0x0040631c
+cmp eax,0xc000008f
+jnz 0x0040630b
+mov dword ptr [0x0040c55c],0x86
+jmp 0x0040631c
+cmp eax,0xc0000092
+jnz 0x0040631c
+mov dword ptr [0x0040c55c],0x8a
+push dword ptr [0x0040c55c]
+push 0x8
+call ebx
+pop ecx
+mov dword ptr [0x0040c55c],esi
+pop ecx
+pop esi
+jmp 0x00406339
+and dword ptr [eax + 0x8],0x0
+push ecx
+call ebx
+pop ecx
+mov eax,dword ptr [ebp + 0x8]
+mov [0x0040d620],eax
+or eax,0xffffffff
+jmp 0x0040634f
+push dword ptr [ebp + 0xc]
+call dword ptr [0x004090d4]
+pop ebx
+pop ebp
+ret
+mov edx,dword ptr [esp + 0x4]
+mov ecx,dword ptr [0x0040c558]
+cmp dword ptr [0x0040c4d8],edx
+push esi
+mov eax,0x40c4d8
+jz 0x0040637f
+lea esi,[ecx + ecx*0x2]
+lea esi,[esi*0x4 + 0x40c4d8]
+add eax,0xc
+cmp eax,esi
+jnc 0x0040637f
+cmp dword ptr [eax],edx
+jnz 0x00406374
+lea ecx,[ecx + ecx*0x2]
+pop esi
+lea ecx,[ecx*0x4 + 0x40c4d8]
+cmp eax,ecx
+jnc 0x00406392
+cmp dword ptr [eax],edx
+jz 0x00406394
+xor eax,eax
+ret
+push ebx
+xor ebx,ebx
+cmp dword ptr [0x0040d9ac],ebx
+push esi
+push edi
+jnz 0x004063a7
+call 0x00408184
+mov esi,dword ptr [0x0040d5a0]
+xor edi,edi
+mov al,byte ptr [esi]
+cmp al,bl
+jz 0x004063c7
+cmp al,0x3d
+jz 0x004063ba
+inc edi
+push esi
+call 0x00406f00
+pop ecx
+lea esi,[esi + eax*0x1 + 0x1]
+jmp 0x004063af
+lea eax,[edi*0x4 + 0x4]
+push eax
+call 0x004027df
+mov esi,eax
+pop ecx
+cmp esi,ebx
+mov dword ptr [0x0040d5fc],esi
+jnz 0x004063e9
+push 0x9
+call 0x00402eca
+pop ecx
+mov edi,dword ptr [0x0040d5a0]
+cmp byte ptr [edi],bl
+jz 0x0040642c
+push ebp
+push edi
+call 0x00406f00
+mov ebp,eax
+pop ecx
+inc ebp
+cmp byte ptr [edi],0x3d
+jz 0x00406425
+push ebp
+call 0x004027df
+cmp eax,ebx
+pop ecx
+mov dword ptr [esi],eax
+jnz 0x00406418
+push 0x9
+call 0x00402eca
+pop ecx
+push edi
+push dword ptr [esi]
+call 0x00407cd0
+pop ecx
+add esi,0x4
+pop ecx
+add edi,ebp
+cmp byte ptr [edi],bl
+jnz 0x004063f4
+pop ebp
+push dword ptr [0x0040d5a0]
+call 0x00402891
+pop ecx
+mov dword ptr [0x0040d5a0],ebx
+mov dword ptr [esi],ebx
+pop edi
+pop esi
+mov dword ptr [0x0040d9a8],0x1
+pop ebx
+ret
+push ebp
+mov ebp,esp
+push ecx
+push ecx
+push ebx
+xor ebx,ebx
+cmp dword ptr [0x0040d9ac],ebx
+push esi
+push edi
+jnz 0x00406465
+call 0x00408184
+mov esi,0x40d624
+push 0x104
+push esi
+push ebx
+call dword ptr [0x00409004]
+mov eax,[0x0040eb04]
+mov dword ptr [0x0040d60c],esi
+mov edi,esi
+cmp byte ptr [eax],bl
+jz 0x0040648a
+mov edi,eax
+lea eax,[ebp + -0x8]
+push eax
+lea eax,[ebp + -0x4]
+push eax
+push ebx
+push ebx
+push edi
+call 0x004064e7
+mov eax,dword ptr [ebp + -0x8]
+mov ecx,dword ptr [ebp + -0x4]
+lea eax,[eax + ecx*0x4]
+push eax
+call 0x004027df
+mov esi,eax
+add esp,0x18
+cmp esi,ebx
+jnz 0x004064ba
+push 0x8
+call 0x00402eca
+pop ecx
+lea eax,[ebp + -0x8]
+push eax
+lea eax,[ebp + -0x4]
+push eax
+mov eax,dword ptr [ebp + -0x4]
+lea eax,[esi + eax*0x4]
+push eax
+push esi
+push edi
+call 0x004064e7
+mov eax,dword ptr [ebp + -0x4]
+add esp,0x14
+dec eax
+mov dword ptr [0x0040d5f4],esi
+pop edi
+pop esi
+mov [0x0040d5f0],eax
+pop ebx
+leave
+ret
+push ebp
+mov ebp,esp
+mov ecx,dword ptr [ebp + 0x18]
+mov eax,dword ptr [ebp + 0x14]
+push ebx
+push esi
+and dword ptr [ecx],0x0
+mov esi,dword ptr [ebp + 0x10]
+push edi
+mov edi,dword ptr [ebp + 0xc]
+mov dword ptr [eax],0x1
+mov eax,dword ptr [ebp + 0x8]
+test edi,edi
+jz 0x00406511
+mov dword ptr [edi],esi
+add edi,0x4
+mov dword ptr [ebp + 0xc],edi
+cmp byte ptr [eax],0x22
+jnz 0x0040655a
+mov dl,byte ptr [eax + 0x1]
+inc eax
+cmp dl,0x22
+jz 0x00406548
+test dl,dl
+jz 0x00406548
+movzx edx,dl
+test byte ptr [edx + 0x40d8a1],0x4
+jz 0x0040653b
+inc dword ptr [ecx]
+test esi,esi
+jz 0x0040653b
+mov dl,byte ptr [eax]
+mov byte ptr [esi],dl
+inc esi
+inc eax
+inc dword ptr [ecx]
+test esi,esi
+jz 0x00406516
+mov dl,byte ptr [eax]
+mov byte ptr [esi],dl
+inc esi
+jmp 0x00406516
+inc dword ptr [ecx]
+test esi,esi
+jz 0x00406552
+and byte ptr [esi],0x0
+inc esi
+cmp byte ptr [eax],0x22
+jnz 0x0040659d
+inc eax
+jmp 0x0040659d
+inc dword ptr [ecx]
+test esi,esi
+jz 0x00406565
+mov dl,byte ptr [eax]
+mov byte ptr [esi],dl
+inc esi
+mov dl,byte ptr [eax]
+inc eax
+movzx ebx,dl
+test byte ptr [ebx + 0x40d8a1],0x4
+jz 0x00406580
+inc dword ptr [ecx]
+test esi,esi
+jz 0x0040657f
+mov bl,byte ptr [eax]
+mov byte ptr [esi],bl
+inc esi
+inc eax
+cmp dl,0x20
+jz 0x0040658e
+test dl,dl
+jz 0x00406592
+cmp dl,0x9
+jnz 0x0040655a
+test dl,dl
+jnz 0x00406595
+dec eax
+jmp 0x0040659d
+test esi,esi
+jz 0x0040659d
+and byte ptr [esi + -0x1],0x0
+and dword ptr [ebp + 0x18],0x0
+cmp byte ptr [eax],0x0
+jz 0x0040668a
+mov dl,byte ptr [eax]
+cmp dl,0x20
+jz 0x004065b6
+cmp dl,0x9
+jnz 0x004065b9
+inc eax
+jmp 0x004065aa
+cmp byte ptr [eax],0x0
+jz 0x0040668a
+test edi,edi
+jz 0x004065ce
+mov dword ptr [edi],esi
+add edi,0x4
+mov dword ptr [ebp + 0xc],edi
+mov edx,dword ptr [ebp + 0x14]
+inc dword ptr [edx]
+mov dword ptr [ebp + 0x8],0x1
+xor ebx,ebx
+cmp byte ptr [eax],0x5c
+jnz 0x004065e5
+inc eax
+inc ebx
+jmp 0x004065dc
+cmp byte ptr [eax],0x22
+jnz 0x00406616
+test bl,0x1
+jnz 0x00406614
+xor edi,edi
+cmp dword ptr [ebp + 0x18],edi
+jz 0x00406603
+cmp byte ptr [eax + 0x1],0x22
+lea edx,[eax + 0x1]
+jnz 0x00406603
+mov eax,edx
+jmp 0x00406606
+mov dword ptr [ebp + 0x8],edi
+mov edi,dword ptr [ebp + 0xc]
+xor edx,edx
+cmp dword ptr [ebp + 0x18],edx
+setz dl
+mov dword ptr [ebp + 0x18],edx
+shr ebx,0x1
+mov edx,ebx
+dec ebx
+test edx,edx
+jz 0x0040662b
+inc ebx
+test esi,esi
+jz 0x00406626
+mov byte ptr [esi],0x5c
+inc esi
+inc dword ptr [ecx]
+dec ebx
+jnz 0x0040661e
+mov dl,byte ptr [eax]
+test dl,dl
+jz 0x0040667b
+cmp dword ptr [ebp + 0x18],0x0
+jnz 0x00406641
+cmp dl,0x20
+jz 0x0040667b
+cmp dl,0x9
+jz 0x0040667b
+cmp dword ptr [ebp + 0x8],0x0
+jz 0x00406675
+test esi,esi
+jz 0x00406664
+movzx ebx,dl
+test byte ptr [ebx + 0x40d8a1],0x4
+jz 0x0040665d
+mov byte ptr [esi],dl
+inc esi
+inc eax
+inc dword ptr [ecx]
+mov dl,byte ptr [eax]
+mov byte ptr [esi],dl
+inc esi
+jmp 0x00406673
+movzx edx,dl
+test byte ptr [edx + 0x40d8a1],0x4
+jz 0x00406673
+inc eax
+inc dword ptr [ecx]
+inc dword ptr [ecx]
+inc eax
+jmp 0x004065d3
+test esi,esi
+jz 0x00406683
+and byte ptr [esi],0x0
+inc esi
+inc dword ptr [ecx]
+jmp 0x004065a1
+test edi,edi
+jz 0x00406691
+and dword ptr [edi],0x0
+mov eax,dword ptr [ebp + 0x14]
+pop edi
+pop esi
+pop ebx
+inc dword ptr [eax]
+pop ebp
+ret
+push ecx
+push ecx
+mov eax,[0x0040d728]
+push ebx
+push ebp
+mov ebp,dword ptr [0x004090e8]
+push esi
+push edi
+xor ebx,ebx
+xor esi,esi
+xor edi,edi
+cmp eax,ebx
+jnz 0x004066e9
+call ebp
+mov esi,eax
+cmp esi,ebx
+jz 0x004066ca
+mov dword ptr [0x0040d728],0x1
+jmp 0x004066f2
+call dword ptr [0x004090e4]
+mov edi,eax
+cmp edi,ebx
+jz 0x004067c4
+mov dword ptr [0x0040d728],0x2
+jmp 0x00406778
+cmp eax,0x1
+jnz 0x00406773
+cmp esi,ebx
+jnz 0x00406702
+call ebp
+mov esi,eax
+cmp esi,ebx
+jz 0x004067c4
+cmp word ptr [esi],bx
+mov eax,esi
+jz 0x00406717
+inc eax
+inc eax
+cmp word ptr [eax],bx
+jnz 0x00406709
+inc eax
+inc eax
+cmp word ptr [eax],bx
+jnz 0x00406709
+sub eax,esi
+mov edi,dword ptr [0x004090e0]
+sar eax,0x1
+push ebx
+push ebx
+inc eax
+push ebx
+push ebx
+push eax
+push esi
+push ebx
+push ebx
+mov dword ptr [esp + 0x34],eax
+call edi
+mov ebp,eax
+cmp ebp,ebx
+jz 0x00406768
+push ebp
+call 0x004027df
+cmp eax,ebx
+pop ecx
+mov dword ptr [esp + 0x10],eax
+jz 0x00406768
+push ebx
+push ebx
+push ebp
+push eax
+push dword ptr [esp + 0x24]
+push esi
+push ebx
+push ebx
+call edi
+test eax,eax
+jnz 0x00406764
+push dword ptr [esp + 0x10]
+call 0x00402891
+pop ecx
+mov dword ptr [esp + 0x10],ebx
+mov ebx,dword ptr [esp + 0x10]
+push esi
+call dword ptr [0x004090dc]
+mov eax,ebx
+jmp 0x004067c6
+cmp eax,0x2
+jnz 0x004067c4
+cmp edi,ebx
+jnz 0x00406788
+call dword ptr [0x004090e4]
+mov edi,eax
+cmp edi,ebx
+jz 0x004067c4
+cmp byte ptr [edi],bl
+mov eax,edi
+jz 0x00406798
+inc eax
+cmp byte ptr [eax],bl
+jnz 0x0040678e
+inc eax
+cmp byte ptr [eax],bl
+jnz 0x0040678e
+sub eax,edi
+inc eax
+mov ebp,eax
+push ebp
+call 0x004027df
+mov esi,eax
+pop ecx
+cmp esi,ebx
+jnz 0x004067ae
+xor esi,esi
+jmp 0x004067b9
+push ebp
+push edi
+push esi
+call 0x00405600
+add esp,0xc
+push edi
+call dword ptr [0x004090d8]
+mov eax,esi
+jmp 0x004067c6
+xor eax,eax
+pop edi
+pop esi
+pop ebp
+pop ebx
+pop ecx
+pop ecx
+ret
+push ebp
+mov ebp,esp
+sub esp,0x8
+push ebx
+push esi
+push edi
+push ebp
+cld
+mov ebx,dword ptr [ebp + 0xc]
+mov eax,dword ptr [ebp + 0x8]
+test dword ptr [eax + 0x4],0x6
+jnz 0x00406878
+mov dword ptr [ebp + -0x8],eax
+mov eax,dword ptr [ebp + 0x10]
+mov dword ptr [ebp + -0x4],eax
+lea eax,[ebp + -0x8]
+mov dword ptr [ebx + -0x4],eax
+mov esi,dword ptr [ebx + 0xc]
+mov edi,dword ptr [ebx + 0x8]
+cmp esi,-0x1
+jz 0x00406871
+lea ecx,[esi + esi*0x2]
+cmp dword ptr [edi + ecx*0x4 + 0x4],0x0
+jz 0x0040685f
+push esi
+push ebp
+lea ebp,[ebx + 0x10]
+call dword ptr [edi + ecx*0x4 + 0x4]
+pop ebp
+pop esi
+mov ebx,dword ptr [ebp + 0xc]
+or eax,eax
+jz 0x0040685f
+js 0x0040686a
+mov edi,dword ptr [ebx + 0x8]
+push ebx
+call 0x004026c0
+add esp,0x4
+lea ebp,[ebx + 0x10]
+push esi
+push ebx
+call 0x00402702
+add esp,0x8
+lea ecx,[esi + esi*0x2]
+push 0x1
+mov eax,dword ptr [edi + ecx*0x4 + 0x8]
+call 0x00402796
+mov eax,dword ptr [edi + ecx*0x4]
+mov dword ptr [ebx + 0xc],eax
+call dword ptr [edi + ecx*0x4 + 0x8]
+mov edi,dword ptr [ebx + 0x8]
+lea ecx,[esi + esi*0x2]
+mov esi,dword ptr [edi + ecx*0x4]
+jmp 0x0040680b
+mov eax,0x0
+jmp 0x0040688d
+mov eax,0x1
+jmp 0x0040688d
+push ebp
+lea ebp,[ebx + 0x10]
+push -0x1
+push ebx
+call 0x00402702
+add esp,0x8
+pop ebp
+mov eax,0x1
+pop ebp
+pop edi
+pop esi
+pop ebx
+mov esp,ebp
+pop ebp
+ret
+push ebp
+mov ecx,dword ptr [esp + 0x8]
+mov ebp,dword ptr [ecx]
+mov eax,dword ptr [ecx + 0x1c]
+push eax
+mov eax,dword ptr [ecx + 0x18]
+push eax
+call 0x00402702
+add esp,0x8
+pop ebp
+ret 0x4
+mov eax,[0x0040d5a8]
+cmp eax,0x1
+jz 0x004068c7
+test eax,eax
+jnz 0x004068e8
+cmp dword ptr [0x0040a204],0x1
+jnz 0x004068e8
+push 0xfc
+call 0x004068e9
+mov eax,[0x0040d72c]
+pop ecx
+test eax,eax
+jz 0x004068dd
+call eax
+push 0xff
+call 0x004068e9
+pop ecx
+ret
+push ebp
+mov ebp,esp
+sub esp,0x1a4
+mov edx,dword ptr [ebp + 0x8]
+xor ecx,ecx
+mov eax,0x40c560
+cmp edx,dword ptr [eax]
+jz 0x0040690b
+add eax,0x8
+inc ecx
+cmp eax,0x40c5f0
+jc 0x004068fc
+push esi
+mov esi,ecx
+shl esi,0x3
+cmp edx,dword ptr [esi + 0x40c560]
+jnz 0x00406a39
+mov eax,[0x0040d5a8]
+cmp eax,0x1
+jz 0x00406a13
+test eax,eax
+jnz 0x0040693c
+cmp dword ptr [0x0040a204],0x1
+jz 0x00406a13
+cmp edx,0xfc
+jz 0x00406a39
+lea eax,[ebp + 0xfffffe5c]
+push 0x104
+push eax
+push 0x0
+call dword ptr [0x00409004]
+test eax,eax
+jnz 0x00406973
+lea eax,[ebp + 0xfffffe5c]
+push 0x409608
+push eax
+call 0x00407cd0
+pop ecx
+pop ecx
+lea eax,[ebp + 0xfffffe5c]
+push edi
+push eax
+lea edi,[ebp + 0xfffffe5c]
+call 0x00406f00
+inc eax
+pop ecx
+cmp eax,0x3c
+jbe 0x004069b6
+lea eax,[ebp + 0xfffffe5c]
+push eax
+call 0x00406f00
+mov edi,eax
+lea eax,[ebp + 0xfffffe5c]
+sub eax,0x3b
+push 0x3
+add edi,eax
+push 0x409604
+push edi
+call 0x00402260
+add esp,0x10
+lea eax,[ebp + 0xffffff60]
+push 0x4095e8
+push eax
+call 0x00407cd0
+lea eax,[ebp + 0xffffff60]
+push edi
+push eax
+call 0x00407ce0
+lea eax,[ebp + 0xffffff60]
+push 0x4095e4
+push eax
+call 0x00407ce0
+push dword ptr [esi + 0x40c564]
+lea eax,[ebp + 0xffffff60]
+push eax
+call 0x00407ce0
+push 0x12010
+lea eax,[ebp + 0xffffff60]
+push 0x4095bc
+push eax
+call 0x004081a0
+add esp,0x2c
+pop edi
+jmp 0x00406a39
+lea eax,[ebp + 0x8]
+lea esi,[esi + 0x40c564]
+push 0x0
+push eax
+push dword ptr [esi]
+call 0x00406f00
+pop ecx
+push eax
+push dword ptr [esi]
+push -0xc
+call dword ptr [0x004090c0]
+push eax
+call dword ptr [0x004090b8]
+pop esi
+leave
+ret
+push esi
+mov esi,dword ptr [esp + 0x8]
+mov eax,dword ptr [esi]
+cmp dword ptr [eax],0xe06d7363
+jnz 0x00406a5f
+cmp dword ptr [eax + 0x10],0x3
+jnz 0x00406a5f
+cmp dword ptr [eax + 0x14],0x19930520
+jnz 0x00406a5f
+jmp 0x0040375c
+mov eax,[0x0040d730]
+test eax,eax
+jz 0x00406a7c
+push eax
+call 0x00406ad8
+test eax,eax
+pop ecx
+jz 0x00406a7c
+push esi
+call dword ptr [0x0040d730]
+jmp 0x00406a7e
+xor eax,eax
+pop esi
+ret 0x4
+push 0x406a3c
+call dword ptr [0x004090ec]
+mov [0x0040d730],eax
+ret
+push esi
+push 0x1
+pop esi
+push dword ptr [esp + 0xc]
+push dword ptr [esp + 0xc]
+call dword ptr [0x0040907c]
+test eax,eax
+jz 0x00406ab8
+xor esi,esi
+mov eax,esi
+pop esi
+ret
+push esi
+push 0x1
+pop esi
+push dword ptr [esp + 0xc]
+push dword ptr [esp + 0xc]
+call dword ptr [0x004090b4]
+test eax,eax
+jz 0x00406ad4
+xor esi,esi
+mov eax,esi
+pop esi
+ret
+push esi
+push 0x1
+pop esi
+push dword ptr [esp + 0x8]
+call dword ptr [0x00409078]
+test eax,eax
+jz 0x00406aec
+xor esi,esi
+mov eax,esi
+pop esi
+ret
+mov edx,dword ptr [esp + 0x4]
+mov ecx,dword ptr [esp + 0x8]
+test edx,0x3
+jnz 0x00406b3c
+mov eax,dword ptr [edx]
+cmp al,byte ptr [ecx]
+jnz 0x00406b34
+or al,al
+jz 0x00406b30
+cmp ah,byte ptr [ecx + 0x1]
+jnz 0x00406b34
+or ah,ah
+jz 0x00406b30
+shr eax,0x10
+cmp al,byte ptr [ecx + 0x2]
+jnz 0x00406b34
+or al,al
+jz 0x00406b30
+cmp ah,byte ptr [ecx + 0x3]
+jnz 0x00406b34
+add ecx,0x4
+add edx,0x4
+or ah,ah
+jnz 0x00406b00
+mov edi,edi
+xor eax,eax
+ret
+sbb eax,eax
+shl eax,0x1
+inc eax
+ret
+test edx,0x1
+jz 0x00406b58
+mov al,byte ptr [edx]
+inc edx
+cmp al,byte ptr [ecx]
+jnz 0x00406b34
+inc ecx
+or al,al
+jz 0x00406b30
+test edx,0x2
+jz 0x00406b00
+mov ax,word ptr [edx]
+add edx,0x2
+cmp al,byte ptr [ecx]
+jnz 0x00406b34
+or al,al
+jz 0x00406b30
+cmp ah,byte ptr [ecx + 0x1]
+jnz 0x00406b34
+or ah,ah
+jz 0x00406b30
+add ecx,0x2
+jmp 0x00406b00
+push ebp
+mov ebp,esp
+push edi
+push esi
+mov esi,dword ptr [ebp + 0xc]
+mov ecx,dword ptr [ebp + 0x10]
+mov edi,dword ptr [ebp + 0x8]
+mov eax,ecx
+mov edx,ecx
+add eax,esi
+cmp edi,esi
+jbe 0x00406ba0
+cmp edi,eax
+jc 0x00406d18
+test edi,0x3
+jnz 0x00406bbc
+shr ecx,0x2
+and edx,0x3
+cmp ecx,0x8
+jc 0x00406bdc
+movsd.rep es:edi,esi
+jmp dword ptr [edx*0x4 + 0x406cc8]
+mov eax,edi
+mov edx,0x3
+sub ecx,0x4
+jc 0x00406bd4
+and eax,0x3
+add ecx,eax
+jmp dword ptr [eax*0x4 + 0x406be0]
+jmp dword ptr [ecx*0x4 + 0x406cd8]
+jmp dword ptr [ecx*0x4 + 0x406c5c]
+and edx,ecx
+mov al,byte ptr [esi]
+mov byte ptr [edi],al
+mov al,byte ptr [esi + 0x1]
+mov byte ptr [edi + 0x1],al
+mov al,byte ptr [esi + 0x2]
+shr ecx,0x2
+mov byte ptr [edi + 0x2],al
+add esi,0x3
+add edi,0x3
+cmp ecx,0x8
+jc 0x00406bdc
+movsd.rep es:edi,esi
+jmp dword ptr [edx*0x4 + 0x406cc8]
+and edx,ecx
+mov al,byte ptr [esi]
+mov byte ptr [edi],al
+mov al,byte ptr [esi + 0x1]
+shr ecx,0x2
+mov byte ptr [edi + 0x1],al
+add esi,0x2
+add edi,0x2
+cmp ecx,0x8
+jc 0x00406bdc
+movsd.rep es:edi,esi
+jmp dword ptr [edx*0x4 + 0x406cc8]
+and edx,ecx
+mov al,byte ptr [esi]
+mov byte ptr [edi],al
+inc esi
+shr ecx,0x2
+inc edi
+cmp ecx,0x8
+jc 0x00406bdc
+movsd.rep es:edi,esi
+jmp dword ptr [edx*0x4 + 0x406cc8]
+mov eax,dword ptr [esi + ecx*0x4 + -0x1c]
+mov dword ptr [edi + ecx*0x4 + -0x1c],eax
+mov eax,dword ptr [esi + ecx*0x4 + -0x18]
+mov dword ptr [edi + ecx*0x4 + -0x18],eax
+mov eax,dword ptr [esi + ecx*0x4 + -0x14]
+mov dword ptr [edi + ecx*0x4 + -0x14],eax
+mov eax,dword ptr [esi + ecx*0x4 + -0x10]
+mov dword ptr [edi + ecx*0x4 + -0x10],eax
+mov eax,dword ptr [esi + ecx*0x4 + -0xc]
+mov dword ptr [edi + ecx*0x4 + -0xc],eax
+mov eax,dword ptr [esi + ecx*0x4 + -0x8]
+mov dword ptr [edi + ecx*0x4 + -0x8],eax
+mov eax,dword ptr [esi + ecx*0x4 + -0x4]
+mov dword ptr [edi + ecx*0x4 + -0x4],eax
+lea eax,[ecx*0x4 + 0x0]
+add esi,eax
+add edi,eax
+jmp dword ptr [edx*0x4 + 0x406cc8]
+mov eax,dword ptr [ebp + 0x8]
+pop esi
+pop edi
+leave
+ret
+mov al,byte ptr [esi]
+mov byte ptr [edi],al
+mov eax,dword ptr [ebp + 0x8]
+pop esi
+pop edi
+leave
+ret
+mov al,byte ptr [esi]
+mov byte ptr [edi],al
+mov al,byte ptr [esi + 0x1]
+mov byte ptr [edi + 0x1],al
+mov eax,dword ptr [ebp + 0x8]
+pop esi
+pop edi
+leave
+ret
+mov al,byte ptr [esi]
+mov byte ptr [edi],al
+mov al,byte ptr [esi + 0x1]
+mov byte ptr [edi + 0x1],al
+mov al,byte ptr [esi + 0x2]
+mov byte ptr [edi + 0x2],al
+mov eax,dword ptr [ebp + 0x8]
+pop esi
+pop edi
+leave
+ret
+lea esi,[ecx + esi*0x1 + -0x4]
+lea edi,[ecx + edi*0x1 + -0x4]
+test edi,0x3
+jnz 0x00406d4c
+shr ecx,0x2
+and edx,0x3
+cmp ecx,0x8
+jc 0x00406d40
+std
+movsd.rep es:edi,esi
+cld
+jmp dword ptr [edx*0x4 + 0x406e60]
+neg ecx
+jmp dword ptr [ecx*0x4 + 0x406e10]
+mov eax,edi
+mov edx,0x3
+cmp ecx,0x4
+jc 0x00406d64
+and eax,0x3
+sub ecx,eax
+jmp dword ptr [eax*0x4 + 0x406d68]
+jmp dword ptr [ecx*0x4 + 0x406e60]
+mov al,byte ptr [esi + 0x3]
+and edx,ecx
+mov byte ptr [edi + 0x3],al
+dec esi
+shr ecx,0x2
+dec edi
+cmp ecx,0x8
+jc 0x00406d40
+std
+movsd.rep es:edi,esi
+cld
+jmp dword ptr [edx*0x4 + 0x406e60]
+mov al,byte ptr [esi + 0x3]
+and edx,ecx
+mov byte ptr [edi + 0x3],al
+mov al,byte ptr [esi + 0x2]
+shr ecx,0x2
+mov byte ptr [edi + 0x2],al
+sub esi,0x2
+sub edi,0x2
+cmp ecx,0x8
+jc 0x00406d40
+std
+movsd.rep es:edi,esi
+cld
+jmp dword ptr [edx*0x4 + 0x406e60]
+mov al,byte ptr [esi + 0x3]
+and edx,ecx
+mov byte ptr [edi + 0x3],al
+mov al,byte ptr [esi + 0x2]
+mov byte ptr [edi + 0x2],al
+mov al,byte ptr [esi + 0x1]
+shr ecx,0x2
+mov byte ptr [edi + 0x1],al
+sub esi,0x3
+sub edi,0x3
+cmp ecx,0x8
+jc 0x00406d40
+std
+movsd.rep es:edi,esi
+cld
+jmp dword ptr [edx*0x4 + 0x406e60]
+mov eax,dword ptr [esi + ecx*0x4 + 0x1c]
+mov dword ptr [edi + ecx*0x4 + 0x1c],eax
+mov eax,dword ptr [esi + ecx*0x4 + 0x18]
+mov dword ptr [edi + ecx*0x4 + 0x18],eax
+mov eax,dword ptr [esi + ecx*0x4 + 0x14]
+mov dword ptr [edi + ecx*0x4 + 0x14],eax
+mov eax,dword ptr [esi + ecx*0x4 + 0x10]
+mov dword ptr [edi + ecx*0x4 + 0x10],eax
+mov eax,dword ptr [esi + ecx*0x4 + 0xc]
+mov dword ptr [edi + ecx*0x4 + 0xc],eax
+mov eax,dword ptr [esi + ecx*0x4 + 0x8]
+mov dword ptr [edi + ecx*0x4 + 0x8],eax
+mov eax,dword ptr [esi + ecx*0x4 + 0x4]
+mov dword ptr [edi + ecx*0x4 + 0x4],eax
+lea eax,[ecx*0x4 + 0x0]
+add esi,eax
+add edi,eax
+jmp dword ptr [edx*0x4 + 0x406e60]
+mov eax,dword ptr [ebp + 0x8]
+pop esi
+pop edi
+leave
+ret
+mov al,byte ptr [esi + 0x3]
+mov byte ptr [edi + 0x3],al
+mov eax,dword ptr [ebp + 0x8]
+pop esi
+pop edi
+leave
+ret
+mov al,byte ptr [esi + 0x3]
+mov byte ptr [edi + 0x3],al
+mov al,byte ptr [esi + 0x2]
+mov byte ptr [edi + 0x2],al
+mov eax,dword ptr [ebp + 0x8]
+pop esi
+pop edi
+leave
+ret
+mov al,byte ptr [esi + 0x3]
+mov byte ptr [edi + 0x3],al
+mov al,byte ptr [esi + 0x2]
+mov byte ptr [edi + 0x2],al
+mov al,byte ptr [esi + 0x1]
+mov byte ptr [edi + 0x1],al
+mov eax,dword ptr [ebp + 0x8]
+pop esi
+pop edi
+leave
+ret
+push 0xa
+call 0x004068e9
+push 0x16
+call 0x00408229
+pop ecx
+pop ecx
+push 0x3
+call 0x00405f65
+mov eax,dword ptr [esp + 0x4]
+cmp eax,dword ptr [0x0040dac0]
+jc 0x00406edb
+xor eax,eax
+ret
+mov ecx,eax
+and eax,0x1f
+sar ecx,0x5
+mov ecx,dword ptr [ecx*0x4 + 0x40d9c0]
+mov al,byte ptr [ecx + eax*0x8 + 0x4]
+and eax,0x40
+ret
+mov ecx,dword ptr [esp + 0x4]
+test ecx,0x3
+jz 0x00406f20
+mov al,byte ptr [ecx]
+inc ecx
+test al,al
+jz 0x00406f53
+test ecx,0x3
+jnz 0x00406f0c
+add eax,0x0
+mov eax,dword ptr [ecx]
+mov edx,0x7efefeff
+add edx,eax
+xor eax,0xffffffff
+xor eax,edx
+add ecx,0x4
+test eax,0x81010100
+jz 0x00406f20
+mov eax,dword ptr [ecx + -0x4]
+test al,al
+jz 0x00406f71
+test ah,ah
+jz 0x00406f67
+test eax,0xff0000
+jz 0x00406f5d
+test eax,0xff000000
+jz 0x00406f53
+jmp 0x00406f20
+lea eax,[ecx + -0x1]
+mov ecx,dword ptr [esp + 0x4]
+sub eax,ecx
+ret
+lea eax,[ecx + -0x2]
+mov ecx,dword ptr [esp + 0x4]
+sub eax,ecx
+ret
+lea eax,[ecx + -0x3]
+mov ecx,dword ptr [esp + 0x4]
+sub eax,ecx
+ret
+lea eax,[ecx + -0x4]
+mov ecx,dword ptr [esp + 0x4]
+sub eax,ecx
+ret
+push ebp
+mov ebp,esp
+push ebx
+push esi
+mov esi,dword ptr [ebp + 0xc]
+xor ebx,ebx
+cmp esi,ebx
+jz 0x00406f9e
+cmp dword ptr [ebp + 0x10],ebx
+jz 0x00406f9e
+mov al,byte ptr [esi]
+cmp al,bl
+jnz 0x00406fa4
+mov eax,dword ptr [ebp + 0x8]
+cmp eax,ebx
+jz 0x00406f9e
+mov word ptr [eax],bx
+xor eax,eax
+pop esi
+pop ebx
+pop ebp
+ret
+cmp dword ptr [0x0040d764],ebx
+jnz 0x00406fbf
+mov ecx,dword ptr [ebp + 0x8]
+cmp ecx,ebx
+jz 0x00406fba
+movzx ax,al
+mov word ptr [ecx],ax
+push 0x1
+pop eax
+jmp 0x00406fa0
+mov ecx,dword ptr [0x0040c624]
+movzx eax,al
+test byte ptr [ecx + eax*0x2 + 0x1],0x80
+jz 0x0040701c
+mov eax,[0x0040c618]
+cmp eax,0x1
+jle 0x00407003
+cmp dword ptr [ebp + 0x10],eax
+jl 0x0040700d
+xor ecx,ecx
+cmp dword ptr [ebp + 0x8],ebx
+setnz cl
+push ecx
+push dword ptr [ebp + 0x8]
+push eax
+push esi
+push 0x9
+push dword ptr [0x0040d774]
+call dword ptr [0x00409028]
+test eax,eax
+mov eax,[0x0040c618]
+jnz 0x00406fa0
+cmp dword ptr [ebp + 0x10],eax
+jc 0x0040700d
+cmp byte ptr [esi + 0x1],bl
+jnz 0x00406fa0
+mov dword ptr [0x0040d5d4],0x2a
+or eax,0xffffffff
+jmp 0x00406fa0
+xor eax,eax
+cmp dword ptr [ebp + 0x8],ebx
+setnz al
+push eax
+push dword ptr [ebp + 0x8]
+push 0x1
+push esi
+push 0x9
+push dword ptr [0x0040d774]
+call dword ptr [0x00409028]
+test eax,eax
+jnz 0x00406fba
+jmp 0x0040700d
+push ebx
+push esi
+mov eax,dword ptr [esp + 0x18]
+or eax,eax
+jnz 0x00407072
+mov ecx,dword ptr [esp + 0x14]
+mov eax,dword ptr [esp + 0x10]
+xor edx,edx
+div ecx
+mov ebx,eax
+mov eax,dword ptr [esp + 0xc]
+div ecx
+mov edx,ebx
+jmp 0x004070b3
+mov ecx,eax
+mov ebx,dword ptr [esp + 0x14]
+mov edx,dword ptr [esp + 0x10]
+mov eax,dword ptr [esp + 0xc]
+shr ecx,0x1
+rcr ebx,0x1
+shr edx,0x1
+rcr eax,0x1
+or ecx,ecx
+jnz 0x00407080
+div ebx
+mov esi,eax
+mul dword ptr [esp + 0x18]
+mov ecx,eax
+mov eax,dword ptr [esp + 0x14]
+mul esi
+add edx,ecx
+jc 0x004070ae
+cmp edx,dword ptr [esp + 0x10]
+ja 0x004070ae
+jc 0x004070af
+cmp eax,dword ptr [esp + 0xc]
+jbe 0x004070af
+dec esi
+xor edx,edx
+mov eax,esi
+pop esi
+pop ebx
+ret 0x10
+push ebx
+mov eax,dword ptr [esp + 0x14]
+or eax,eax
+jnz 0x004070e1
+mov ecx,dword ptr [esp + 0x10]
+mov eax,dword ptr [esp + 0xc]
+xor edx,edx
+div ecx
+mov eax,dword ptr [esp + 0x8]
+div ecx
+mov eax,edx
+xor edx,edx
+jmp 0x00407131
+mov ecx,eax
+mov ebx,dword ptr [esp + 0x10]
+mov edx,dword ptr [esp + 0xc]
+mov eax,dword ptr [esp + 0x8]
+shr ecx,0x1
+rcr ebx,0x1
+shr edx,0x1
+rcr eax,0x1
+or ecx,ecx
+jnz 0x004070ef
+div ebx
+mov ecx,eax
+mul dword ptr [esp + 0x14]
+xchg eax,ecx
+mul dword ptr [esp + 0x10]
+add edx,ecx
+jc 0x0040711a
+cmp edx,dword ptr [esp + 0xc]
+ja 0x0040711a
+jc 0x00407122
+cmp eax,dword ptr [esp + 0x8]
+jbe 0x00407122
+sub eax,dword ptr [esp + 0x10]
+sbb edx,dword ptr [esp + 0x14]
+sub eax,dword ptr [esp + 0x8]
+sbb edx,dword ptr [esp + 0xc]
+neg edx
+neg eax
+sbb edx,0x0
+pop ebx
+ret 0x10
+push ebp
+mov ebp,esp
+push esi
+mov esi,dword ptr [ebp + 0xc]
+test byte ptr [esi + 0xc],0x40
+jnz 0x00407207
+mov eax,dword ptr [esi + 0x10]
+cmp eax,-0x1
+jz 0x00407162
+mov ecx,eax
+sar ecx,0x5
+and eax,0x1f
+mov ecx,dword ptr [ecx*0x4 + 0x40d9c0]
+lea eax,[ecx + eax*0x8]
+jmp 0x00407167
+mov eax,0x40c4d0
+test byte ptr [eax + 0x4],0x80
+jz 0x00407207
+push dword ptr [ebp + 0x8]
+lea eax,[ebp + 0xc]
+push eax
+call 0x0040839b
+pop ecx
+cmp eax,-0x1
+pop ecx
+jnz 0x00407197
+mov dword ptr [0x0040d5d4],0x2a
+or ax,0xffff
+jmp 0x00407227
+cmp eax,0x1
+jnz 0x004071c8
+dec dword ptr [esi + 0x4]
+js 0x004071b0
+mov eax,dword ptr [esi]
+mov cl,byte ptr [ebp + 0xc]
+mov byte ptr [eax],cl
+movzx eax,byte ptr [ebp + 0xc]
+inc dword ptr [esi]
+jmp 0x004071bd
+movsx eax,byte ptr [ebp + 0xc]
+push esi
+push eax
+call 0x00405229
+pop ecx
+pop ecx
+cmp eax,-0x1
+jz 0x0040718e
+mov ax,word ptr [ebp + 0x8]
+jmp 0x00407227
+dec dword ptr [esi + 0x4]
+js 0x004071dc
+mov eax,dword ptr [esi]
+mov cl,byte ptr [ebp + 0xc]
+mov byte ptr [eax],cl
+inc dword ptr [esi]
+movzx eax,byte ptr [ebp + 0xc]
+jmp 0x004071e9
+movsx eax,byte ptr [ebp + 0xc]
+push esi
+push eax
+call 0x00405229
+pop ecx
+pop ecx
+cmp eax,-0x1
+jz 0x0040718e
+dec dword ptr [esi + 0x4]
+js 0x00407200
+mov eax,dword ptr [esi]
+mov cl,byte ptr [ebp + 0xd]
+mov byte ptr [eax],cl
+movzx eax,byte ptr [ebp + 0xd]
+jmp 0x004071ac
+movsx eax,byte ptr [ebp + 0xd]
+push esi
+jmp 0x004071b5
+add dword ptr [esi + 0x4],-0x2
+js 0x0040721a
+mov ecx,dword ptr [esi]
+mov eax,dword ptr [ebp + 0x8]
+mov word ptr [ecx],ax
+add dword ptr [esi],0x2
+jmp 0x00407227
+movzx eax,word ptr [ebp + 0x8]
+push esi
+push eax
+call 0x0040840c
+pop ecx
+pop ecx
+pop esi
+pop ebp
+ret
+push ebp
+mov ebp,esp
+push esi
+mov esi,dword ptr [ebp + 0x8]
+imul esi,dword ptr [ebp + 0xc]
+cmp esi,-0x20
+push edi
+mov dword ptr [ebp + 0x8],esi
+ja 0x0040724b
+test esi,esi
+jnz 0x00407245
+push 0x1
+pop esi
+add esi,0xf
+and esi,0xfffffff0
+xor edi,edi
+cmp esi,-0x20
+ja 0x004072aa
+mov eax,[0x0040dae4]
+cmp eax,0x3
+jnz 0x00407276
+mov eax,dword ptr [ebp + 0x8]
+cmp eax,dword ptr [0x0040dadc]
+ja 0x00407295
+push eax
+call 0x00404750
+mov edi,eax
+pop ecx
+test edi,edi
+jnz 0x004072c0
+jmp 0x00407295
+cmp eax,0x2
+jnz 0x00407295
+cmp esi,dword ptr [0x0040c4c4]
+ja 0x00407295
+mov eax,esi
+shr eax,0x4
+push eax
+call 0x00404efd
+mov edi,eax
+pop ecx
+test edi,edi
+jnz 0x004072d4
+push esi
+push 0x8
+push dword ptr [0x0040dae0]
+call dword ptr [0x00409084]
+mov edi,eax
+test edi,edi
+jnz 0x004072ce
+cmp dword ptr [0x0040d5c8],0x0
+jz 0x004072ce
+push esi
+call 0x004041c7
+test eax,eax
+pop ecx
+jz 0x004072d7
+jmp 0x0040724b
+push dword ptr [ebp + 0x8]
+push 0x0
+push edi
+call 0x004076f0
+add esp,0xc
+mov eax,edi
+pop edi
+pop esi
+pop ebp
+ret
+push esi
+jmp 0x004072c3
+xor eax,eax
+jmp 0x004072d0
+push 0x0
+push dword ptr [esp + 0x10]
+push dword ptr [esp + 0x10]
+push dword ptr [esp + 0x10]
+call 0x0040734a
+add esp,0x10
+ret
+push ebp
+mov ebp,esp
+sub esp,0xc
+push ebx
+and dword ptr [ebp + -0x8],0x0
+push esi
+push edi
+mov edi,dword ptr [ebp + 0x8]
+mov bl,byte ptr [edi]
+lea esi,[edi + 0x1]
+mov dword ptr [ebp + -0x4],esi
+cmp dword ptr [0x0040c618],0x1
+jle 0x0040737a
+movzx eax,bl
+push 0x8
+push eax
+call 0x004085fc
+pop ecx
+pop ecx
+jmp 0x00407389
+mov ecx,dword ptr [0x0040c624]
+movzx eax,bl
+mov al,byte ptr [ecx + eax*0x2]
+and eax,0x8
+test eax,eax
+jz 0x00407392
+mov bl,byte ptr [esi]
+inc esi
+jmp 0x00407362
+cmp bl,0x2d
+mov dword ptr [ebp + -0x4],esi
+jnz 0x004073a0
+or dword ptr [ebp + 0x14],0x2
+jmp 0x004073a5
+cmp bl,0x2b
+jnz 0x004073ab
+mov bl,byte ptr [esi]
+inc esi
+mov dword ptr [ebp + -0x4],esi
+mov eax,dword ptr [ebp + 0x10]
+test eax,eax
+jl 0x00407542
+cmp eax,0x1
+jz 0x00407542
+cmp eax,0x24
+jg 0x00407542
+push 0x10
+test eax,eax
+pop ecx
+jnz 0x004073f3
+cmp bl,0x30
+jz 0x004073dd
+mov dword ptr [ebp + 0x10],0xa
+jmp 0x0040740f
+mov al,byte ptr [esi]
+cmp al,0x78
+jz 0x004073f0
+cmp al,0x58
+jz 0x004073f0
+mov dword ptr [ebp + 0x10],0x8
+jmp 0x0040740f
+mov dword ptr [ebp + 0x10],ecx
+cmp dword ptr [ebp + 0x10],ecx
+jnz 0x0040740f
+cmp bl,0x30
+jnz 0x0040740f
+mov al,byte ptr [esi]
+cmp al,0x78
+jz 0x00407407
+cmp al,0x58
+jnz 0x0040740f
+mov bl,byte ptr [esi + 0x1]
+inc esi
+inc esi
+mov dword ptr [ebp + -0x4],esi
+or eax,0xffffffff
+xor edx,edx
+div dword ptr [ebp + 0x10]
+mov edi,0x103
+mov dword ptr [ebp + -0xc],eax
+cmp dword ptr [0x0040c618],0x1
+movzx esi,bl
+jle 0x00407437
+push 0x4
+push esi
+call 0x004085fc
+pop ecx
+pop ecx
+jmp 0x00407442
+mov eax,[0x0040c624]
+mov al,byte ptr [eax + esi*0x2]
+and eax,0x4
+test eax,eax
+jz 0x0040744e
+movsx ecx,bl
+sub ecx,0x30
+jmp 0x00407480
+cmp dword ptr [0x0040c618],0x1
+jle 0x00407462
+push edi
+push esi
+call 0x004085fc
+pop ecx
+pop ecx
+jmp 0x0040746d
+mov eax,[0x0040c624]
+mov ax,word ptr [eax + esi*0x2]
+and eax,edi
+test eax,eax
+jz 0x004074bb
+movsx eax,bl
+push eax
+call 0x00408530
+pop ecx
+mov ecx,eax
+sub ecx,0x37
+cmp ecx,dword ptr [ebp + 0x10]
+jnc 0x004074bb
+mov esi,dword ptr [ebp + -0x8]
+or dword ptr [ebp + 0x14],0x8
+cmp esi,dword ptr [ebp + -0xc]
+jc 0x004074a5
+jnz 0x0040749f
+or eax,0xffffffff
+xor edx,edx
+div dword ptr [ebp + 0x10]
+cmp ecx,edx
+jbe 0x004074a5
+or dword ptr [ebp + 0x14],0x4
+jmp 0x004074ae
+imul esi,dword ptr [ebp + 0x10]
+add esi,ecx
+mov dword ptr [ebp + -0x8],esi
+mov eax,dword ptr [ebp + -0x4]
+inc dword ptr [ebp + -0x4]
+mov bl,byte ptr [eax]
+jmp 0x0040741f
+mov ecx,dword ptr [ebp + 0x14]
+dec dword ptr [ebp + -0x4]
+mov edx,dword ptr [ebp + 0xc]
+test cl,0x8
+jnz 0x004074d9
+test edx,edx
+jz 0x004074d3
+mov eax,dword ptr [ebp + 0x8]
+mov dword ptr [ebp + -0x4],eax
+and dword ptr [ebp + -0x8],0x0
+jmp 0x00407526
+test cl,0x4
+mov eax,0x7fffffff
+jnz 0x004074ff
+test cl,0x1
+jnz 0x00407526
+and ecx,0x2
+jz 0x004074f6
+cmp dword ptr [ebp + -0x8],0x80000000
+ja 0x004074ff
+test ecx,ecx
+jnz 0x00407526
+cmp dword ptr [ebp + -0x8],eax
+jbe 0x00407526
+test byte ptr [ebp + 0x14],0x1
+mov dword ptr [0x0040d5d4],0x22
+jz 0x00407515
+or dword ptr [ebp + -0x8],0xffffffff
+jmp 0x00407526
+mov ecx,dword ptr [ebp + 0x14]
+and cl,0x2
+neg cl
+sbb ecx,ecx
+neg ecx
+add ecx,eax
+mov dword ptr [ebp + -0x8],ecx
+test edx,edx
+jz 0x0040752f
+mov eax,dword ptr [ebp + -0x4]
+mov dword ptr [edx],eax
+test byte ptr [ebp + 0x14],0x2
+jz 0x0040753d
+mov eax,dword ptr [ebp + -0x8]
+neg eax
+mov dword ptr [ebp + -0x8],eax
+mov eax,dword ptr [ebp + -0x8]
+jmp 0x0040754d
+mov eax,dword ptr [ebp + 0xc]
+test eax,eax
+jz 0x0040754b
+mov dword ptr [eax],edi
+xor eax,eax
+pop edi
+pop esi
+pop ebx
+leave
+ret
+lea eax,[edx + -0x1]
+pop ebx
+ret
+xor eax,eax
+mov al,byte ptr [esp + 0x8]
+push ebx
+mov ebx,eax
+shl eax,0x8
+mov edx,dword ptr [esp + 0x8]
+test edx,0x3
+jz 0x0040759b
+mov cl,byte ptr [edx]
+inc edx
+cmp cl,bl
+jz 0x00407560
+test cl,cl
+jz 0x004075e4
+test edx,0x3
+jnz 0x00407588
+or ebx,eax
+push edi
+mov eax,ebx
+shl ebx,0x10
+push esi
+or ebx,eax
+mov ecx,dword ptr [edx]
+mov edi,0x7efefeff
+mov eax,ecx
+mov esi,edi
+xor ecx,ebx
+add esi,eax
+add edi,ecx
+xor ecx,0xffffffff
+xor eax,0xffffffff
+xor ecx,edi
+xor eax,esi
+add edx,0x4
+and ecx,0x81010100
+jnz 0x004075e8
+and eax,0x81010100
+jz 0x004075a6
+and eax,0x1010100
+jnz 0x004075e2
+and esi,0x80000000
+jnz 0x004075a6
+pop esi
+pop edi
+pop ebx
+xor eax,eax
+ret
+mov eax,dword ptr [edx + -0x4]
+cmp al,bl
+jz 0x00407625
+test al,al
+jz 0x004075e2
+cmp ah,bl
+jz 0x0040761e
+test ah,ah
+jz 0x004075e2
+shr eax,0x10
+cmp al,bl
+jz 0x00407617
+test al,al
+jz 0x004075e2
+cmp ah,bl
+jz 0x00407610
+test ah,ah
+jz 0x004075e2
+jmp 0x004075a6
+pop esi
+pop edi
+lea eax,[edx + -0x1]
+pop ebx
+ret
+lea eax,[edx + -0x2]
+pop esi
+pop edi
+pop ebx
+ret
+lea eax,[edx + -0x3]
+pop esi
+pop edi
+pop ebx
+ret
+lea eax,[edx + -0x4]
+pop esi
+pop edi
+pop ebx
+ret
+mov ecx,dword ptr [esp + 0x8]
+push edi
+push ebx
+push esi
+mov dl,byte ptr [ecx]
+mov edi,dword ptr [esp + 0x10]
+test dl,dl
+jz 0x004076aa
+mov dh,byte ptr [ecx + 0x1]
+test dh,dh
+jz 0x00407697
+mov esi,edi
+mov ecx,dword ptr [esp + 0x14]
+mov al,byte ptr [edi]
+inc esi
+cmp al,dl
+jz 0x0040766a
+test al,al
+jz 0x00407664
+mov al,byte ptr [esi]
+inc esi
+cmp al,dl
+jz 0x0040766a
+test al,al
+jnz 0x00407659
+pop esi
+pop ebx
+pop edi
+xor eax,eax
+ret
+mov al,byte ptr [esi]
+inc esi
+cmp al,dh
+jnz 0x0040765c
+lea edi,[esi + -0x1]
+mov ah,byte ptr [ecx + 0x2]
+test ah,ah
+jz 0x004076a3
+mov al,byte ptr [esi]
+add esi,0x2
+cmp al,ah
+jnz 0x00407648
+mov al,byte ptr [ecx + 0x3]
+test al,al
+jz 0x004076a3
+mov ah,byte ptr [esi + -0x1]
+add ecx,0x2
+cmp al,ah
+jz 0x00407674
+jmp 0x00407648
+xor eax,eax
+pop esi
+pop ebx
+pop edi
+mov al,dl
+jmp 0x00407576
+lea eax,[edi + -0x1]
+pop esi
+pop ebx
+pop edi
+ret
+mov eax,edi
+pop esi
+pop ebx
+pop edi
+ret
+push ebp
+mov ebp,esp
+push edi
+push esi
+push ebx
+mov ecx,dword ptr [ebp + 0x10]
+jecxz 0x004076e1
+mov ebx,ecx
+mov edi,dword ptr [ebp + 0x8]
+mov esi,edi
+xor eax,eax
+scasb.repne es:edi
+neg ecx
+add ecx,ebx
+mov edi,esi
+mov esi,dword ptr [ebp + 0xc]
+cmpsb.repe es:edi,esi
+mov al,byte ptr [esi + -0x1]
+xor ecx,ecx
+cmp al,byte ptr [edi + -0x1]
+ja 0x004076df
+jz 0x004076e1
+dec ecx
+dec ecx
+not ecx
+mov eax,ecx
+pop ebx
+pop esi
+pop edi
+leave
+ret
+mov edx,dword ptr [esp + 0xc]
+mov ecx,dword ptr [esp + 0x4]
+test edx,edx
+jz 0x00407743
+xor eax,eax
+mov al,byte ptr [esp + 0x8]
+push edi
+mov edi,ecx
+cmp edx,0x4
+jc 0x00407737
+neg ecx
+and ecx,0x3
+jz 0x00407719
+sub edx,ecx
+mov byte ptr [edi],al
+inc edi
+dec ecx
+jnz 0x00407713
+mov ecx,eax
+shl eax,0x8
+add eax,ecx
+mov ecx,eax
+shl eax,0x10
+add eax,ecx
+mov ecx,edx
+and edx,0x3
+shr ecx,0x2
+jz 0x00407737
+stosd.rep es:edi
+test edx,edx
+jz 0x0040773d
+mov byte ptr [edi],al
+inc edi
+dec edx
+jnz 0x00407737
+mov eax,dword ptr [esp + 0x8]
+pop edi
+ret
+mov eax,dword ptr [esp + 0x4]
+ret
+inc dword ptr [0x0040d5c4]
+push 0x1000
+call 0x004027df
+pop ecx
+mov ecx,dword ptr [esp + 0x4]
+test eax,eax
+mov dword ptr [ecx + 0x8],eax
+jz 0x00407771
+or dword ptr [ecx + 0xc],0x8
+mov dword ptr [ecx + 0x18],0x1000
+jmp 0x00407782
+or dword ptr [ecx + 0xc],0x4
+lea eax,[ecx + 0x14]
+mov dword ptr [ecx + 0x8],eax
+mov dword ptr [ecx + 0x18],0x2
+mov eax,dword ptr [ecx + 0x8]
+and dword ptr [ecx + 0x4],0x0
+mov dword ptr [ecx],eax
+ret
+mov ecx,dword ptr [esp + 0x4]
+xor edx,edx
+mov dword ptr [0x0040d5d8],ecx
+mov eax,0x40c830
+cmp ecx,dword ptr [eax]
+jz 0x004077c1
+add eax,0x8
+inc edx
+cmp eax,0x40c998
+jc 0x0040779d
+cmp ecx,0x13
+jc 0x004077ce
+cmp ecx,0x24
+ja 0x004077ce
+mov dword ptr [0x0040d5d4],0xd
+ret
+mov eax,dword ptr [edx*0x8 + 0x40c834]
+mov [0x0040d5d4],eax
+ret
+cmp ecx,0xbc
+jc 0x004077e8
+cmp ecx,0xca
+mov dword ptr [0x0040d5d4],0x8
+jbe 0x004077f2
+mov dword ptr [0x0040d5d4],0x16
+ret
+mov eax,dword ptr [esp + 0x4]
+cmp eax,dword ptr [0x0040dac0]
+jnc 0x0040783c
+mov ecx,eax
+mov edx,eax
+sar ecx,0x5
+and edx,0x1f
+mov ecx,dword ptr [ecx*0x4 + 0x40d9c0]
+test byte ptr [ecx + edx*0x8 + 0x4],0x1
+jz 0x0040783c
+push eax
+call 0x004079d0
+pop ecx
+push eax
+call dword ptr [0x00409074]
+test eax,eax
+jnz 0x00407831
+call dword ptr [0x00409000]
+jmp 0x00407833
+xor eax,eax
+test eax,eax
+jz 0x00407849
+mov [0x0040d5d8],eax
+mov dword ptr [0x0040d5d4],0x9
+or eax,0xffffffff
+ret
+push ebx
+push esi
+push edi
+or ebx,0xffffffff
+xor edi,edi
+xor esi,esi
+mov ecx,0x40d9c0
+mov eax,dword ptr [ecx]
+test eax,eax
+jz 0x00407896
+lea edx,[eax + 0x100]
+cmp eax,edx
+jnc 0x00407885
+test byte ptr [eax + 0x4],0x1
+jz 0x00407874
+add eax,0x8
+jmp 0x00407865
+or dword ptr [eax],0xffffffff
+sub eax,dword ptr [ecx]
+sar eax,0x3
+add eax,esi
+mov ebx,eax
+cmp ebx,-0x1
+jnz 0x004078d9
+add ecx,0x4
+inc edi
+add esi,0x20
+cmp ecx,0x40dac0
+jl 0x00407859
+jmp 0x004078d9
+mov esi,0x100
+push esi
+call 0x004027df
+test eax,eax
+pop ecx
+jz 0x004078d9
+add dword ptr [0x0040dac0],0x20
+lea ecx,[edi*0x4 + 0x40d9c0]
+lea edx,[eax + 0x100]
+mov dword ptr [ecx],eax
+cmp eax,edx
+jnc 0x004078d4
+and byte ptr [eax + 0x4],0x0
+or dword ptr [eax],0xffffffff
+mov byte ptr [eax + 0x5],0xa
+mov edx,dword ptr [ecx]
+add eax,0x8
+add edx,esi
+jmp 0x004078bc
+shl edi,0x5
+mov ebx,edi
+pop edi
+mov eax,ebx
+pop esi
+pop ebx
+ret
+mov eax,dword ptr [esp + 0x4]
+push esi
+cmp eax,dword ptr [0x0040dac0]
+push edi
+jnc 0x0040793f
+mov ecx,eax
+mov esi,eax
+sar ecx,0x5
+and esi,0x1f
+lea edi,[ecx*0x4 + 0x40d9c0]
+shl esi,0x3
+mov ecx,dword ptr [edi]
+cmp dword ptr [ecx + esi*0x1],-0x1
+jnz 0x0040793f
+cmp dword ptr [0x0040a204],0x1
+push ebx
+mov ebx,dword ptr [esp + 0x14]
+jnz 0x00407935
+sub eax,0x0
+jz 0x0040792c
+dec eax
+jz 0x00407927
+dec eax
+jnz 0x00407935
+push ebx
+push -0xc
+jmp 0x0040792f
+push ebx
+push -0xb
+jmp 0x0040792f
+push ebx
+push -0xa
+call dword ptr [0x00409070]
+mov eax,dword ptr [edi]
+mov dword ptr [eax + esi*0x1],ebx
+xor eax,eax
+pop ebx
+jmp 0x00407953
+and dword ptr [0x0040d5d8],0x0
+mov dword ptr [0x0040d5d4],0x9
+or eax,0xffffffff
+pop edi
+pop esi
+ret
+mov ecx,dword ptr [esp + 0x4]
+push esi
+cmp ecx,dword ptr [0x0040dac0]
+push edi
+jnc 0x004079b9
+mov eax,ecx
+mov esi,ecx
+sar eax,0x5
+and esi,0x1f
+lea edi,[eax*0x4 + 0x40d9c0]
+shl esi,0x3
+mov eax,dword ptr [edi]
+add eax,esi
+test byte ptr [eax + 0x4],0x1
+jz 0x004079b9
+cmp dword ptr [eax],-0x1
+jz 0x004079b9
+cmp dword ptr [0x0040a204],0x1
+jnz 0x004079af
+xor eax,eax
+sub ecx,eax
+jz 0x004079a6
+dec ecx
+jz 0x004079a1
+dec ecx
+jnz 0x004079af
+push eax
+push -0xc
+jmp 0x004079a9
+push eax
+push -0xb
+jmp 0x004079a9
+push eax
+push -0xa
+call dword ptr [0x00409070]
+mov eax,dword ptr [edi]
+or dword ptr [eax + esi*0x1],0xffffffff
+xor eax,eax
+jmp 0x004079cd
+and dword ptr [0x0040d5d8],0x0
+mov dword ptr [0x0040d5d4],0x9
+or eax,0xffffffff
+pop edi
+pop esi
+ret
+mov eax,dword ptr [esp + 0x4]
+cmp eax,dword ptr [0x0040dac0]
+jnc 0x004079f8
+mov ecx,eax
+and eax,0x1f
+sar ecx,0x5
+mov ecx,dword ptr [ecx*0x4 + 0x40d9c0]
+test byte ptr [ecx + eax*0x8 + 0x4],0x1
+lea eax,[ecx + eax*0x8]
+jz 0x004079f8
+mov eax,dword ptr [eax]
+ret
+and dword ptr [0x0040d5d8],0x0
+mov dword ptr [0x0040d5d4],0x9
+or eax,0xffffffff
+ret
+push ebp
+mov ebp,esp
+sub esp,0x1c
+mov ecx,dword ptr [ebp + 0xc]
+push ebx
+xor ebx,ebx
+push esi
+test cl,0x80
+push edi
+mov dword ptr [ebp + -0x1c],0xc
+mov dword ptr [ebp + -0x18],ebx
+jz 0x00407a33
+mov dword ptr [ebp + -0x14],ebx
+mov byte ptr [ebp + -0x1],0x10
+jmp 0x00407a3e
+and byte ptr [ebp + -0x1],0x0
+mov dword ptr [ebp + -0x14],0x1
+mov eax,0x8000
+test eax,ecx
+jnz 0x00407a58
+test ch,0x40
+jnz 0x00407a54
+cmp dword ptr [0x0040d77c],eax
+jz 0x00407a58
+or byte ptr [ebp + -0x1],0x80
+push 0x3
+mov eax,ecx
+pop esi
+and eax,esi
+sub eax,ebx
+jz 0x00407a90
+dec eax
+jz 0x00407a87
+dec eax
+jz 0x00407a7e
+mov dword ptr [0x0040d5d4],0x16
+mov dword ptr [0x0040d5d8],ebx
+jmp 0x00407ca3
+mov dword ptr [ebp + -0xc],0xc0000000
+jmp 0x00407a97
+mov dword ptr [ebp + -0xc],0x40000000
+jmp 0x00407a97
+mov dword ptr [ebp + -0xc],0x80000000
+mov eax,dword ptr [ebp + 0x10]
+cmp eax,0x10
+jz 0x00407ac5
+cmp eax,0x20
+jz 0x00407abc
+cmp eax,0x30
+jz 0x00407ab3
+cmp eax,0x40
+jnz 0x00407a69
+mov dword ptr [ebp + -0x10],esi
+jmp 0x00407ac8
+mov dword ptr [ebp + -0x10],0x2
+jmp 0x00407ac8
+mov dword ptr [ebp + -0x10],0x1
+jmp 0x00407ac8
+mov dword ptr [ebp + -0x10],ebx
+mov edx,0x700
+mov eax,0x400
+and ecx,edx
+mov edi,0x100
+cmp ecx,eax
+jg 0x00407b12
+jz 0x00407b0d
+cmp ecx,ebx
+jz 0x00407b0d
+cmp ecx,edi
+jz 0x00407b04
+cmp ecx,0x200
+jz 0x00407b2b
+cmp ecx,0x300
+jnz 0x00407a69
+mov dword ptr [ebp + -0x8],0x2
+jmp 0x00407b3b
+mov dword ptr [ebp + -0x8],0x4
+jmp 0x00407b3b
+mov dword ptr [ebp + -0x8],esi
+jmp 0x00407b3b
+cmp ecx,0x500
+jz 0x00407b34
+cmp ecx,0x600
+jz 0x00407b2b
+cmp ecx,edx
+jz 0x00407b34
+jmp 0x00407a69
+mov dword ptr [ebp + -0x8],0x5
+jmp 0x00407b3b
+mov dword ptr [ebp + -0x8],0x1
+mov eax,dword ptr [ebp + 0xc]
+mov esi,0x80
+test edi,eax
+jz 0x00407b5a
+mov ecx,dword ptr [0x0040d5dc]
+not ecx
+and ecx,dword ptr [ebp + 0x14]
+test cl,0x80
+jnz 0x00407b5a
+push 0x1
+pop esi
+test al,0x40
+jz 0x00407b68
+or esi,0x4000000
+or byte ptr [ebp + -0xa],0x1
+test ah,0x10
+jz 0x00407b6f
+or esi,edi
+test al,0x20
+jz 0x00407b7b
+or esi,0x8000000
+jmp 0x00407b85
+test al,0x10
+jz 0x00407b85
+or esi,0x10000000
+call 0x0040784a
+mov ebx,eax
+or edi,0xffffffff
+cmp ebx,edi
+jnz 0x00407ba6
+and dword ptr [0x0040d5d8],0x0
+mov dword ptr [0x0040d5d4],0x18
+jmp 0x00407be4
+push 0x0
+push esi
+push dword ptr [ebp + -0x8]
+lea eax,[ebp + -0x1c]
+push eax
+push dword ptr [ebp + -0x10]
+push dword ptr [ebp + -0xc]
+push dword ptr [ebp + 0x8]
+call dword ptr [0x00409018]
+mov esi,eax
+cmp esi,edi
+jz 0x00407bd7
+push esi
+call dword ptr [0x004090c4]
+test eax,eax
+jnz 0x00407beb
+push esi
+call dword ptr [0x0040900c]
+call dword ptr [0x00409000]
+push eax
+call 0x0040778c
+pop ecx
+mov eax,edi
+jmp 0x00407cc1
+cmp eax,0x2
+jnz 0x00407bf6
+or byte ptr [ebp + -0x1],0x40
+jmp 0x00407bff
+cmp eax,0x3
+jnz 0x00407bff
+or byte ptr [ebp + -0x1],0x8
+push esi
+push ebx
+call 0x004078df
+pop ecx
+mov al,byte ptr [ebp + -0x1]
+pop ecx
+mov esi,ebx
+mov ecx,ebx
+or al,0x1
+sar ecx,0x5
+and esi,0x1f
+mov byte ptr [ebp + 0xb],al
+lea edi,[ecx*0x4 + 0x40d9c0]
+shl esi,0x3
+mov ecx,dword ptr [edi]
+and byte ptr [ebp + 0xb],0x48
+mov byte ptr [ecx + esi*0x1 + 0x4],al
+jnz 0x00407ca8
+test al,0x80
+jz 0x00407ca8
+test byte ptr [ebp + 0xc],0x2
+jz 0x00407ca8
+push 0x2
+push -0x1
+push ebx
+call 0x00405ce2
+add esp,0xc
+cmp eax,-0x1
+mov dword ptr [ebp + -0x10],eax
+jnz 0x00407c5d
+cmp dword ptr [0x0040d5d8],0x83
+jz 0x00407ca8
+jmp 0x00407c9c
+and byte ptr [ebp + 0x13],0x0
+lea eax,[ebp + 0x13]
+push 0x1
+push eax
+push ebx
+call 0x00405a0e
+add esp,0xc
+test eax,eax
+jnz 0x00407c8a
+cmp byte ptr [ebp + 0x13],0x1a
+jnz 0x00407c8a
+push dword ptr [ebp + -0x10]
+push ebx
+call 0x00408671
+pop ecx
+cmp eax,-0x1
+pop ecx
+jz 0x00407c9c
+push 0x0
+push 0x0
+push ebx
+call 0x00405ce2
+add esp,0xc
+cmp eax,-0x1
+jnz 0x00407ca8
+push ebx
+call 0x00405c04
+pop ecx
+or eax,0xffffffff
+jmp 0x00407cc1
+cmp byte ptr [ebp + 0xb],0x0
+jnz 0x00407cbf
+test byte ptr [ebp + 0xc],0x8
+jz 0x00407cbf
+mov eax,dword ptr [edi]
+or byte ptr [eax + esi*0x1 + 0x4],0x20
+lea eax,[eax + esi*0x1 + 0x4]
+mov eax,ebx
+pop edi
+pop esi
+pop ebx
+leave
+ret
+push edi
+mov edi,dword ptr [esp + 0x8]
+jmp 0x00407d41
+mov ecx,dword ptr [esp + 0x4]
+push edi
+test ecx,0x3
+jz 0x00407cfc
+mov al,byte ptr [ecx]
+inc ecx
+test al,al
+jz 0x00407d2f
+test ecx,0x3
+jnz 0x00407ced
+mov eax,dword ptr [ecx]
+mov edx,0x7efefeff
+add edx,eax
+xor eax,0xffffffff
+xor eax,edx
+add ecx,0x4
+test eax,0x81010100
+jz 0x00407cfc
+mov eax,dword ptr [ecx + -0x4]
+test al,al
+jz 0x00407d3e
+test ah,ah
+jz 0x00407d39
+test eax,0xff0000
+jz 0x00407d34
+test eax,0xff000000
+jz 0x00407d2f
+jmp 0x00407cfc
+lea edi,[ecx + -0x1]
+jmp 0x00407d41
+lea edi,[ecx + -0x2]
+jmp 0x00407d41
+lea edi,[ecx + -0x3]
+jmp 0x00407d41
+lea edi,[ecx + -0x4]
+mov ecx,dword ptr [esp + 0xc]
+test ecx,0x3
+jz 0x00407d66
+mov dl,byte ptr [ecx]
+inc ecx
+test dl,dl
+jz 0x00407db8
+mov byte ptr [edi],dl
+inc edi
+test ecx,0x3
+jnz 0x00407d4d
+jmp 0x00407d66
+mov dword ptr [edi],edx
+add edi,0x4
+mov edx,0x7efefeff
+mov eax,dword ptr [ecx]
+add edx,eax
+xor eax,0xffffffff
+xor eax,edx
+mov edx,dword ptr [ecx]
+add ecx,0x4
+test eax,0x81010100
+jz 0x00407d61
+test dl,dl
+jz 0x00407db8
+test dh,dh
+jz 0x00407daf
+test edx,0xff0000
+jz 0x00407da2
+test edx,0xff000000
+jz 0x00407d9a
+jmp 0x00407d61
+mov dword ptr [edi],edx
+mov eax,dword ptr [esp + 0x8]
+pop edi
+ret
+mov word ptr [edi],dx
+mov eax,dword ptr [esp + 0x8]
+mov byte ptr [edi + 0x2],0x0
+pop edi
+ret
+mov word ptr [edi],dx
+mov eax,dword ptr [esp + 0x8]
+pop edi
+ret
+mov byte ptr [edi],dl
+mov eax,dword ptr [esp + 0x8]
+pop edi
+ret
+push ebp
+mov ebp,esp
+sub esp,0x18
+push ebx
+push esi
+push edi
+push dword ptr [ebp + 0x8]
+call 0x00407f59
+mov esi,eax
+pop ecx
+cmp esi,dword ptr [0x0040d788]
+mov dword ptr [ebp + 0x8],esi
+jz 0x00407f4d
+xor ebx,ebx
+cmp esi,ebx
+jz 0x00407f43
+xor edx,edx
+mov eax,0x40c9a8
+cmp dword ptr [eax],esi
+jz 0x00407e6a
+add eax,0x30
+inc edx
+cmp eax,0x40ca98
+jc 0x00407df4
+lea eax,[ebp + -0x18]
+push eax
+push esi
+call dword ptr [0x0040906c]
+cmp eax,0x1
+jnz 0x00407f3b
+push 0x40
+xor eax,eax
+pop ecx
+mov edi,0x40d8a0
+cmp dword ptr [ebp + -0x18],0x1
+mov dword ptr [0x0040d788],esi
+stosd.rep es:edi
+stosb es:edi
+mov dword ptr [0x0040d9a4],ebx
+jbe 0x00407f29
+cmp byte ptr [ebp + -0x12],0x0
+jz 0x00407eff
+lea ecx,[ebp + -0x11]
+mov dl,byte ptr [ecx]
+test dl,dl
+jz 0x00407eff
+movzx eax,byte ptr [ecx + -0x1]
+movzx edx,dl
+cmp eax,edx
+ja 0x00407ef3
+or byte ptr [eax + 0x40d8a1],0x4
+inc eax
+jmp 0x00407e58
+push 0x40
+xor eax,eax
+pop ecx
+mov edi,0x40d8a0
+stosd.rep es:edi
+lea esi,[edx + edx*0x2]
+mov dword ptr [ebp + -0x4],ebx
+shl esi,0x4
+stosb es:edi
+lea ebx,[esi + 0x40c9b8]
+cmp byte ptr [ebx],0x0
+mov ecx,ebx
+jz 0x00407eb9
+mov dl,byte ptr [ecx + 0x1]
+test dl,dl
+jz 0x00407eb9
+movzx eax,byte ptr [ecx]
+movzx edi,dl
+cmp eax,edi
+ja 0x00407eb2
+mov edx,dword ptr [ebp + -0x4]
+mov dl,byte ptr [edx + 0x40c9a0]
+or byte ptr [eax + 0x40d8a1],dl
+inc eax
+cmp eax,edi
+jbe 0x00407ea7
+inc ecx
+inc ecx
+cmp byte ptr [ecx],0x0
+jnz 0x00407e8d
+inc dword ptr [ebp + -0x4]
+add ebx,0x8
+cmp dword ptr [ebp + -0x4],0x4
+jc 0x00407e86
+mov eax,dword ptr [ebp + 0x8]
+mov dword ptr [0x0040d79c],0x1
+push eax
+mov [0x0040d788],eax
+call 0x00407fa3
+lea esi,[esi + 0x40c9ac]
+mov edi,0x40d790
+movsd es:edi,esi
+movsd es:edi,esi
+pop ecx
+mov [0x0040d9a4],eax
+movsd es:edi,esi
+jmp 0x00407f48
+inc ecx
+inc ecx
+cmp byte ptr [ecx + -0x1],0x0
+jnz 0x00407e47
+push 0x1
+pop eax
+or byte ptr [eax + 0x40d8a1],0x8
+inc eax
+cmp eax,0xff
+jc 0x00407f02
+push esi
+call 0x00407fa3
+pop ecx
+mov [0x0040d9a4],eax
+mov dword ptr [0x0040d79c],0x1
+jmp 0x00407f2f
+mov dword ptr [0x0040d79c],ebx
+xor eax,eax
+mov edi,0x40d790
+stosd es:edi
+stosd es:edi
+stosd es:edi
+jmp 0x00407f48
+cmp dword ptr [0x0040d738],ebx
+jz 0x00407f51
+call 0x00407fd6
+call 0x00407fff
+xor eax,eax
+jmp 0x00407f54
+or eax,0xffffffff
+pop edi
+pop esi
+pop ebx
+leave
+ret
+mov eax,dword ptr [esp + 0x4]
+and dword ptr [0x0040d738],0x0
+cmp eax,-0x2
+jnz 0x00407f79
+mov dword ptr [0x0040d738],0x1
+jmp dword ptr [0x00409064]
+cmp eax,-0x3
+jnz 0x00407f8e
+mov dword ptr [0x0040d738],0x1
+jmp dword ptr [0x00409068]
+cmp eax,-0x4
+jnz 0x00407fa2
+mov eax,[0x0040d774]
+mov dword ptr [0x0040d738],0x1
+ret
+mov eax,dword ptr [esp + 0x4]
+sub eax,0x3a4
+jz 0x00407fd0
+sub eax,0x4
+jz 0x00407fca
+sub eax,0xd
+jz 0x00407fc4
+dec eax
+jz 0x00407fbe
+xor eax,eax
+ret
+mov eax,0x404
+ret
+mov eax,0x412
+ret
+mov eax,0x804
+ret
+mov eax,0x411
+ret
+push edi
+push 0x40
+pop ecx
+xor eax,eax
+mov edi,0x40d8a0
+stosd.rep es:edi
+stosb es:edi
+xor eax,eax
+mov edi,0x40d790
+mov [0x0040d788],eax
+mov [0x0040d79c],eax
+mov [0x0040d9a4],eax
+stosd es:edi
+stosd es:edi
+stosd es:edi
+pop edi
+ret
+push ebp
+mov ebp,esp
+sub esp,0x514
+lea eax,[ebp + -0x14]
+push esi
+push eax
+push dword ptr [0x0040d788]
+call dword ptr [0x0040906c]
+cmp eax,0x1
+jnz 0x00408138
+xor eax,eax
+mov esi,0x100
+mov byte ptr [ebp + eax*0x1 + 0xfffffeec],al
+inc eax
+cmp eax,esi
+jc 0x00408029
+mov al,byte ptr [ebp + -0xe]
+mov byte ptr [ebp + 0xfffffeec],0x20
+test al,al
+jz 0x0040807a
+push ebx
+push edi
+lea edx,[ebp + -0xd]
+movzx ecx,byte ptr [edx]
+movzx eax,al
+cmp eax,ecx
+ja 0x0040806f
+sub ecx,eax
+lea edi,[ebp + eax*0x1 + 0xfffffeec]
+inc ecx
+mov eax,0x20202020
+mov ebx,ecx
+shr ecx,0x2
+stosd.rep es:edi
+mov ecx,ebx
+and ecx,0x3
+stosb.rep es:edi
+inc edx
+inc edx
+mov al,byte ptr [edx + -0x1]
+test al,al
+jnz 0x00408048
+pop edi
+pop ebx
+push 0x0
+lea eax,[ebp + 0xfffffaec]
+push dword ptr [0x0040d9a4]
+push dword ptr [0x0040d788]
+push eax
+lea eax,[ebp + 0xfffffeec]
+push esi
+push eax
+push 0x1
+call 0x00408a06
+push 0x0
+lea eax,[ebp + 0xfffffdec]
+push dword ptr [0x0040d788]
+push esi
+push eax
+lea eax,[ebp + 0xfffffeec]
+push esi
+push eax
+push esi
+push dword ptr [0x0040d9a4]
+call 0x004087b7
+push 0x0
+lea eax,[ebp + 0xfffffcec]
+push dword ptr [0x0040d788]
+push esi
+push eax
+lea eax,[ebp + 0xfffffeec]
+push esi
+push eax
+push 0x200
+push dword ptr [0x0040d9a4]
+call 0x004087b7
+add esp,0x5c
+xor eax,eax
+lea ecx,[ebp + 0xfffffaec]
+mov dx,word ptr [ecx]
+test dl,0x1
+jz 0x00408113
+or byte ptr [eax + 0x40d8a1],0x10
+mov dl,byte ptr [ebp + eax*0x1 + 0xfffffdec]
+mov byte ptr [eax + 0x40d7a0],dl
+jmp 0x0040812f
+test dl,0x2
+jz 0x00408128
+or byte ptr [eax + 0x40d8a1],0x20
+mov dl,byte ptr [ebp + eax*0x1 + 0xfffffcec]
+jmp 0x0040810b
+and byte ptr [eax + 0x40d7a0],0x0
+inc eax
+inc ecx
+inc ecx
+cmp eax,esi
+jc 0x004080f5
+jmp 0x00408181
+xor eax,eax
+mov esi,0x100
+cmp eax,0x41
+jc 0x0040815d
+cmp eax,0x5a
+ja 0x0040815d
+or byte ptr [eax + 0x40d8a1],0x10
+mov cl,al
+add cl,0x20
+mov byte ptr [eax + 0x40d7a0],cl
+jmp 0x0040817c
+cmp eax,0x61
+jc 0x00408175
+cmp eax,0x7a
+ja 0x00408175
+or byte ptr [eax + 0x40d8a1],0x20
+mov cl,al
+sub cl,0x20
+jmp 0x00408155
+and byte ptr [eax + 0x40d7a0],0x0
+inc eax
+cmp eax,esi
+jc 0x0040813f
+pop esi
+leave
+ret
+cmp dword ptr [0x0040d9ac],0x0
+jnz 0x0040819f
+push -0x3
+call 0x00407dc0
+pop ecx
+mov dword ptr [0x0040d9ac],0x1
+ret
+push ebx
+xor ebx,ebx
+cmp dword ptr [0x0040d73c],ebx
+push esi
+push edi
+jnz 0x004081ef
+push 0x4096c4
+call dword ptr [0x0040905c]
+mov edi,eax
+cmp edi,ebx
+jz 0x00408225
+mov esi,dword ptr [0x00409060]
+push 0x4096b8
+push edi
+call esi
+test eax,eax
+mov [0x0040d73c],eax
+jz 0x00408225
+push 0x4096a8
+push edi
+call esi
+push 0x409694
+push edi
+mov [0x0040d740],eax
+call esi
+mov [0x0040d744],eax
+mov eax,[0x0040d740]
+test eax,eax
+jz 0x0040820e
+call eax
+mov ebx,eax
+test ebx,ebx
+jz 0x0040820e
+mov eax,[0x0040d744]
+test eax,eax
+jz 0x0040820e
+push ebx
+call eax
+mov ebx,eax
+push dword ptr [esp + 0x18]
+push dword ptr [esp + 0x18]
+push dword ptr [esp + 0x18]
+push ebx
+call dword ptr [0x0040d73c]
+pop edi
+pop esi
+pop ebx
+ret
+xor eax,eax
+jmp 0x00408221
+push ebp
+mov ebp,esp
+push esi
+push edi
+mov edi,dword ptr [ebp + 0x8]
+mov eax,edi
+dec eax
+dec eax
+jz 0x00408290
+dec eax
+dec eax
+jz 0x00408281
+sub eax,0x4
+jz 0x00408281
+sub eax,0x3
+jz 0x00408281
+sub eax,0x4
+jz 0x00408274
+sub eax,0x6
+jz 0x00408267
+dec eax
+jz 0x0040825a
+or eax,0xffffffff
+jmp 0x00408352
+mov esi,dword ptr [0x0040d750]
+mov eax,0x40d750
+jmp 0x0040829b
+mov esi,dword ptr [0x0040d74c]
+mov eax,0x40d74c
+jmp 0x0040829b
+mov esi,dword ptr [0x0040d754]
+mov eax,0x40d754
+jmp 0x0040829b
+push edi
+call 0x00408356
+mov esi,dword ptr [eax + 0x8]
+add eax,0x8
+pop ecx
+jmp 0x0040829b
+mov esi,dword ptr [0x0040d748]
+mov eax,0x40d748
+cmp esi,0x1
+jnz 0x004082a7
+xor eax,eax
+jmp 0x00408352
+test esi,esi
+jnz 0x004082b2
+push 0x3
+call 0x00405f65
+push ebx
+push 0x8
+pop ecx
+cmp edi,ecx
+jz 0x004082c4
+cmp edi,0xb
+jz 0x004082c4
+cmp edi,0x4
+jnz 0x004082ea
+mov ebx,dword ptr [0x0040d620]
+and dword ptr [0x0040d620],0x0
+cmp edi,ecx
+jnz 0x00408319
+mov edx,dword ptr [0x0040c55c]
+mov dword ptr [0x0040c55c],0x8c
+mov dword ptr [ebp + 0x8],edx
+jmp 0x004082ed
+mov ebx,dword ptr [ebp + 0x8]
+cmp edi,ecx
+jnz 0x00408319
+mov eax,[0x0040c550]
+mov ecx,dword ptr [0x0040c554]
+add ecx,eax
+cmp eax,ecx
+jge 0x00408320
+lea edx,[eax + eax*0x2]
+sub ecx,eax
+lea edx,[edx*0x4 + 0x40c4e0]
+and dword ptr [edx],0x0
+add edx,0xc
+dec ecx
+jnz 0x0040830e
+jmp 0x00408320
+and dword ptr [eax],0x0
+cmp edi,ecx
+jnz 0x0040832e
+push dword ptr [0x0040c55c]
+push 0x8
+call esi
+pop ecx
+pop ecx
+jmp 0x0040833c
+push edi
+call esi
+cmp edi,0xb
+pop ecx
+jz 0x0040833c
+cmp edi,0x4
+jnz 0x0040834f
+cmp edi,0x8
+mov dword ptr [0x0040d620],ebx
+jnz 0x0040834f
+mov eax,dword ptr [ebp + 0x8]
+mov [0x0040c55c],eax
+xor eax,eax
+pop ebx
+pop edi
+pop esi
+pop ebp
+ret
+mov edx,dword ptr [esp + 0x4]
+mov ecx,dword ptr [0x0040c558]
+cmp dword ptr [0x0040c4dc],edx
+push esi
+mov eax,0x40c4d8
+jz 0x00408384
+lea esi,[ecx + ecx*0x2]
+lea esi,[esi*0x4 + 0x40c4d8]
+add eax,0xc
+cmp eax,esi
+jnc 0x00408384
+cmp dword ptr [eax + 0x4],edx
+jnz 0x00408378
+lea ecx,[ecx + ecx*0x2]
+pop esi
+lea ecx,[ecx*0x4 + 0x40c4d8]
+cmp eax,ecx
+jnc 0x00408398
+cmp dword ptr [eax + 0x4],edx
+jz 0x0040839a
+xor eax,eax
+ret
+push ebp
+mov ebp,esp
+mov eax,dword ptr [ebp + 0x8]
+test eax,eax
+jnz 0x004083a7
+pop ebp
+ret
+cmp dword ptr [0x0040d764],0x0
+jnz 0x004083c2
+mov cx,word ptr [ebp + 0xc]
+cmp cx,0xff
+ja 0x004083f4
+push 0x1
+mov byte ptr [eax],cl
+pop eax
+pop ebp
+ret
+lea ecx,[ebp + 0x8]
+and dword ptr [ebp + 0x8],0x0
+push ecx
+push 0x0
+push dword ptr [0x0040c618]
+push eax
+lea eax,[ebp + 0xc]
+push 0x1
+push eax
+push 0x220
+push dword ptr [0x0040d774]
+call dword ptr [0x004090e0]
+test eax,eax
+jz 0x004083f4
+cmp dword ptr [ebp + 0x8],0x0
+jz 0x00408401
+mov dword ptr [0x0040d5d4],0x2a
+or eax,0xffffffff
+pop ebp
+ret
+push 0x2
+call 0x00402eca
+pop ecx
+ret
+push ebp
+mov ebp,esp
+push ecx
+push ebx
+push esi
+mov esi,dword ptr [ebp + 0xc]
+mov eax,dword ptr [esi + 0xc]
+mov ecx,dword ptr [esi + 0x10]
+test al,0x82
+mov dword ptr [ebp + -0x4],ecx
+jz 0x00408522
+test al,0x40
+jnz 0x00408522
+xor ebx,ebx
+test al,0x1
+jz 0x00408449
+test al,0x10
+mov dword ptr [esi + 0x4],ebx
+jz 0x00408522
+mov edx,dword ptr [esi + 0x8]
+and al,0xfe
+mov dword ptr [esi],edx
+mov dword ptr [esi + 0xc],eax
+mov eax,dword ptr [esi + 0xc]
+mov dword ptr [esi + 0x4],ebx
+and al,0xef
+mov dword ptr [ebp + 0xc],ebx
+or al,0x2
+test ax,0x10c
+mov dword ptr [esi + 0xc],eax
+jnz 0x00408484
+cmp esi,0x40a238
+jz 0x0040846f
+cmp esi,0x40a258
+jnz 0x0040847a
+push ecx
+call 0x00406ecc
+test eax,eax
+pop ecx
+jnz 0x00408481
+push esi
+call 0x00407748
+pop ecx
+mov ecx,dword ptr [ebp + -0x4]
+test word ptr [esi + 0xc],0x108
+push edi
+jz 0x004084f2
+mov eax,dword ptr [esi + 0x8]
+mov edi,dword ptr [esi]
+sub edi,eax
+lea edx,[eax + 0x2]
+mov dword ptr [esi],edx
+mov edx,dword ptr [esi + 0x18]
+dec edx
+dec edx
+cmp edi,ebx
+mov dword ptr [esi + 0x4],edx
+jle 0x004084b5
+push edi
+push eax
+push ecx
+call 0x0040533e
+add esp,0xc
+mov dword ptr [ebp + 0xc],eax
+jmp 0x004084e7
+cmp ecx,-0x1
+jz 0x004084d0
+mov eax,ecx
+mov edx,ecx
+sar eax,0x5
+and edx,0x1f
+mov eax,dword ptr [eax*0x4 + 0x40d9c0]
+lea eax,[eax + edx*0x8]
+jmp 0x004084d5
+mov eax,0x40c4d0
+test byte ptr [eax + 0x4],0x20
+jz 0x004084e7
+push 0x2
+push ebx
+push ecx
+call 0x00405ce2
+add esp,0xc
+mov eax,dword ptr [esi + 0x8]
+mov ebx,dword ptr [ebp + 0x8]
+mov word ptr [eax],bx
+jmp 0x0040850d
+mov ebx,dword ptr [ebp + 0x8]
+push 0x2
+pop edi
+lea eax,[ebp + 0x8]
+push edi
+push eax
+push ecx
+mov word ptr [ebp + 0x8],bx
+call 0x0040533e
+add esp,0xc
+mov dword ptr [ebp + 0xc],eax
+cmp dword ptr [ebp + 0xc],edi
+pop edi
+jz 0x00408519
+or dword ptr [esi + 0xc],0x20
+jmp 0x00408527
+mov eax,ebx
+and eax,0xffff
+jmp 0x0040852c
+or al,0x20
+mov dword ptr [esi + 0xc],eax
+mov eax,0xffff
+pop esi
+pop ebx
+leave
+ret
+push ebp
+mov ebp,esp
+push ecx
+cmp dword ptr [0x0040d764],0x0
+push ebx
+jnz 0x0040855b
+mov eax,dword ptr [ebp + 0x8]
+cmp eax,0x61
+jl 0x004085f9
+cmp eax,0x7a
+jg 0x004085f9
+sub eax,0x20
+jmp 0x004085f9
+mov ebx,dword ptr [ebp + 0x8]
+cmp ebx,0x100
+jge 0x0040858e
+cmp dword ptr [0x0040c618],0x1
+jle 0x0040857b
+push 0x2
+push ebx
+call 0x004085fc
+pop ecx
+pop ecx
+jmp 0x00408586
+mov eax,[0x0040c624]
+mov al,byte ptr [eax + ebx*0x2]
+and eax,0x2
+test eax,eax
+jnz 0x0040858e
+mov eax,ebx
+jmp 0x004085f9
+mov edx,dword ptr [0x0040c624]
+mov eax,ebx
+sar eax,0x8
+movzx ecx,al
+test byte ptr [edx + ecx*0x2 + 0x1],0x80
+jz 0x004085b1
+and byte ptr [ebp + 0xa],0x0
+mov byte ptr [ebp + 0x8],al
+mov byte ptr [ebp + 0x9],bl
+push 0x2
+jmp 0x004085ba
+and byte ptr [ebp + 0x9],0x0
+mov byte ptr [ebp + 0x8],bl
+push 0x1
+pop eax
+lea ecx,[ebp + -0x4]
+push 0x1
+push 0x0
+push 0x3
+push ecx
+push eax
+lea eax,[ebp + 0x8]
+push eax
+push 0x200
+push dword ptr [0x0040d764]
+call 0x004087b7
+add esp,0x20
+test eax,eax
+jz 0x0040858a
+cmp eax,0x1
+jnz 0x004085ec
+movzx eax,byte ptr [ebp + -0x4]
+jmp 0x004085f9
+movzx eax,byte ptr [ebp + -0x3]
+movzx ecx,byte ptr [ebp + -0x4]
+shl eax,0x8
+or eax,ecx
+pop ebx
+leave
+ret
+push ebp
+mov ebp,esp
+push ecx
+mov eax,dword ptr [ebp + 0x8]
+lea ecx,[eax + 0x1]
+cmp ecx,0x100
+ja 0x0040861a
+mov ecx,dword ptr [0x0040c624]
+movzx eax,word ptr [ecx + eax*0x2]
+jmp 0x0040866c
+mov ecx,eax
+push esi
+mov esi,dword ptr [0x0040c624]
+sar ecx,0x8
+movzx edx,cl
+test byte ptr [esi + edx*0x2 + 0x1],0x80
+pop esi
+jz 0x0040863f
+and byte ptr [ebp + -0x2],0x0
+mov byte ptr [ebp + -0x4],cl
+mov byte ptr [ebp + -0x3],al
+push 0x2
+jmp 0x00408648
+and byte ptr [ebp + -0x3],0x0
+mov byte ptr [ebp + -0x4],al
+push 0x1
+pop eax
+lea ecx,[ebp + 0xa]
+push 0x1
+push 0x0
+push 0x0
+push ecx
+push eax
+lea eax,[ebp + -0x4]
+push eax
+push 0x1
+call 0x00408a06
+add esp,0x1c
+test eax,eax
+jnz 0x00408668
+leave
+ret
+movzx eax,word ptr [ebp + 0xa]
+and eax,dword ptr [ebp + 0xc]
+leave
+ret
+push ebp
+mov ebp,esp
+mov eax,0x1000
+call 0x00402690
+push ebx
+mov ebx,dword ptr [ebp + 0x8]
+push esi
+xor esi,esi
+cmp ebx,dword ptr [0x0040dac0]
+jnc 0x004087a6
+mov eax,ebx
+mov ecx,ebx
+sar eax,0x5
+and ecx,0x1f
+mov eax,dword ptr [eax*0x4 + 0x40d9c0]
+test byte ptr [eax + ecx*0x8 + 0x4],0x1
+jz 0x004087a6
+push 0x1
+push esi
+push ebx
+call 0x00405ce2
+add esp,0xc
+cmp eax,-0x1
+mov dword ptr [ebp + 0x8],eax
+jz 0x004087b0
+push 0x2
+push esi
+push ebx
+call 0x00405ce2
+add esp,0xc
+cmp eax,-0x1
+jz 0x004087b0
+push edi
+mov edi,dword ptr [ebp + 0xc]
+sub edi,eax
+test edi,edi
+jle 0x00408753
+push 0x1000
+lea eax,[ebp + 0xfffff000]
+push esi
+push eax
+call 0x004076f0
+push 0x8000
+push ebx
+call 0x00408b4f
+add esp,0x14
+mov dword ptr [ebp + 0xc],eax
+mov eax,0x1000
+cmp edi,eax
+jge 0x00408712
+mov eax,edi
+push eax
+lea eax,[ebp + 0xfffff000]
+push eax
+push ebx
+call 0x0040533e
+add esp,0xc
+cmp eax,-0x1
+jz 0x00408730
+sub edi,eax
+test edi,edi
+jle 0x00408746
+jmp 0x00408707
+cmp dword ptr [0x0040d5d8],0x5
+jnz 0x00408743
+mov dword ptr [0x0040d5d4],0xd
+or esi,0xffffffff
+push dword ptr [ebp + 0xc]
+push ebx
+call 0x00408b4f
+pop ecx
+pop ecx
+jmp 0x00408793
+jge 0x00408793
+push 0x0
+push dword ptr [ebp + 0xc]
+push ebx
+call 0x00405ce2
+push ebx
+call 0x004079d0
+add esp,0x10
+push eax
+call dword ptr [0x00409058]
+mov esi,eax
+neg esi
+sbb esi,esi
+neg esi
+dec esi
+cmp esi,-0x1
+jnz 0x00408793
+mov dword ptr [0x0040d5d4],0xd
+call dword ptr [0x00409000]
+mov [0x0040d5d8],eax
+push 0x0
+push dword ptr [ebp + 0x8]
+push ebx
+call 0x00405ce2
+add esp,0xc
+mov eax,esi
+pop edi
+jmp 0x004087b3
+mov dword ptr [0x0040d5d4],0x9
+or eax,0xffffffff
+pop esi
+pop ebx
+leave
+ret
+push ebp
+mov ebp,esp
+push -0x1
+push 0x4096d8
+push 0x4067d8
+mov eax,fs:[0x0]
+push eax
+mov dword ptr fs:[0x0],esp
+sub esp,0x1c
+push ebx
+push esi
+push edi
+mov dword ptr [ebp + -0x18],esp
+xor edi,edi
+cmp dword ptr [0x0040d780],edi
+jnz 0x0040882d
+push edi
+push edi
+push 0x1
+pop ebx
+push ebx
+push 0x4096d4
+mov esi,0x100
+push esi
+push edi
+call dword ptr [0x00409050]
+test eax,eax
+jz 0x0040880b
+mov dword ptr [0x0040d780],ebx
+jmp 0x0040882d
+push edi
+push edi
+push ebx
+push 0x4096d0
+push esi
+push edi
+call dword ptr [0x00409054]
+test eax,eax
+jz 0x00408945
+mov dword ptr [0x0040d780],0x2
+cmp dword ptr [ebp + 0x14],edi
+jle 0x00408842
+push dword ptr [ebp + 0x14]
+push dword ptr [ebp + 0x10]
+call 0x004089db
+pop ecx
+pop ecx
+mov dword ptr [ebp + 0x14],eax
+mov eax,[0x0040d780]
+cmp eax,0x2
+jnz 0x00408869
+push dword ptr [ebp + 0x1c]
+push dword ptr [ebp + 0x18]
+push dword ptr [ebp + 0x14]
+push dword ptr [ebp + 0x10]
+push dword ptr [ebp + 0xc]
+push dword ptr [ebp + 0x8]
+call dword ptr [0x00409054]
+jmp 0x00408947
+cmp eax,0x1
+jnz 0x00408945
+cmp dword ptr [ebp + 0x20],edi
+jnz 0x0040887f
+mov eax,[0x0040d774]
+mov dword ptr [ebp + 0x20],eax
+push edi
+push edi
+push dword ptr [ebp + 0x14]
+push dword ptr [ebp + 0x10]
+mov eax,dword ptr [ebp + 0x24]
+neg eax
+sbb eax,eax
+and eax,0x8
+inc eax
+push eax
+push dword ptr [ebp + 0x20]
+call dword ptr [0x00409028]
+mov ebx,eax
+mov dword ptr [ebp + -0x1c],ebx
+cmp ebx,edi
+jz 0x00408945
+mov dword ptr [ebp + -0x4],edi
+lea eax,[ebx + ebx*0x1]
+add eax,0x3
+and al,0xfc
+call 0x00402690
+mov dword ptr [ebp + -0x18],esp
+mov eax,esp
+mov dword ptr [ebp + -0x24],eax
+or dword ptr [ebp + -0x4],0xffffffff
+jmp 0x004088da
+push 0x1
+pop eax
+ret
+cmp dword ptr [ebp + -0x24],edi
+jz 0x00408945
+push ebx
+push dword ptr [ebp + -0x24]
+push dword ptr [ebp + 0x14]
+push dword ptr [ebp + 0x10]
+push 0x1
+push dword ptr [ebp + 0x20]
+call dword ptr [0x00409028]
+test eax,eax
+jz 0x00408945
+push edi
+push edi
+push ebx
+push dword ptr [ebp + -0x24]
+push dword ptr [ebp + 0xc]
+push dword ptr [ebp + 0x8]
+call dword ptr [0x00409050]
+mov esi,eax
+mov dword ptr [ebp + -0x28],esi
+cmp esi,edi
+jz 0x00408945
+test byte ptr [ebp + 0xd],0x4
+jz 0x00408959
+cmp dword ptr [ebp + 0x1c],edi
+jz 0x004089d4
+cmp esi,dword ptr [ebp + 0x1c]
+jg 0x00408945
+push dword ptr [ebp + 0x1c]
+push dword ptr [ebp + 0x18]
+push ebx
+push dword ptr [ebp + -0x24]
+push dword ptr [ebp + 0xc]
+push dword ptr [ebp + 0x8]
+call dword ptr [0x00409050]
+test eax,eax
+jnz 0x004089d4
+xor eax,eax
+lea esp,[ebp + -0x38]
+mov ecx,dword ptr [ebp + -0x10]
+mov dword ptr fs:[0x0],ecx
+pop edi
+pop esi
+pop ebx
+leave
+ret
+mov dword ptr [ebp + -0x4],0x1
+lea eax,[esi + esi*0x1]
+add eax,0x3
+and al,0xfc
+call 0x00402690
+mov dword ptr [ebp + -0x18],esp
+mov ebx,esp
+mov dword ptr [ebp + -0x20],ebx
+or dword ptr [ebp + -0x4],0xffffffff
+jmp 0x0040898d
+push 0x1
+pop eax
+ret
+cmp ebx,edi
+jz 0x00408945
+push esi
+push ebx
+push dword ptr [ebp + -0x1c]
+push dword ptr [ebp + -0x24]
+push dword ptr [ebp + 0xc]
+push dword ptr [ebp + 0x8]
+call dword ptr [0x00409050]
+test eax,eax
+jz 0x00408945
+cmp dword ptr [ebp + 0x1c],edi
+push edi
+push edi
+jnz 0x004089b4
+push edi
+push edi
+jmp 0x004089ba
+push dword ptr [ebp + 0x1c]
+push dword ptr [ebp + 0x18]
+push esi
+push ebx
+push 0x220
+push dword ptr [ebp + 0x20]
+call dword ptr [0x004090e0]
+mov esi,eax
+cmp esi,edi
+jz 0x00408945
+mov eax,esi
+jmp 0x00408947
+mov edx,dword ptr [esp + 0x8]
+mov eax,dword ptr [esp + 0x4]
+test edx,edx
+push esi
+lea ecx,[edx + -0x1]
+jz 0x004089f8
+cmp byte ptr [eax],0x0
+jz 0x004089f8
+inc eax
+mov esi,ecx
+dec ecx
+test esi,esi
+jnz 0x004089eb
+cmp byte ptr [eax],0x0
+pop esi
+jnz 0x00408a03
+sub eax,dword ptr [esp + 0x4]
+ret
+mov eax,edx
+ret
+push ebp
+mov ebp,esp
+push -0x1
+push 0x4096f0
+push 0x4067d8
+mov eax,fs:[0x0]
+push eax
+mov dword ptr fs:[0x0],esp
+sub esp,0x18
+push ebx
+push esi
+push edi
+mov dword ptr [ebp + -0x18],esp
+mov eax,[0x0040d784]
+xor ebx,ebx
+cmp eax,ebx
+jnz 0x00408a75
+lea eax,[ebp + -0x1c]
+push eax
+push 0x1
+pop esi
+push esi
+push 0x4096d4
+push esi
+call dword ptr [0x004090f0]
+test eax,eax
+jz 0x00408a53
+mov eax,esi
+jmp 0x00408a70
+lea eax,[ebp + -0x1c]
+push eax
+push esi
+push 0x4096d0
+push esi
+push ebx
+call dword ptr [0x0040904c]
+test eax,eax
+jz 0x00408b3b
+push 0x2
+pop eax
+mov [0x0040d784],eax
+cmp eax,0x2
+jnz 0x00408a9e
+mov eax,dword ptr [ebp + 0x1c]
+cmp eax,ebx
+jnz 0x00408a86
+mov eax,[0x0040d764]
+push dword ptr [ebp + 0x14]
+push dword ptr [ebp + 0x10]
+push dword ptr [ebp + 0xc]
+push dword ptr [ebp + 0x8]
+push eax
+call dword ptr [0x0040904c]
+jmp 0x00408b3d
+cmp eax,0x1
+jnz 0x00408b3b
+cmp dword ptr [ebp + 0x18],ebx
+jnz 0x00408ab4
+mov eax,[0x0040d774]
+mov dword ptr [ebp + 0x18],eax
+push ebx
+push ebx
+push dword ptr [ebp + 0x10]
+push dword ptr [ebp + 0xc]
+mov eax,dword ptr [ebp + 0x20]
+neg eax
+sbb eax,eax
+and eax,0x8
+inc eax
+push eax
+push dword ptr [ebp + 0x18]
+call dword ptr [0x00409028]
+mov dword ptr [ebp + -0x20],eax
+cmp eax,ebx
+jz 0x00408b3b
+mov dword ptr [ebp + -0x4],ebx
+lea edi,[eax + eax*0x1]
+mov eax,edi
+add eax,0x3
+and al,0xfc
+call 0x00402690
+mov dword ptr [ebp + -0x18],esp
+mov esi,esp
+mov dword ptr [ebp + -0x24],esi
+push edi
+push ebx
+push esi
+call 0x004076f0
+add esp,0xc
+jmp 0x00408b0a
+push 0x1
+pop eax
+ret
+or dword ptr [ebp + -0x4],0xffffffff
+cmp esi,ebx
+jz 0x00408b3b
+push dword ptr [ebp + -0x20]
+push esi
+push dword ptr [ebp + 0x10]
+push dword ptr [ebp + 0xc]
+push 0x1
+push dword ptr [ebp + 0x18]
+call dword ptr [0x00409028]
+cmp eax,ebx
+jz 0x00408b3b
+push dword ptr [ebp + 0x14]
+push eax
+push esi
+push dword ptr [ebp + 0x8]
+call dword ptr [0x004090f0]
+jmp 0x00408b3d
+xor eax,eax
+lea esp,[ebp + -0x34]
+mov ecx,dword ptr [ebp + -0x10]
+mov dword ptr fs:[0x0],ecx
+pop edi
+pop esi
+pop ebx
+leave
+ret
+mov eax,dword ptr [esp + 0x4]
+push esi
+cmp eax,dword ptr [0x0040dac0]
+jnc 0x00408bb6
+mov ecx,eax
+and eax,0x1f
+sar ecx,0x5
+mov ecx,dword ptr [ecx*0x4 + 0x40d9c0]
+lea edx,[ecx + eax*0x8 + 0x4]
+mov cl,byte ptr [ecx + eax*0x8 + 0x4]
+test cl,0x1
+jz 0x00408bb6
+mov al,cl
+mov esi,0x8000
+and eax,0x80
+cmp dword ptr [esp + 0xc],esi
+jnz 0x00408b8f
+and cl,0x7f
+jmp 0x00408b9c
+cmp dword ptr [esp + 0xc],0x4000
+jnz 0x00408baa
+or cl,0x80
+neg eax
+sbb eax,eax
+mov byte ptr [edx],cl
+and ax,0xc000
+add eax,esi
+pop esi
+ret
+mov dword ptr [0x0040d5d4],0x16
+jmp 0x00408bc0
+mov dword ptr [0x0040d5d4],0x9
+or eax,0xffffffff
+pop esi
+ret
+jmp dword ptr [0x00409080]
+lea ecx,[ebp + 0xffffefb0]
+jmp 0x00401740
+lea ecx,[ebp + 0xffffefa8]
+jmp 0x00401740
+mov eax,0x409700
+jmp 0x00402431
+lea ecx,[ebp + 0xfffffce0]
+jmp 0x00401bc0
+mov eax,0x409730
+jmp 0x00402431

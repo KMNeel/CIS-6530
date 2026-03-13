@@ -1,0 +1,184 @@
+pushad
+mov esi,0x18000
+lea edi,[esi + 0xffff9000]
+push edi
+jmp 0x0001854a
+mov al,byte ptr [esi]
+inc esi
+mov byte ptr [edi],al
+inc edi
+add ebx,ebx
+jnz 0x00018551
+mov ebx,dword ptr [esi]
+sub esi,-0x4
+adc ebx,ebx
+jc 0x00018540
+mov eax,0x1
+add ebx,ebx
+jnz 0x00018563
+mov ebx,dword ptr [esi]
+sub esi,-0x4
+adc ebx,ebx
+adc eax,eax
+add ebx,ebx
+jnc 0x00018558
+jnz 0x00018574
+mov ebx,dword ptr [esi]
+sub esi,-0x4
+adc ebx,ebx
+jnc 0x00018558
+xor ecx,ecx
+sub eax,0x3
+jc 0x00018588
+shl eax,0x8
+mov al,byte ptr [esi]
+inc esi
+xor eax,0xffffffff
+jz 0x000185fa
+mov ebp,eax
+add ebx,ebx
+jnz 0x00018593
+mov ebx,dword ptr [esi]
+sub esi,-0x4
+adc ebx,ebx
+adc ecx,ecx
+add ebx,ebx
+jnz 0x000185a0
+mov ebx,dword ptr [esi]
+sub esi,-0x4
+adc ebx,ebx
+adc ecx,ecx
+jnz 0x000185c4
+inc ecx
+add ebx,ebx
+jnz 0x000185b0
+mov ebx,dword ptr [esi]
+sub esi,-0x4
+adc ebx,ebx
+adc ecx,ecx
+add ebx,ebx
+jnc 0x000185a5
+jnz 0x000185c1
+mov ebx,dword ptr [esi]
+sub esi,-0x4
+adc ebx,ebx
+jnc 0x000185a5
+add ecx,0x2
+cmp ebp,0xfffff300
+adc ecx,0x1
+lea edx,[edi + ebp*0x1]
+cmp ebp,-0x4
+jbe 0x000185e4
+mov al,byte ptr [edx]
+inc edx
+mov byte ptr [edi],al
+inc edi
+dec ecx
+jnz 0x000185d5
+jmp 0x00018546
+mov eax,dword ptr [edx]
+add edx,0x4
+mov dword ptr [edi],eax
+add edi,0x4
+sub ecx,0x4
+ja 0x000185e4
+add edi,ecx
+jmp 0x00018546
+pop esi
+mov edi,esi
+mov ecx,0x2e
+mov al,byte ptr [edi]
+inc edi
+sub al,0xe8
+cmp al,0x1
+ja 0x00018602
+cmp byte ptr [edi],0x0
+jnz 0x00018602
+mov eax,dword ptr [edi]
+mov bl,byte ptr [edi + 0x4]
+shr ax,0x8
+rol eax,0x10
+xchg ah,al
+sub eax,edi
+sub bl,0xe8
+add eax,esi
+mov dword ptr [edi],eax
+add edi,0x5
+mov al,bl
+loop 0x00018607
+lea edi,[esi + 0x6000]
+mov eax,dword ptr [edi]
+or eax,eax
+jz 0x00018676
+mov ebx,dword ptr [edi + 0x4]
+lea eax,[eax + esi*0x1 + 0x80b0]
+add ebx,esi
+push eax
+add edi,0x8
+call dword ptr [esi + 0x80d8]
+xchg eax,ebp
+mov al,byte ptr [edi]
+inc edi
+or al,al
+jz 0x00018634
+mov ecx,edi
+push edi
+dec eax
+scasb.repne es:edi
+push ebp
+call dword ptr [esi + 0x80dc]
+or eax,eax
+jz 0x00018670
+mov dword ptr [ebx],eax
+add ebx,0x4
+jmp 0x00018651
+call dword ptr [esi + 0x80ec]
+add edi,0x4
+lea ebx,[esi + -0x4]
+xor eax,eax
+mov al,byte ptr [edi]
+inc edi
+or eax,eax
+jz 0x000186a7
+cmp al,0xef
+ja 0x0001869a
+add ebx,eax
+mov eax,dword ptr [ebx]
+xchg ah,al
+rol eax,0x10
+xchg ah,al
+add eax,esi
+mov dword ptr [ebx],eax
+jmp 0x0001867c
+and al,0xf
+shl eax,0x10
+mov ax,word ptr [edi]
+add edi,0x2
+jmp 0x00018689
+mov ebp,dword ptr [esi + 0x80e0]
+lea edi,[esi + 0xfffff000]
+mov ebx,0x1000
+push eax
+push esp
+push 0x4
+push ebx
+push edi
+call ebp
+lea eax,[edi + 0x21f]
+and byte ptr [eax],0x7f
+and byte ptr [eax + 0x28],0x7f
+pop eax
+push eax
+push esp
+push eax
+push ebx
+push edi
+call ebp
+pop eax
+popad
+lea eax,[esp + -0x80]
+push 0x0
+cmp esp,eax
+jnz 0x000186db
+sub esp,-0x80
+jmp 0x000114d0

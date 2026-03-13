@@ -1,0 +1,1069 @@
+mov qword ptr [rsp + 0x8],rbx
+mov qword ptr [rsp + 0x10],rsi
+push rdi
+sub rsp,0x20
+mov esi,edx
+mov rbx,rcx
+test dl,0x2
+jz 0x18000bdfb
+mov r8d,dword ptr [rcx + -0x8]
+lea r9,[0x18000c632]
+mov edx,0x18
+call 0x18000c2b4
+test sil,0x1
+jz 0x18000bdf5
+lea rcx,[rbx + -0x8]
+call 0x18000c262
+lea rax,[rbx + -0x8]
+jmp 0x18000be11
+call 0x18000c632
+test sil,0x1
+jz 0x18000be0e
+mov rcx,rbx
+call 0x18000c262
+mov rax,rbx
+mov rbx,qword ptr [rsp + 0x30]
+mov rsi,qword ptr [rsp + 0x38]
+add rsp,0x20
+pop rdi
+ret
+int3
+jmp qword ptr [0x18000f5d8]
+jmp qword ptr [0x18000f5d0]
+push rbx
+sub rsp,0x20
+mov ecx,0x100
+call qword ptr [0x18000f5b8]
+mov rcx,rax
+mov rbx,rax
+call qword ptr [0x18000f5c0]
+mov qword ptr [0x180035df0],rax
+mov qword ptr [0x180035de8],rax
+test rbx,rbx
+jnz 0x18000be65
+lea eax,[rbx + 0x1]
+jmp 0x18000be88
+and qword ptr [rbx],0x0
+call 0x18000c3e8
+lea rcx,[0x18000c420]
+call 0x18000c3d0
+lea rcx,[0x18000c314]
+call 0x18000c3d0
+xor eax,eax
+add rsp,0x20
+pop rbx
+ret
+int3
+mov rax,rsp
+mov qword ptr [rax + 0x8],rbx
+mov qword ptr [rax + 0x10],rbp
+mov qword ptr [rax + 0x18],rdi
+mov qword ptr [rax + 0x20],r12
+push r13
+push r14
+push r15
+sub rsp,0x20
+xor edi,edi
+mov r12,r8
+mov r13,rcx
+cmp edx,edi
+jnz 0x18000bff5
+mov eax,dword ptr [0x18002fda0]
+cmp eax,edi
+jle 0x18000bfee
+dec eax
+mov r13d,edi
+mov dword ptr [0x18002fda0],eax
+mov rax,qword ptr gs:[0x30]
+mov rbx,qword ptr [rax + 0x8]
+jmp 0x18000bef5
+cmp rax,rbx
+jz 0x18000bf04
+mov ecx,0x3e8
+call qword ptr [0x18000f0b8]
+xor eax,eax
+cmpxchg.lock qword ptr [0x180035de0],rbx
+jnz 0x18000bee5
+jmp 0x18000bf0a
+mov r13d,0x1
+mov eax,dword ptr [0x180035dd8]
+cmp eax,0x2
+jz 0x18000bf24
+mov ecx,0x1f
+call 0x18000c540
+jmp 0x18000c0c5
+mov rcx,qword ptr [0x180035df0]
+call qword ptr [0x18000f590]
+mov r12,rax
+cmp rax,rdi
+jz 0x18000bfd3
+mov rcx,qword ptr [0x180035de8]
+call qword ptr [0x18000f590]
+mov r15,r12
+mov r14,rax
+mov rbp,rax
+sub rbp,0x8
+cmp rbp,r12
+jc 0x18000bfb6
+cmp qword ptr [rbp],rdi
+jz 0x18000bf53
+call qword ptr [0x18000f598]
+cmp qword ptr [rbp],rax
+jz 0x18000bf53
+mov rcx,qword ptr [rbp]
+call qword ptr [0x18000f590]
+mov rbx,rax
+call qword ptr [0x18000f598]
+mov qword ptr [rbp],rax
+call rbx
+mov rcx,qword ptr [0x180035df0]
+call qword ptr [0x18000f590]
+mov rcx,qword ptr [0x180035de8]
+mov rbx,rax
+call qword ptr [0x18000f590]
+cmp r15,rbx
+jnz 0x18000bfae
+cmp r14,rax
+jz 0x18000bf53
+mov r15,rbx
+mov r12,rbx
+jmp 0x18000bf4d
+mov rcx,r12
+call qword ptr [0x18000f5a0]
+call qword ptr [0x18000f598]
+mov qword ptr [0x180035de8],rax
+mov qword ptr [0x180035df0],rax
+mov dword ptr [0x180035dd8],edi
+cmp r13d,edi
+jnz 0x18000c0c5
+xchg qword ptr [0x180035de0],rdi
+jmp 0x18000c0c5
+xor eax,eax
+jmp 0x18000c0ca
+cmp edx,0x1
+jnz 0x18000c0c5
+mov rax,qword ptr gs:[0x30]
+mov ebp,edi
+mov rbx,qword ptr [rax + 0x8]
+jmp 0x18000c01f
+cmp rax,rbx
+jz 0x18000c02e
+mov ecx,0x3e8
+call qword ptr [0x18000f0b8]
+xor eax,eax
+cmpxchg.lock qword ptr [0x180035de0],rbx
+jnz 0x18000c00f
+jmp 0x18000c033
+mov ebp,0x1
+mov eax,dword ptr [0x180035dd8]
+cmp eax,edi
+jz 0x18000c049
+mov ecx,0x1f
+call 0x18000c540
+jmp 0x18000c087
+lea rdx,[0x18000f750]
+lea rcx,[0x18000f740]
+mov dword ptr [0x180035dd8],0x1
+call 0x18000c528
+cmp eax,edi
+jnz 0x18000bfee
+lea rdx,[0x18000f738]
+lea rcx,[0x18000f730]
+call 0x18000c522
+mov dword ptr [0x180035dd8],0x2
+cmp ebp,edi
+jnz 0x18000c095
+mov rax,rdi
+xchg qword ptr [0x180035de0],rax
+cmp qword ptr [0x180035df8],rdi
+jz 0x18000c0bf
+lea rcx,[0x180035df8]
+call 0x18000c4e0
+cmp eax,edi
+jz 0x18000c0bf
+mov r8,r12
+mov edx,0x2
+mov rcx,r13
+call qword ptr [0x180035df8]
+inc dword ptr [0x18002fda0]
+mov eax,0x1
+mov rbx,qword ptr [rsp + 0x40]
+mov rbp,qword ptr [rsp + 0x48]
+mov rdi,qword ptr [rsp + 0x50]
+mov r12,qword ptr [rsp + 0x58]
+add rsp,0x20
+pop r15
+pop r14
+pop r13
+ret
+int3
+mov rax,rsp
+mov qword ptr [rax + 0x8],rbx
+mov qword ptr [rax + 0x10],rsi
+mov qword ptr [rax + 0x18],rdi
+push r12
+sub rsp,0x30
+mov rsi,r8
+mov edi,edx
+mov r12,rcx
+mov ebx,0x1
+mov dword ptr [rax + -0x18],ebx
+mov dword ptr [0x18002b020],edx
+test edx,edx
+jnz 0x18000c12d
+cmp dword ptr [0x18002fda0],edx
+jnz 0x18000c12d
+xor ebx,ebx
+mov dword ptr [rax + -0x18],ebx
+jmp 0x18000c1f7
+cmp edx,0x1
+jz 0x18000c137
+cmp edx,0x2
+jnz 0x18000c16a
+mov rax,qword ptr [0x18000f7e0]
+test rax,rax
+jz 0x18000c14b
+call rax
+mov ebx,eax
+mov dword ptr [rsp + 0x20],eax
+test ebx,ebx
+jz 0x18000c162
+mov r8,rsi
+mov edx,edi
+mov rcx,r12
+call 0x18000be90
+mov ebx,eax
+mov dword ptr [rsp + 0x20],eax
+test ebx,ebx
+jz 0x18000c1f7
+mov r8,rsi
+mov edx,edi
+mov rcx,r12
+call 0x18000c554
+mov ebx,eax
+mov dword ptr [rsp + 0x20],eax
+cmp edi,0x1
+jnz 0x18000c1b7
+test eax,eax
+jnz 0x18000c1b7
+mov r8,rsi
+xor edx,edx
+mov rcx,r12
+call 0x18000c554
+mov r8,rsi
+xor edx,edx
+mov rcx,r12
+call 0x18000be90
+mov r11,qword ptr [0x18000f7e0]
+test r11,r11
+jz 0x18000c1b7
+mov r8,rsi
+xor edx,edx
+mov rcx,r12
+call r11
+test edi,edi
+jz 0x18000c1c0
+cmp edi,0x3
+jnz 0x18000c1f7
+mov r8,rsi
+mov edx,edi
+mov rcx,r12
+call 0x18000be90
+neg eax
+sbb ecx,ecx
+and ecx,ebx
+mov ebx,ecx
+mov dword ptr [rsp + 0x20],ecx
+jz 0x18000c1f7
+mov rax,qword ptr [0x18000f7e0]
+test rax,rax
+jz 0x18000c1f7
+mov r8,rsi
+mov edx,edi
+mov rcx,r12
+call rax
+mov ebx,eax
+mov dword ptr [rsp + 0x20],eax
+jmp 0x18000c1ff
+mov dword ptr [0x18002b020],0xffffffff
+mov eax,ebx
+mov rbx,qword ptr [rsp + 0x40]
+mov rsi,qword ptr [rsp + 0x48]
+mov rdi,qword ptr [rsp + 0x50]
+add rsp,0x30
+pop r12
+ret
+int3
+mov qword ptr [rsp + 0x8],rbx
+mov qword ptr [rsp + 0x10],rsi
+push rdi
+sub rsp,0x20
+mov rdi,r8
+mov ebx,edx
+mov rsi,rcx
+cmp edx,0x1
+jnz 0x18000c245
+call 0x18000c578
+mov r8,rdi
+mov edx,ebx
+mov rcx,rsi
+mov rbx,qword ptr [rsp + 0x30]
+mov rsi,qword ptr [rsp + 0x38]
+add rsp,0x20
+pop rdi
+jmp 0x18000c0ec
+int3
+jmp qword ptr [0x18000f5c8]
+mov qword ptr [rsp + 0x10],rbx
+mov dword ptr [rsp + 0x18],r8d
+mov qword ptr [rsp + 0x8],rcx
+push rsi
+push rdi
+push r12
+sub rsp,0x40
+mov rsi,r9
+mov edi,r8d
+mov r12,rdx
+mov rbx,rcx
+sub edi,0x1
+mov dword ptr [rsp + 0x70],edi
+js 0x18000c2a3
+sub rbx,r12
+mov qword ptr [rsp + 0x60],rbx
+mov rcx,rbx
+call rsi
+jmp 0x18000c28b
+jmp 0x18000c2a5
+mov rbx,qword ptr [rsp + 0x68]
+add rsp,0x40
+pop r12
+pop rdi
+pop rsi
+ret
+int3
+mov rax,rsp
+mov qword ptr [rax + 0x20],r9
+mov dword ptr [rax + 0x18],r8d
+mov qword ptr [rax + 0x10],rdx
+push rbx
+push rsi
+push rdi
+push r12
+sub rsp,0x38
+mov r12,r9
+movsxd rdi,r8d
+mov rsi,rdx
+and dword ptr [rax + -0x38],0x0
+mov rbx,rdi
+imul rbx,rdx
+add rbx,rcx
+mov qword ptr [rax + 0x8],rbx
+sub edi,0x1
+mov dword ptr [rsp + 0x70],edi
+js 0x18000c300
+sub rbx,rsi
+mov qword ptr [rsp + 0x60],rbx
+mov rcx,rbx
+call r12
+jmp 0x18000c2e7
+mov dword ptr [rsp + 0x20],0x1
+add rsp,0x38
+pop r12
+pop rdi
+pop rsi
+pop rbx
+ret
+int3
+lea rcx,[0x18002fda8]
+jmp 0x18000c638
+push rbx
+sub rsp,0x20
+mov rbx,rcx
+mov rcx,qword ptr [0x180035df0]
+call qword ptr [0x18000f590]
+mov qword ptr [rsp + 0x38],rax
+cmp rax,-0x1
+jnz 0x18000c34c
+mov rcx,rbx
+call qword ptr [0x18000f540]
+jmp 0x18000c3ca
+mov ecx,0x8
+call 0x18000c64a
+nop
+mov rcx,qword ptr [0x180035df0]
+call qword ptr [0x18000f590]
+mov qword ptr [rsp + 0x38],rax
+mov rcx,qword ptr [0x180035de8]
+call qword ptr [0x18000f590]
+mov qword ptr [rsp + 0x40],rax
+mov rcx,rbx
+call qword ptr [0x18000f5c0]
+mov rcx,rax
+lea r8,[rsp + 0x40]
+lea rdx,[rsp + 0x38]
+call 0x18000c644
+mov rbx,rax
+mov rcx,qword ptr [rsp + 0x38]
+call qword ptr [0x18000f5c0]
+mov qword ptr [0x180035df0],rax
+mov rcx,qword ptr [rsp + 0x40]
+call qword ptr [0x18000f5c0]
+mov qword ptr [0x180035de8],rax
+mov ecx,0x8
+call 0x18000c63e
+mov rax,rbx
+add rsp,0x20
+pop rbx
+ret
+sub rsp,0x28
+call 0x18000c320
+neg rax
+sbb eax,eax
+neg eax
+dec eax
+add rsp,0x28
+ret
+int3
+mov qword ptr [rsp + 0x8],rbx
+push rdi
+sub rsp,0x20
+lea rbx,[0x180027fb8]
+lea rdi,[0x180027fb8]
+jmp 0x18000c410
+mov rax,qword ptr [rbx]
+test rax,rax
+jz 0x18000c40c
+call rax
+add rbx,0x8
+cmp rbx,rdi
+jc 0x18000c402
+mov rbx,qword ptr [rsp + 0x30]
+add rsp,0x20
+pop rdi
+ret
+mov qword ptr [rsp + 0x8],rbx
+push rdi
+sub rsp,0x20
+lea rbx,[0x180027fc8]
+lea rdi,[0x180027fc8]
+jmp 0x18000c448
+mov rax,qword ptr [rbx]
+test rax,rax
+jz 0x18000c444
+call rax
+add rbx,0x8
+cmp rbx,rdi
+jc 0x18000c43a
+mov rbx,qword ptr [rsp + 0x30]
+add rsp,0x20
+pop rdi
+ret
+jmp qword ptr [0x18000f5c0]
+mov rax,rcx
+mov ecx,0x5a4d
+cmp word ptr [rax],cx
+jz 0x18000c470
+xor eax,eax
+ret
+movsxd rcx,dword ptr [rax + 0x3c]
+add rcx,rax
+xor eax,eax
+cmp dword ptr [rcx],0x4550
+jnz 0x18000c48d
+mov edx,0x20b
+cmp word ptr [rcx + 0x18],dx
+setz al
+ret
+movsxd r8,dword ptr [rcx + 0x3c]
+xor r9d,r9d
+mov r10,rdx
+add r8,rcx
+movzx eax,word ptr [r8 + 0x14]
+movzx r11d,word ptr [r8 + 0x6]
+lea rcx,[rax + r8*0x1 + 0x18]
+test r11d,r11d
+jz 0x18000c4cf
+mov edx,dword ptr [rcx + 0xc]
+cmp r10,rdx
+jc 0x18000c4c3
+mov eax,dword ptr [rcx + 0x8]
+add eax,edx
+cmp r10,rax
+jc 0x18000c4d2
+inc r9d
+add rcx,0x28
+cmp r9d,r11d
+jc 0x18000c4b1
+xor eax,eax
+ret
+mov rax,rcx
+ret
+sub rsp,0x28
+mov r8,rcx
+lea r9,[0x180000000]
+mov rcx,r9
+call 0x18000c460
+test eax,eax
+jz 0x18000c51c
+sub r8,r9
+mov rdx,r8
+mov rcx,r9
+call 0x18000c490
+test rax,rax
+jz 0x18000c51c
+mov eax,dword ptr [rax + 0x24]
+shr eax,0x1f
+not eax
+and eax,0x1
+jmp 0x18000c51c
+add rsp,0x28
+ret
+int3
+jmp qword ptr [0x18000f5b0]
+jmp qword ptr [0x18000f5a8]
+jmp qword ptr [0x18000f5a0]
+jmp qword ptr [0x18000f598]
+jmp qword ptr [0x18000f590]
+jmp qword ptr [0x18000f588]
+jmp qword ptr [0x18000f580]
+jmp qword ptr [0x18000f578]
+sub rsp,0x28
+cmp edx,0x1
+jnz 0x18000c56d
+cmp qword ptr [0x18000f7e0],0x0
+jnz 0x18000c56d
+call qword ptr [0x18000f0c0]
+mov eax,0x1
+add rsp,0x28
+ret
+int3
+mov qword ptr [rsp + 0x18],rbx
+push rdi
+sub rsp,0x20
+mov rax,qword ptr [0x18002b028]
+and qword ptr [rsp + 0x30],0x0
+mov rdi,0x2b992ddfa232
+cmp rax,rdi
+jz 0x18000c5aa
+not rax
+mov qword ptr [0x18002b030],rax
+jmp 0x18000c620
+lea rcx,[rsp + 0x30]
+call qword ptr [0x18000f0e8]
+mov rbx,qword ptr [rsp + 0x30]
+call qword ptr [0x18000f0e0]
+mov r11d,eax
+xor rbx,r11
+call qword ptr [0x18000f0d8]
+mov r11d,eax
+xor rbx,r11
+call qword ptr [0x18000f0d0]
+lea rcx,[rsp + 0x38]
+mov r11d,eax
+xor rbx,r11
+call qword ptr [0x18000f0c8]
+mov r11,qword ptr [rsp + 0x38]
+xor r11,rbx
+mov rax,0xffffffffffff
+and r11,rax
+mov rax,0x2b992ddfa233
+cmp r11,rdi
+cmovz r11,rax
+mov qword ptr [0x18002b028],r11
+not r11
+mov qword ptr [0x18002b030],r11
+mov rbx,qword ptr [rsp + 0x40]
+add rsp,0x20
+pop rdi
+ret
+int3
+jmp qword ptr [0x18000f570]
+jmp qword ptr [0x18000f568]
+jmp qword ptr [0x18000f560]
+jmp qword ptr [0x18000f558]
+jmp qword ptr [0x18000f550]
+jmp qword ptr [0x18000f548]
+mov rax,qword ptr gs:[0x30]
+mov rax,qword ptr [rax + 0x8]
+ret
+jmp qword ptr [0x18000f0b8]
+jmp qword ptr [0x18000f0d0]
+jmp qword ptr [0x18000f0f0]
+jmp qword ptr [0x18000f0f8]
+jmp qword ptr [0x18000f100]
+jmp qword ptr [0x18000f108]
+jmp qword ptr [0x18000f110]
+jmp qword ptr [0x18000f118]
+jmp qword ptr [0x18000f120]
+jmp qword ptr [0x18000f128]
+jmp qword ptr [0x18000f130]
+jmp qword ptr [0x18000f138]
+jmp qword ptr [0x18000f140]
+jmp qword ptr [0x18000f148]
+jmp qword ptr [0x18000f150]
+jmp qword ptr [0x18000f158]
+jmp qword ptr [0x18000f160]
+jmp qword ptr [0x18000f168]
+jmp qword ptr [0x18000f170]
+jmp qword ptr [0x18000f178]
+jmp qword ptr [0x18000f180]
+jmp qword ptr [0x18000f188]
+jmp qword ptr [0x18000f190]
+jmp qword ptr [0x18000f198]
+jmp qword ptr [0x18000f1a0]
+jmp qword ptr [0x18000f1a8]
+jmp qword ptr [0x18000f1b0]
+jmp qword ptr [0x18000f1b8]
+jmp qword ptr [0x18000f1c0]
+jmp qword ptr [0x18000f1c8]
+jmp qword ptr [0x18000f1d0]
+jmp qword ptr [0x18000f1d8]
+jmp qword ptr [0x18000f1e0]
+jmp qword ptr [0x18000f1e8]
+jmp qword ptr [0x18000f1f0]
+jmp qword ptr [0x18000f1f8]
+jmp qword ptr [0x18000f200]
+jmp qword ptr [0x18000f208]
+jmp qword ptr [0x18000f210]
+jmp qword ptr [0x18000f218]
+jmp qword ptr [0x18000f220]
+jmp qword ptr [0x18000f228]
+jmp qword ptr [0x18000f0b0]
+jmp qword ptr [0x18000f0a8]
+jmp qword ptr [0x18000f0a0]
+jmp qword ptr [0x18000f098]
+jmp qword ptr [0x18000f090]
+jmp qword ptr [0x18000f040]
+jmp qword ptr [0x18000f000]
+jmp qword ptr [0x18000f008]
+jmp qword ptr [0x18000f010]
+jmp qword ptr [0x18000f018]
+jmp qword ptr [0x18000f020]
+jmp qword ptr [0x18000f028]
+jmp qword ptr [0x18000f030]
+jmp qword ptr [0x18000f038]
+jmp qword ptr [0x18000f628]
+jmp qword ptr [0x18000f5f0]
+jmp qword ptr [0x18000f5e8]
+jmp qword ptr [0x18000f5f8]
+jmp qword ptr [0x18000f618]
+jmp qword ptr [0x18000f610]
+jmp qword ptr [0x18000f608]
+jmp qword ptr [0x18000f600]
+jmp qword ptr [0x18000f6a0]
+xor edx,edx
+jmp qword ptr [0x18002b098]
+push rbx
+sub rsp,0x20
+lea rax,[0x18002b0e0]
+mov rbx,rcx
+mov qword ptr [rcx],rax
+mov rcx,qword ptr [rcx + 0x10]
+test rcx,rcx
+jz 0x18000d6d2
+mov rax,qword ptr [rcx]
+call qword ptr [rax + 0x10]
+cmp qword ptr [rbx + 0x18],0x0
+jz 0x18000d6f3
+call qword ptr [0x18000f0f8]
+test rax,rax
+jz 0x18000d6f3
+mov r8,qword ptr [rbx + 0x18]
+xor edx,edx
+mov rcx,rax
+call qword ptr [0x18000f138]
+add rsp,0x20
+pop rbx
+ret
+int3
+sub rsp,0x48
+lea rax,[0x18002b0e0]
+mov dword ptr [rsp + 0x28],ecx
+mov qword ptr [rsp + 0x30],rdx
+lea rdx,[0x180028110]
+lea rcx,[rsp + 0x20]
+mov qword ptr [rsp + 0x38],0x0
+mov qword ptr [rsp + 0x20],rax
+call 0x18000d804
+int3
+push rbx
+sub rsp,0x20
+lea rax,[0x18002b0e0]
+mov rbx,rcx
+mov qword ptr [rcx],rax
+mov eax,dword ptr [rdx + 0x8]
+mov dword ptr [rcx + 0x8],eax
+mov rax,qword ptr [rdx + 0x10]
+mov qword ptr [rcx + 0x18],0x0
+mov qword ptr [rcx + 0x10],rax
+mov rcx,rax
+test rax,rax
+jz 0x18000d777
+mov rax,qword ptr [rax]
+call qword ptr [rax + 0x8]
+mov rax,rbx
+add rsp,0x20
+pop rbx
+ret
+jmp qword ptr [0x18000f538]
+jmp qword ptr [0x18000f530]
+jmp qword ptr [0x18000f528]
+jmp qword ptr [0x18000f520]
+jmp qword ptr [0x18000f518]
+jmp qword ptr [0x18000f510]
+jmp qword ptr [0x18000f508]
+jmp qword ptr [0x18000f500]
+jmp qword ptr [0x18000f4f8]
+jmp qword ptr [0x18000f4f0]
+jmp qword ptr [0x18000f4e8]
+jmp qword ptr [0x18000f4e0]
+jmp qword ptr [0x18000f4d8]
+jmp qword ptr [0x18000f4d0]
+jmp qword ptr [0x18000f4c8]
+jmp qword ptr [0x18000f4c0]
+jmp qword ptr [0x18000f4b8]
+jmp qword ptr [0x18000f4b0]
+jmp qword ptr [0x18000f4a8]
+jmp qword ptr [0x18000f4a0]
+jmp qword ptr [0x18000f498]
+jmp qword ptr [0x18000f490]
+jmp qword ptr [0x18000f488]
+jmp qword ptr [0x18000f480]
+jmp qword ptr [0x18000f478]
+jmp qword ptr [0x18000f470]
+jmp qword ptr [0x18000f468]
+jmp qword ptr [0x18000f460]
+jmp qword ptr [0x18000f458]
+jmp qword ptr [0x18000f450]
+jmp qword ptr [0x18000f448]
+jmp qword ptr [0x18000f440]
+mov qword ptr [rsp + 0x8],rcx
+sub rsp,0x88
+lea rcx,[0x1800308c0]
+call qword ptr [0x18000f700]
+mov r11,qword ptr [0x1800309b8]
+mov qword ptr [rsp + 0x58],r11
+xor r8d,r8d
+lea rdx,[rsp + 0x60]
+mov rcx,qword ptr [rsp + 0x58]
+call 0x18000dbd6
+mov qword ptr [rsp + 0x50],rax
+cmp qword ptr [rsp + 0x50],0x0
+jz 0x18000d8f5
+mov qword ptr [rsp + 0x38],0x0
+lea rax,[rsp + 0x48]
+mov qword ptr [rsp + 0x30],rax
+lea rax,[rsp + 0x40]
+mov qword ptr [rsp + 0x28],rax
+lea rax,[0x1800308c0]
+mov qword ptr [rsp + 0x20],rax
+mov r9,qword ptr [rsp + 0x50]
+mov r8,qword ptr [rsp + 0x58]
+mov rdx,qword ptr [rsp + 0x60]
+xor ecx,ecx
+call 0x18000dbd0
+jmp 0x18000d917
+mov rax,qword ptr [rsp + 0x88]
+mov qword ptr [0x1800309b8],rax
+lea rax,[rsp + 0x88]
+add rax,0x8
+mov qword ptr [0x180030958],rax
+mov rax,qword ptr [0x1800309b8]
+mov qword ptr [0x180030830],rax
+mov rax,qword ptr [rsp + 0x90]
+mov qword ptr [0x180030940],rax
+mov dword ptr [0x180030820],0xc0000409
+mov dword ptr [0x180030824],0x1
+mov rax,qword ptr [0x18002b028]
+mov qword ptr [rsp + 0x68],rax
+mov rax,qword ptr [0x18002b030]
+mov qword ptr [rsp + 0x70],rax
+call qword ptr [0x18000f088]
+mov dword ptr [0x1800308b8],eax
+mov ecx,0x1
+call 0x18000d9ba
+xor ecx,ecx
+call qword ptr [0x18000f080]
+lea rcx,[0x18000f840]
+call qword ptr [0x18000f078]
+cmp dword ptr [0x1800308b8],0x0
+jnz 0x18000d99e
+mov ecx,0x1
+call 0x18000d9ba
+call qword ptr [0x18000f130]
+mov edx,0xc0000409
+mov rcx,rax
+call qword ptr [0x18000f178]
+add rsp,0x88
+ret
+jmp qword ptr [0x18000f438]
+jmp qword ptr [0x18000f6d8]
+jmp qword ptr [0x18000f6d0]
+jmp qword ptr [0x18000f6c8]
+jmp qword ptr [0x18000f6c0]
+jmp qword ptr [0x18000f6b8]
+jmp qword ptr [0x18000f6e0]
+jmp qword ptr [0x18000f3f8]
+jmp qword ptr [0x18000f3f0]
+jmp qword ptr [0x18000f3e8]
+jmp qword ptr [0x18000f3e0]
+jmp qword ptr [0x18000f3d8]
+jmp qword ptr [0x18000f3d0]
+jmp qword ptr [0x18000f3c8]
+jmp qword ptr [0x18000f3c0]
+jmp qword ptr [0x18000f3b8]
+jmp qword ptr [0x18000f3b0]
+jmp qword ptr [0x18000f3a8]
+jmp qword ptr [0x18000f3a0]
+jmp qword ptr [0x18000f398]
+jmp qword ptr [0x18000f390]
+jmp qword ptr [0x18000f388]
+jmp qword ptr [0x18000f380]
+jmp qword ptr [0x18000f378]
+jmp qword ptr [0x18000f370]
+jmp qword ptr [0x18000f368]
+jmp qword ptr [0x18000f360]
+jmp qword ptr [0x18000f358]
+jmp qword ptr [0x18000f350]
+jmp qword ptr [0x18000f348]
+jmp qword ptr [0x18000f340]
+jmp qword ptr [0x18000f338]
+jmp qword ptr [0x18000f330]
+jmp qword ptr [0x18000f328]
+jmp qword ptr [0x18000f320]
+jmp qword ptr [0x18000f318]
+jmp qword ptr [0x18000f310]
+jmp qword ptr [0x18000f308]
+jmp qword ptr [0x18000f300]
+jmp qword ptr [0x18000f240]
+jmp qword ptr [0x18000f248]
+jmp qword ptr [0x18000f250]
+jmp qword ptr [0x18000f258]
+jmp qword ptr [0x18000f260]
+jmp qword ptr [0x18000f268]
+jmp qword ptr [0x18000f270]
+jmp qword ptr [0x18000f278]
+jmp qword ptr [0x18000f280]
+jmp qword ptr [0x18000f288]
+jmp qword ptr [0x18000f290]
+jmp qword ptr [0x18000f298]
+jmp qword ptr [0x18000f2a0]
+jmp qword ptr [0x18000f2a8]
+jmp qword ptr [0x18000f2b0]
+jmp qword ptr [0x18000f2b8]
+jmp qword ptr [0x18000f2c0]
+jmp qword ptr [0x18000f2c8]
+jmp qword ptr [0x18000f2d0]
+jmp qword ptr [0x18000f2d8]
+jmp qword ptr [0x18000f2e0]
+jmp qword ptr [0x18000f2e8]
+jmp qword ptr [0x18000f400]
+jmp qword ptr [0x18000f408]
+jmp qword ptr [0x18000f428]
+jmp qword ptr [0x18000f420]
+jmp qword ptr [0x18000f418]
+jmp qword ptr [0x18000f410]
+jmp qword ptr [0x18000f2f8]
+jmp qword ptr [0x18000f2f0]
+jmp qword ptr [0x18000f068]
+jmp qword ptr [0x18000f050]
+jmp qword ptr [0x18000f058]
+jmp qword ptr [0x18000f060]
+jmp qword ptr [0x18000f640]
+jmp qword ptr [0x18000f668]
+jmp qword ptr [0x18000f638]
+jmp qword ptr [0x18000f660]
+jmp qword ptr [0x18000f648]
+jmp qword ptr [0x18000f650]
+jmp qword ptr [0x18000f658]
+jmp qword ptr [0x18000f690]
+jmp qword ptr [0x18000f670]
+jmp qword ptr [0x18000f678]
+jmp qword ptr [0x18000f680]
+jmp qword ptr [0x18000f688]
+jmp qword ptr [0x18000f710]
+jmp qword ptr [0x18000f718]
+jmp qword ptr [0x18000f6f0]
+jmp qword ptr [0x18000f6f8]
+jmp qword ptr [0x18000f720]
+jmp qword ptr [0x18000f708]
+jmp qword ptr [0x18000f6a8]
+sub rsp,0x10
+mov qword ptr [rsp],r10
+mov qword ptr [rsp + 0x8],r11
+xor r11,r11
+lea r10,[rsp + 0x18]
+sub r10,rax
+cmovc r10,r11
+mov r11,qword ptr gs:[0x10]
+cmp r10,r11
+jnc 0x18000dc40
+and r10w,0xf000
+lea r11,[r11 + -0x1000]
+mov byte ptr [r11],0x0
+cmp r10,r11
+jnz 0x18000dc30
+mov r10,qword ptr [rsp]
+mov r11,qword ptr [rsp + 0x8]
+add rsp,0x10
+ret
+int3
+push rbp
+sub rsp,0x20
+mov rbp,rdx
+mov rdx,rcx
+mov qword ptr [rbp + 0x28],rcx
+mov rax,qword ptr [rcx]
+mov ecx,dword ptr [rax]
+mov dword ptr [rbp + 0x24],ecx
+call 0x18000c54c
+add rsp,0x20
+pop rbp
+ret
+int3
+push rbp
+sub rsp,0x20
+mov rbp,rdx
+mov dword ptr [0x18002b020],0xffffffff
+add rsp,0x20
+pop rbp
+ret
+push rbp
+sub rsp,0x20
+mov rbp,rdx
+mov qword ptr [rbp + 0x38],rcx
+mov qword ptr [rbp + 0x28],rcx
+mov rax,qword ptr [rbp + 0x28]
+mov rcx,qword ptr [rax]
+mov qword ptr [rbp + 0x30],rcx
+mov rax,qword ptr [rbp + 0x30]
+cmp dword ptr [rax],0xe06d7363
+jz 0x18000dccd
+mov dword ptr [rbp + 0x20],0x0
+mov eax,dword ptr [rbp + 0x20]
+jmp 0x18000dcd2
+call 0x18000c62c
+add rsp,0x20
+pop rbp
+ret
+push rbp
+sub rsp,0x20
+mov rbp,rdx
+cmp dword ptr [rbp + 0x20],0x0
+jnz 0x18000dcfc
+mov r9,qword ptr [rbp + 0x78]
+mov r8d,dword ptr [rbp + 0x70]
+mov rdx,qword ptr [rbp + 0x68]
+mov rcx,qword ptr [rbp + 0x60]
+call 0x18000c268
+add rsp,0x20
+pop rbp
+ret
+push rbp
+sub rsp,0x20
+mov rbp,rdx
+mov ecx,0x8
+call 0x18000c63e
+add rsp,0x20
+pop rbp
+ret
+int3
+push rbp
+sub rsp,0x20
+mov rbp,rdx
+mov rax,qword ptr [rcx]
+xor ecx,ecx
+cmp dword ptr [rax],0xc0000005
+setz cl
+mov eax,ecx
+mov eax,ecx
+add rsp,0x20
+pop rbp
+ret
+int3
+jmp 0x18000e00a
+jmp qword ptr [0x18002fd68]
+jmp 0x18000e02a
+jmp qword ptr [0x18002fd58]
+jmp 0x18000e03a
+jmp qword ptr [0x18002fcc8]
+jmp 0x18000e04a
+jmp qword ptr [0x18002fd48]
+jmp 0x18000e06a
+jmp qword ptr [0x18002fd88]
+jmp 0x18000e08a
+jmp qword ptr [0x18002fc98]
+jmp 0x18000e09a
+jmp qword ptr [0x18002fc88]
+jmp 0x18000e0aa
+jmp qword ptr [0x18002fc78]
+jmp 0x18000e0ba
+jmp qword ptr [0x18002fc68]
+jmp 0x18000e0ca
+jmp qword ptr [0x18002fc58]
+jmp 0x18000e0da
+jmp qword ptr [0x18002fc48]
+jmp 0x18000e0ea
+jmp qword ptr [0x18002fc38]
+jmp 0x18000e0fa
+jmp qword ptr [0x18002fc28]
+jmp 0x18000e10a
+jmp qword ptr [0x18002fc18]
+jmp 0x18000e11a
+jmp qword ptr [0x18002fc08]
+jmp 0x18000e12a
+jmp qword ptr [0x18002fbf8]
+jmp 0x18000e13a
+jmp qword ptr [0x18002fbe8]
+jmp 0x18000e14a
+jmp qword ptr [0x18002fbd8]
+jmp 0x18000e15a
+jmp qword ptr [0x18002fbc8]
+jmp 0x18000e16a
+jmp qword ptr [0x18002fbb8]
+jmp 0x18000e17a
+jmp qword ptr [0x18002fba8]
+jmp 0x18000e18a
+jmp qword ptr [0x18002fb98]
+jmp 0x18000e19a
+jmp qword ptr [0x18002fb88]
+jmp 0x18000e1aa
+jmp qword ptr [0x18002fb78]
+jmp 0x18000e1ba
+jmp qword ptr [0x18002fb68]
+jmp 0x18000e1ca
+jmp qword ptr [0x18002fb58]
+jmp 0x18000e1da
+jmp qword ptr [0x18002fb48]
+jmp 0x18000e1ea
+jmp qword ptr [0x18002fb38]
+jmp 0x18000e1fa
+jmp qword ptr [0x18002fb28]
+jmp 0x18000e20a
+jmp qword ptr [0x18002fb18]
+jmp 0x18000e21a
+jmp qword ptr [0x18002fb08]
+jmp 0x18000e22a
+jmp qword ptr [0x18002faf8]
+jmp 0x18000e23a
+jmp qword ptr [0x18002fae8]
+jmp 0x18000e24a
+jmp qword ptr [0x18002fad8]
+jmp 0x18000e25a
+jmp qword ptr [0x18002fac8]
+jmp 0x18000e26a
+jmp qword ptr [0x18002fd38]
+jmp 0x18000e27a
+jmp qword ptr [0x18002fd28]
+jmp 0x18000e28a
+jmp qword ptr [0x18002fab8]
+jmp 0x18000e29a
+jmp qword ptr [0x18002fd18]
+jmp 0x18000e2aa
+jmp qword ptr [0x18002fd08]
+jmp 0x18000e2ca
+jmp qword ptr [0x18002fd78]
+jmp 0x18000e2ea
+jmp qword ptr [0x18002b040]
+jmp 0x18000e2fa
+jmp qword ptr [0x18002b050]

@@ -1,0 +1,380 @@
+push ebp
+mov ebp,esp
+sub esp,0x18
+mov dword ptr [ebp + -0x8],ebx
+mov edx,dword ptr [ebp + 0x8]
+xor ebx,ebx
+mov dword ptr [ebp + -0x4],esi
+mov eax,dword ptr [edx]
+xor esi,esi
+mov eax,dword ptr [eax]
+cmp eax,0xc0000091
+ja 0x00401061
+cmp eax,0xc000008d
+jc 0x00401080
+mov esi,0x1
+mov dword ptr [esp],0x8
+xor eax,eax
+mov dword ptr [esp + 0x4],eax
+call 0x00403530
+cmp eax,0x1
+jz 0x004010ad
+test eax,eax
+jz 0x0040106f
+mov dword ptr [esp],0x8
+call eax
+mov ebx,0xffffffff
+mov eax,ebx
+mov esi,dword ptr [ebp + -0x4]
+mov ebx,dword ptr [ebp + -0x8]
+mov esp,ebp
+pop ebp
+ret 0x4
+cmp eax,0xc0000093
+jz 0x00401025
+cmp eax,0xc0000094
+jz 0x0040102a
+mov eax,ebx
+mov esi,dword ptr [ebp + -0x4]
+mov ebx,dword ptr [ebp + -0x8]
+mov esp,ebp
+pop ebp
+ret 0x4
+cmp eax,0xc0000005
+jnz 0x0040106f
+mov dword ptr [esp],0xb
+xor esi,esi
+mov dword ptr [esp + 0x4],esi
+call 0x00403530
+cmp eax,0x1
+jz 0x004010d2
+test eax,eax
+jz 0x0040106f
+mov dword ptr [esp],0xb
+call eax
+jmp 0x0040104e
+mov dword ptr [esp],0x8
+mov ebx,0x1
+mov dword ptr [esp + 0x4],ebx
+call 0x00403530
+test esi,esi
+jz 0x0040104e
+call 0x00403070
+mov ebx,0xffffffff
+jmp 0x00401053
+mov dword ptr [esp],0xb
+mov ecx,0x1
+mov ebx,0xffffffff
+mov dword ptr [esp + 0x4],ecx
+call 0x00403530
+jmp 0x00401053
+push ebp
+mov ebp,esp
+push ebx
+sub esp,0x24
+lea ebx,[ebp + -0x8]
+mov dword ptr [esp],0x401000
+call 0x004036b0
+sub esp,0x4
+call 0x00403070
+mov dword ptr [ebp + -0x8],0x0
+mov eax,0x411000
+lea edx,[ebp + -0xc]
+mov dword ptr [esp + 0x10],ebx
+mov ecx,dword ptr [0x004041c0]
+mov dword ptr [esp + 0x4],eax
+mov dword ptr [esp + 0x8],edx
+mov dword ptr [esp + 0xc],ecx
+mov dword ptr [esp],0x411004
+call 0x00403560
+mov eax,[0x00411140]
+test eax,eax
+jz 0x004011b0
+mov [0x004041d0],eax
+mov edx,dword ptr [0x004121d0]
+test edx,edx
+jnz 0x004011f6
+cmp edx,-0x20
+jz 0x00401190
+mov eax,[0x00411140]
+mov dword ptr [esp + 0x4],eax
+mov ebx,dword ptr [0x004121d0]
+mov ecx,dword ptr [ebx + 0x30]
+mov dword ptr [esp],ecx
+call 0x00403550
+mov edx,dword ptr [0x004121d0]
+cmp edx,-0x40
+jz 0x004011b0
+mov ebx,dword ptr [0x00411140]
+mov dword ptr [esp + 0x4],ebx
+mov ecx,dword ptr [0x004121d0]
+mov edx,dword ptr [ecx + 0x50]
+mov dword ptr [esp],edx
+call 0x00403550
+call 0x00403540
+mov ebx,dword ptr [0x004041d0]
+mov dword ptr [eax],ebx
+call 0x00403040
+and esp,0xfffffff0
+call 0x00403520
+mov ecx,dword ptr [eax]
+mov dword ptr [esp + 0x8],ecx
+mov edx,dword ptr [0x00411000]
+mov dword ptr [esp + 0x4],edx
+mov eax,[0x00411004]
+mov dword ptr [esp],eax
+call 0x00402f20
+mov ebx,eax
+call 0x00403510
+mov dword ptr [esp],ebx
+call 0x004036c0
+mov dword ptr [esp + 0x4],eax
+mov edx,dword ptr [0x004121d0]
+mov eax,dword ptr [edx + 0x10]
+mov dword ptr [esp],eax
+call 0x00403550
+mov edx,dword ptr [0x004121d0]
+jmp 0x0040116b
+push ebp
+mov ebp,esp
+sub esp,0x8
+mov dword ptr [esp],0x2
+call dword ptr [0x004121c8]
+call 0x00401100
+push ebp
+mov ecx,dword ptr [0x004121e0]
+mov ebp,esp
+pop ebp
+jmp ecx
+push ebp
+mov ebp,esp
+sub esp,0x8
+cmp dword ptr [0x00411118],0x0
+jz 0x004012b5
+mov dword ptr [esp + 0x4],0x405000
+mov dword ptr [esp],0x405002
+call 0x00403570
+jmp 0x0040129f
+mov dword ptr [0x00404180],0x0
+mov dword ptr [0x00404184],0x4012ce
+leave
+ret 0xc
+push ebp
+mov ebp,esp
+sub esp,0x8
+mov dword ptr [esp + 0x4],0x405000
+mov dword ptr [esp],0x405002
+call 0x00403570
+mov dword ptr [0x00411118],0x1
+cmp dword ptr [0x0041111c],0x0
+jnz 0x004013d1
+mov dword ptr [esp + 0x4],0x405000
+mov dword ptr [esp],0x405002
+call 0x00403570
+jmp 0x004013bb
+mov eax,0x0
+leave
+ret 0x10
+jmp dword ptr [0x00412240]
+jmp dword ptr [0x00412244]
+jmp dword ptr [0x00412248]
+jmp dword ptr [0x0041224c]
+push ebp
+mov eax,0x10
+mov ebp,esp
+push ebx
+sub esp,0x64
+and esp,0xfffffff0
+call 0x00403480
+call 0x00403120
+call 0x00403720
+mov ebx,eax
+lea eax,[ebp + -0x58]
+mov dword ptr [esp],eax
+call 0x00403730
+sub esp,0x4
+test ebx,ebx
+jnz 0x00402f58
+jmp 0x00402ff6
+inc ebx
+movzx ecx,byte ptr [ebx]
+cmp cl,0x20
+setz al
+cmp cl,0x9
+setz dl
+or eax,edx
+test al,0x1
+jnz 0x00402f57
+cmp cl,0x22
+jz 0x00402fb0
+cmp cl,0x20
+setnz al
+xor edx,edx
+cmp cl,0x9
+setnz dl
+test eax,edx
+jz 0x00402fd0
+lea esi,[esi]
+lea edi,[edi]
+test cl,cl
+jz 0x00402fd0
+inc ebx
+movzx ecx,byte ptr [ebx]
+cmp cl,0x20
+setnz al
+xor edx,edx
+cmp cl,0x9
+setnz dl
+test eax,edx
+jnz 0x00402f90
+jmp 0x00402fd0
+inc ebx
+movzx ecx,byte ptr [ebx]
+cmp cl,0x22
+setnz al
+xor edx,edx
+test cl,cl
+setnz dl
+test eax,edx
+jnz 0x00402fb0
+cmp cl,0x22
+jz 0x00403032
+lea esi,[esi]
+cmp cl,0x20
+setz al
+cmp cl,0x9
+setz dl
+jmp 0x00402ff0
+inc ebx
+movzx ecx,byte ptr [ebx]
+cmp cl,0x20
+setz dl
+cmp cl,0x9
+setz al
+or eax,edx
+test al,0x1
+jnz 0x00402fe0
+mov dword ptr [esp],0x0
+call 0x00403710
+sub esp,0x4
+test byte ptr [ebp + -0x2c],0x1
+mov edx,0xa
+jz 0x00403014
+movzx edx,word ptr [ebp + -0x28]
+mov dword ptr [esp + 0x8],ebx
+xor ebx,ebx
+mov dword ptr [esp + 0x4],ebx
+mov dword ptr [esp + 0xc],edx
+mov dword ptr [esp],eax
+call 0x0040138e
+sub esp,0x10
+mov ebx,dword ptr [ebp + -0x4]
+leave
+ret
+inc ebx
+movzx ecx,byte ptr [ebx]
+jmp 0x00402fd0
+push ebp
+mov ecx,0x410260
+mov ebp,esp
+jmp 0x0040305e
+mov edx,dword ptr [ecx + 0x4]
+mov eax,dword ptr [ecx]
+add ecx,0x8
+add dword ptr [edx + 0x400000],eax
+cmp ecx,0x410260
+jc 0x00403050
+pop ebp
+ret
+push ebp
+mov ebp,esp
+fninit
+pop ebp
+ret
+push ebp
+mov ebp,esp
+sub esp,0x8
+mov eax,[0x004041e0]
+mov ecx,dword ptr [eax]
+test ecx,ecx
+jz 0x004030b7
+jmp 0x004030a0
+call dword ptr [eax]
+mov ecx,dword ptr [0x004041e0]
+mov edx,dword ptr [ecx + 0x4]
+lea eax,[ecx + 0x4]
+mov [0x004041e0],eax
+test edx,edx
+jnz 0x004030a0
+leave
+ret
+push ebp
+mov ebp,esp
+push ebx
+sub esp,0x4
+mov eax,[0x00411150]
+test eax,eax
+jnz 0x00403166
+mov eax,[0x00403780]
+mov ebx,0x1
+mov dword ptr [0x00411150],ebx
+cmp eax,-0x1
+jz 0x0040316a
+test eax,eax
+mov ebx,eax
+jz 0x0040315a
+nop
+lea esi,[esi]
+call dword ptr [ebx*0x4 + 0x403780]
+dec ebx
+jnz 0x00403150
+mov dword ptr [esp],0x403080
+call 0x00401260
+pop ebx
+pop ebx
+pop ebp
+ret
+mov ecx,dword ptr [0x00403784]
+xor eax,eax
+test ecx,ecx
+jmp 0x00403180
+inc eax
+mov edx,dword ptr [eax*0x4 + 0x403784]
+test edx,edx
+jnz 0x00403176
+jmp 0x00403145
+push ecx
+mov ecx,esp
+add ecx,0x8
+cmp eax,0x1000
+jc 0x0040349d
+sub ecx,0x1000
+or dword ptr [ecx],0x0
+sub eax,0x1000
+jmp 0x00403486
+sub ecx,eax
+or dword ptr [ecx],0x0
+mov eax,esp
+mov esp,ecx
+mov ecx,dword ptr [eax]
+mov eax,dword ptr [eax + 0x4]
+jmp eax
+jmp dword ptr [0x004121cc]
+jmp dword ptr [0x004121c0]
+jmp dword ptr [0x004121f8]
+jmp dword ptr [0x004121c4]
+jmp dword ptr [0x004121d8]
+jmp dword ptr [0x004121bc]
+jmp dword ptr [0x004121e8]
+jmp dword ptr [0x0041221c]
+jmp dword ptr [0x00412228]
+jmp dword ptr [0x0041220c]
+jmp dword ptr [0x004121b0]
+jmp dword ptr [0x00412198]
+jmp dword ptr [0x00412190]
+jmp dword ptr [0x0041218c]
+jmp dword ptr [0x00412188]
+jmp dword ptr [0x00412194]
+jmp dword ptr [0x004121a8]
+jmp dword ptr [0x004121a4]
+jmp dword ptr [0x004121ac]
